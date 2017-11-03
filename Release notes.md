@@ -1,5 +1,63 @@
 # Release notes
 
+## 5.11.0
+
+- Updates and additions
+    - Added Polish ID Back Recognizer `PPPolishIDBackRecognizerResult` and `PPPolishIDBackRecognizerSettings`
+    - Added Polish ID Front Recognizer `PPPolishIDFrontRecognizerResult` and `PPPolishIDFrontRecognizerSettings`
+    - Added Polish ID Combined Recognizer `PPPolishIDCombinedRecognizerResult` and `PPPolishIDCombinedRecognizerSettings`
+    - Added Australian Driver Licence Recognizer `PPAustraliaDLFrontRecognizerResult` and `PPAustraliaDLFrontRecognizerSettings` for state Victoria
+    - Added Swiss ID Front Recognizer `PPSwissIDFrontRecognizerResult` and `PPSwissIDFrontRecognizerSettings`
+    - Added Swiss QR Payment `PPChQrCodeRecognizerResult` and `PPChQrCodeRecognizerSettings`
+    - Added option `extractRecipient` on `PPNedSlipRecognizerSettings` to enable or disable reading of recipient name. By default, this is turned off and recipient name will not be returned
+    - Added reading of mirrored QR codes
+    - Added `PPMrzFilter` protocol and delegate `mrzFilter` on `PPMrtdRecognizerSettings`
+        - Determines whether document should be processed or it is filtered out, based on its MRZ (Machine Readable Zone)
+    - Introduced `GlareDetector` which is by default used in all recognizers whose settings implement `GlareDetectorOptions`:
+        - When glare is detected, OCR will not be performed on the affected document position to prevent errors in the extracted data
+        - If the glare detector is used and obtaining of glare metadata is enabled in `MetadataSettings`
+        - Glare detector can be disabled by using `detectGlare` property on the recognizer settings
+    - Added `PPQuadDetectorResultWithSize` which inherits existing `PPQuadDetectorResult`
+        - It's subclasses are `PPDocumentDetectorResult` and `PPMrtdDetectorResult`
+        - Returns information about physical size (height) in inches of the detected location when physical size is known
+        - added support for scanning front and back side of Polish ID - use `PPPolishIDFrontRecognizerSettings`, `PolishIDBackRecognizerSettings` and `PPPolishIDCombinedRecognizerSettings`
+    - New document specification presets in `PPDocumentPreset` enum:  `PPDocumentPresetId1VerticalCard` and  `PPDocumentPresetId2VerticalCard` - use `[PPDocumentSpecification newFromPreset]` method to create document specification for detector
+    - `PPEudlRecognizer` can return face image from the driver's license
+    - Warning for time limited license keys when using provided activities, custom UI integration or Direct API:
+        - the goal is to prevent unintentional publishing of application to production with the demo license key that will expire
+        - warning toast can be disabled by using `showLicenseKeyTimeLimitedWarning` property on `PPUiSettings`
+    - Added `PPMrtdSpecification` and method `setMrtdSpecifications` on `PPMrtdDetectorSettings`
+        - setting `PPMrtdSpecification` on `PPMrtdDetectorSettings` will return results only for specified MRTD Documents
+        - `PPMrtdSpecification` can be created using `PPMrtdPreset`: `PPMrtdPresetTd1, PPMrtdPresetTd2, PPMrtdPresetTd3`    
+
+- Minor API changes
+    - `PPDocumentDetectorResult` does not contain information about screen orientation any more
+
+- Bugfixes:
+    - Fixed crash which sometimes happened while scanning MRTD documents
+    - Fixed scanning return result type of `PPDetectorRecognizerSettings` when initialized with `PPMrtdDetectorSettings` - returning `PPMrtdDetectorResult`
+    - Fixed race condition crash when initialising and getting videoPreviewLayer 
+
+- Improvements in ID scanning performance:
+    - Date parsing improvements
+    - Better extraction of fields on back side of the Croatian ID card
+    - Improved reading of issuing authority on Croatian ID back side
+    - Improved face detection in `DocumentFaceRecognizer`: stable detection is required to prevent returning of blurred images
+    - Improved reading of Malaysian `MyKad` documents: 
+        - Improved reading and parsing of address fields; previously recognizer was unable to read some documents because of the expected address format
+    - Improved reading of Malaysian visas and work permits
+    - Better reading of dates on Australian Driver's Licence
+    - Improved parsing of variable symbol on Czech payment slips
+    - Allowed scanning of Czech QR codes which have colon (:) in payment description field
+    - Italian IBAN parsing now validates the BBAN check digit
+
+## 5.10.2
+
+- Bug fixes
+    - fixed amount parsing from German BezahlCode
+        - 0.8 is now parsed as 80 cents, not as 8 cents anymore
+    - fixed autorotation of overlay view controller
+
 ## 5.10.1
 
 - Bug fixes
