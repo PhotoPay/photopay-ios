@@ -1,0 +1,960 @@
+# Release notes
+
+## 5.10.1
+
+- Bug fixes
+    - fixed crash in QR code which happened periodically in all recognizers
+
+- Minor API changes
+    - removed option to scan 1D Code39 and Code128 barcodes on US Driver's licenses that contain those barcodes alongside PDF417 barcode
+
+- Improvements for existing features
+    - better extraction of fields on back side of the Croatian ID card
+    - improved USDLRecognizer - added support for new USDL standard
+    - KosovoCode128Recognizer returns reference number for new barcode type
+
+## 5.10.0
+
+- Updates and additions
+    - `PPBlinkOcrRecognizerResult` and `PPBlinkOcrRecognizerSettings` are now deprecated. Use `PPDetectorRecognizerResult` and `PPDetectorRecognizerSettings` for templating or `PPBlinkInputRecognizerResult` and `PPBlinkInputRecognizerSettings` for segment scan
+    - `PPSerbianPdf417RecognizerResult` and `PPSerbianPdf417RecognizerSettings` are renamed to `PPSerbianBarcodeRecognizerResult` and `PPSerbianBarcodeRecognizerSettings`
+    - Added Austrian Passport Recognizer `PPAusPassportRecognizerResult` and `PPAusPassportRecognizerSettings`
+    - Added Swiss Passport Recognizer `PPSwissPassportRecognizerResult` and `PPSwissPassportRecognizerSettings`
+    - Added Swiss ID Back Recognizer `PPSwissIDBackRecognizerResult` and `PPSwissIDBackRecognizerSettings`
+    - Added support for scanning MRZ on Mexican voters card
+    - Added support for reading Croatian ID with permanent DateOfExpiry in `PPCroIDFrontRecognizerResult` and `PPCroIDCombinedRecognizerResult` with BOOL property `isDocumentDateOfExpiryPermanent`
+    - Added combining data from MRZ and fields in Austrian passport through `PPAusIDCombinedRecognizerResult` and `PPAusIDCombinedRecognizerSettings`
+    - Added support for reading Serbian payment QR codes with `PPSerbianBarcodeRecognizerResult` and `PPSerbianBarcodeRecognizerSettings`
+    - Added reading of mirrored QR codes
+
+- Bugfixes:
+    - Fixed crash which sometimes happened while scanning MRTD documents
+    - Fixed returning valid data for MRZ based recognizers when not all fields outside MRZ have been scanned
+
+- Improvements in ID scanning performance:
+    - Improved scanning of IKad addresses
+    - Improved reading of Croatian ID Address field
+    - Improved reading of Croatian ID IssuedBy field
+    - Date parsing improvements
+    - Improved parsing of amounts with less than 2 decimals
+
+## 5.9.4
+
+- Updates and additions
+    - Added `nonMRZNationality` and `nonMRZSex` properties to Romanian ID Recognizer for getting sex and nationality outside MRZ
+    - Added support for long addresses and employer names for iKad
+    - `extractAddress` property in `PPSlovakIDBackRecognizerSettings` is now removed since previously wasn't used
+    - Added `extractDocumentNumber` property in `PPSlovakIDFrontRecognizerSettings` for defining if issuing document number should be extracted from Slovakian ID 
+    - Removed `PPAztecRecognizerSettings` and `PPAztecRecognizerResult`
+    - Added to Slovakian ID Combined Settings options properties:
+        - `extractSex`
+        - `extractNationality`
+        - `extractDateOfBirth`
+        - `extractDateOfExpiry`
+        - `extractDateOfIssue`
+        - `extractIssuedBy`
+        - `extractDocumentNumber`
+        - `extractSurnameAtBirth`
+        - `extractPlaceOfBirth`
+        - `extractSpecialRemarks`
+
+- Bugfixes:
+    - Fixed crash while scanning QR Code
+    - Fixed reading positions of ID elements on Slovakian ID card
+    - Fixed reading positions of ID elements on Singapore ID card
+
+- Improvements in ID scanning performance:
+    - Always read personal number field on front side of Slovakian ID card
+    - Improved reading precision of address, place of birth, last name and issuing authority on Slovakian ID card
+    - Improved reading of name and blood type on Singapore ID card        
+
+
+## 5.9.3
+
+- Updates and additions
+    - Added Barcode Recognizer `PPBarcodeRecognizerResult` and `PPBarcodeRecognizerSettings`
+    - Deprecated `PPAztecRecognizerResult` and `PPAztecRecognizerSettings`. Use Barcode Recognizer
+    - Deprecated `PPBarDecoderRecognizerResult` and `PPBarDecoderRecognizerSettings`. Use Barcode Recognizer
+    - Deprecated `PPZXingRecognizerResult` and `PPZXingRecognizerSettings`. Use Barcode Recognizer
+
+- Bugfixes:
+    - Fixed Czech QR Code amount scanning - improved parsing of amounts with less than 2 decimals
+    - Fixed support for Slovenian references without prefix
+
+## 5.9.2
+
+- Updates and additions
+    - Added creation of customized build of framework. If your final app size is too large, you can create a customised build of MicroBlink.framework and MicroBlink.bundle which will contain only features and resources that you really need. You can see detailed explanation at [Creating customized build of PhotoPay SDK](https://github.com/PhotoPay/photopay-ios/wiki/Creating-customized-build)
+    - Added Serbian PDF417 Barcode `PPSerbianPdf417RecognizerResult` and `PPSerbianPdf417RecognizerSettings`
+    - Added US Driver's license Combined Recognizer `PPUsdlCombinedRecognizerResult` and `PPUsdlCombinedRecognizerSettings` 
+    - Added Austrian ID Combined Recognizer `PPAusIDCombinedRecognizerResult` and `PPAusIDCombinedRecognizerSettings`
+    - Added Czech ID Combined Recognizer `PPCzIDCombinedRecognizerResult` and `PPCzIDCombinedRecognizerSettings`
+    - Added Serbian ID Combined Recognizer `PPSerbianIDCombinedRecognizerResult` and `PPSerbianIDCombinedRecognizerSettings`
+    - Added Singapore ID Combined Recognizer `PPSingaporeIDCombinedRecognizerResult` and `PPSingaporeIDCombinedRecognizerSettings`
+    - Added Slovakian ID Combined Recognizer `PPSlovakIDCombinedRecognizerResult` and `PPSlovakIDCombinedRecognizerSettings`
+    - Added Slovenian ID Combined Recognizer `PPSlovenianIDCombinedRecognizerResult` and `PPSlovenianIDCombinedRecognizerSettings`
+    - Added VIN Recognizer `PPVinRecognizerResult` and `PPVinRecognizerSettings`
+    - Updated Kosovo Code128 Barcode with new data: `district`, `dueDate`, `customerID`, `serviceCode`
+
+- Bugfixes:
+    - Fixed Czech translation
+
+- Improvements in PhotoPay scanning:
+    - Improved reading of French IBANs
+    - Added support for all IBANs return always with prefix
+    - Improved reading of pdf417 barcodes having width:height bar aspect ratio less than 2:1
+
+## 5.9.1
+
+- Fixed crash which sometimes happened when presenting help screens (if `PPHelpDisplayModeAlways` or `PPHelpDisplayModeFirstRun` were used)
+
+## 5.9.0
+
+- Updates and additions:
+    - Microblink.framework is now a dynamic framework. The change is introduced because of the following reasons:
+        - isolation of code
+        - smaller binary size - roughly 16%
+        - better interop with third party libraries (such as Asseco SEE Mobile Token)
+    - Improved Screen shown when Camera permission is not granted:
+        - fixed crash which happened on tap anywhere on screen
+        - close button can now be removed (for example, if the scanning screen is inside `UINavigationController` instance)
+        - Header is now public so you can instantiate that class if needed
+    - Updated PPUiSettings with new features:
+        - flag `showStatusBar` which you can use to show or hide status bar on camera screen 
+        - flag `showCloseButton` which you can use to show or hide close button on camera screen. By default it's presented, but when inside `UINavigationController` it should be hidden
+        - flat `showTorchButton` which you can use to show or hide torch button on camera screen.
+    - Deprecated `PPHelpDisplayMode`. You should replace it with a custom logic for presenting help inside the application using the SDK.
+    - Renamed internal extension method with namespace so that they don't interfere with third party libraries
+    - Added standard tap to focus overlay subview in all default OverlayViewControllers. Also added it as a public header.
+    - PPScanningViewController now has a simple method to turn on torch
+    - Simplified `PPOcrLayout` class (removed properties which were not used)
+    - 
+- Bugfixes:
+    - Fixed bug which caused didOutputResults: not to get called in DirectAPI
+      Fixed case sensitivity in class & file naming
+    - Fixed issue which sometimes caused scanning not to be started when the user is asked for camera permission (first run of the app)
+    - Fixed rare crash which Camera paused label UI being updated on background thread
+    - Fixed incorrect handling of camera mirror when using front facing camera
+    -   
+- Improvements in PhotoPay scanning:
+    - Improved reading of the receiver field on Austrian payslips
+    - Improved recipient name and address extraction in Slovakian slips (recipient name is not returned when second line of address is empty)
+    - Added support for polish IBAN without PL prefix
+
+- Improvements in ID scanning performance:
+    - ID result classes which have Date fields now return both parsed `NSDate` and raw `NSString`
+    - Restructured German ID recognizers into:
+        - GermanIDFrontRecognizer, for scanning front side of the new German ID
+        - GermanIDBackRecognizer, for scanning back side of the new German ID
+        - GermanOldIDRecognizer, for scanning front side of the old German ID
+        - GermanPassportRecognizer, for scanning front side of the German Passport
+        - added PPGermanIDCombinedRecognizer which enables reading of all data contained on German passports, old and new IDs
+    - Splitting address on new German IDs to ZIP code, city, street and house number
+    - Added name and surname dictionaries for the German ID front side recognizer which improves the scanning performance
+    - MyKadRecognizer now knows how to split address to street, ZIP code, city and state
+    - Improved CroIDCombinedRecognizer, which can scan both sides of the ID consecutively 
+    - Improvements in CroID scanning, use multiple scans to boost confidence
+        - croID combined bugfix - now always showing DocumentBilingual flag
+    - Improvements in MRTD scanning:
+        - WSA (World Goverment of World Citizens) added as valid country code when parsing MRZ 
+    - Added option of encoding images of MRZ and full document in Machine readable travel documents and encoding of images in DocumentFaceRecognizer
+    - Handling names containing dashes and extra long names inside combined recognizers
+    - Added AztecRecognizer for state of the art scanning of Aztec barcodes
+    - Added RomanianIDFrontRecognizer for scanning Romanian IDs
+    
+- Sim & TopUp scanning improvements:
+    - Added suport for 14 digits long sim numbers in addition to existing lengths (12, 19, 20)
+    - TopUp scanning improvements
+    
+- Changes in Samples:
+     - Added libz to all samples to prevent linker errors (caused by slimming down the SDK)
+     - Samples updated to use new dynamic framework
+     - Added a build phase in each sample which removes unused architectures from the dynamic framework
+
+## 5.8.0
+
+- added designated initializers to all `PPOcrParserFactory` objects
+- added play success sound method to `PPScanningViewController` protocol
+- improved `TopUpParser`: added option to enable all prefixes at the same time (generic prefix)
+- improved `MRTDRecognizer` with better support for Arab MRZ
+- updated `CroatianIDFrontSideRecognizer`: returning sex as written on front side of a document
+- fixed issue with Direct API which disabled processing
+- fixed crash when multiple QR code-based recognizers were used together
+- fixed crash in Slovenian QR Code Recognizer
+- Internal switch to new build system using cmake. This allows faster deployments and easier updates in the future
+
+## 5.7.2
+
+- Fixed issue with blurred camera display when `PPCoordinator` instance was reused between consecutive scanning sessions
+- Fixed crashed which happened when multiple instances of `PPCoordinator` were used simultaneously (one being terminated and one starting recognition). This most commonly happened when after scanning session, a new view controller was pushed to a Navigation View Controller, when the user repeated the procedure a number of times (five or more).
+- Added SimCardRecognizer
+- Added Generic parsing in TopUpOcrParser
+
+## 5.7.1
+
+- Updated Slovakian Payment slip results. Now they don't have redundant property for account number, instead of that all results now have iban property.
+- Updated Slovenian QR code scanning results. We now split street and place information from payer and recipient address. Instead of using `payerAddress`, please use `payerStreet` and `payerPlace`, and instead of `recipientAddress`, please use `recipientStreet` and `recipientPlace` properties.
+- Updated getters for obtaining names of images returned when scanning ID documents. You can now use static properties in `PPRecognizerSettings` to obtain names of the images. Previously an instance of `PPRecognizerSettings` subclass was needed.
+- Improved Croatian Reference number parsing in Croatian PhotoPay 
+  - references in form HRXX-XXXX... are not returned if model is not valid, for example HR22-2360 is not a valid reference because model 22 does not exist
+  - trailing whitespace is removed from result when using Segment scanning
+- Fixed an issue which caused camera settings to be reset each time PPCoordinator's applySettings method was called. This issue manifested, for example, by automatically turning off torch after successful scan in SegmentScan.
+- Fixed redundant log warnings in setting language ("Trying to set language to nil, returning") and CameraManager ("hould not have been observing autofocus")
+- Fixed issue with resuming camera when user is first asked for camera permission. This manifested as sometimes camera going black.
+- Fixed encoding issue in Slovenian QR code result - `rawResult` property. We now return UTF8 string.
+
+## 5.7.0
+
+- Added support for new UPN format in Slo payment slip recognizer (works out of the box)
+- Added support for Slovak Code128 scanning on payment slips  
+- Added CroIDCombined recognizer which can scan both sides consecutively
+- Added DocumentFace recognizer which can be used to get the image of the ID document which contains a face
+- Added FaceDetector feature which can now be used in DetectorRecognizer.
+- Added support for extracting place of birth on old German IDs
+- Added property allowResultForEveryFrame in PPScanSettings which can be used when using Direct API to force calling didOutputResults: callback for every frame
+- Added feature to enable frame quality estimation when using Direct API (by exposing property estimateFrameQuality)
+- Added support for scanning IBAN from Georgia in Segment Scan
+- Added logging of the SDK name when the license key is invalid for easier troubleshooting
+- Added Belgian account number check to IBAN parser
+- Added scaling of the default viewfinder in ID scanning overlay view
+- Added a property which you can use to set a custom location for resources. For example, if you would like to avoid using Microblink.bundle as resources bundle, you can set a different one in PPSettings object.
+- Improved quality of German ID address recognition
+- Updated - Singapore ID recognizer has now split in two recognizers - one for front and one for back side
+- Fixed Date of Birth scanning issue in MyKad Recognizer
+- Fixed MRTD returning payment data with verified = false when mrtdSettings.allowUnverified(false)
+- Fixed bug in MRTD recognizer where mrtd image were not returned although scanning was successful
+- Fixed crash when Single dispatch queue was used for processing
+- Fixed frame quality issue in PPimageMetadata. Previously it was always nan if used after image getter.
+- Fixed Torch button on default camera overlays. Previously it never changed state after it was turned on.
+- Fixed help display mode "First run", which previously didn't work
+- Fixed crash when the user tapped anywhere on the view controller presented when camera permission wasn't allowed
+- Fixed warning message when language is set to something other than @en, @de and @fr and @cro
+- Fixed crash on start in swift if custom UI was used to handle detector results
+- Fixed a problem which caused internal recognizer state not to be reset when using the scanner for the second time with the same PPCoordinator instance
+- Fixed ocrLayout getter in PPBlinkOcrRecognizer which previously returned nil
+
+## 5.6.0
+
+- Added support for scanning IBAN from Georgia in Segment Scan
+- Added Belgian account number check to IBAN parser
+- Added PhotoPay support for scanning Slovak payslips and Slovak Data Matrix codes
+- Fixed MRTD returning payment data with verified = false when mrtdSettings.allowUnverified(false)
+- Singapore ID recognizer has now split in two recognizers - one for front and one for back side
+
+## 5.5.0
+
+- updated `SepaQRRecognizer` to process image frames in the same way as `ZXingRecognizer`. Now, `useSlowerThoroughScan` is enabled by default.
+- improved quality of german ID address recognition
+- added support for extracting place of birth on old German IDs
+
+## 5.4.1
+
+- added support for scanning IBANs that contain spaces and dashes
+- support for scanning Croatian slips that have no amount, but have currency in amount field
+
+## 5.4.0
+
+- added support for scanning front and back side of Serbian ID cards
+- improved IBAN parser
+- `PPMrtdRecognizerResult` now returns date of expiry and date of birth as `NSDate` instead of `NSString`
+- all recognizer results (classes that derive `PPRecognizerResult`) now have annotated nullability for their getters. Some of them used to assume non-null, while still returning `nil` sometimes. This has now been corrected and all getters are `_Nullable`
+- Czech account number is now separated into first (prefix) and second part. First part is not mandatory on czech payslips.
+- improved amount parser
+- added support for returning optional data beyond the end of SEPA payment QR code
+
+## 5.3.0
+
+- added support for scanning Beneficiary name in slovenian payslips
+- added support for scanning PayerID from slip (if missing in OCR line) in hungarian payslips
+- improved czech code and symbol parsing
+- added support for recognizing SEPA payment QR codes
+
+## 5.2.0
+
+- iOS updates:
+	- added support for hungarian parsers in segment scan
+		- account number parser
+		- payer ID parser
+	- added support for slovenian parsers in segment scan
+		- reference parser
+	- improved Croatian ID recognition
+		- address parsing improved with dictionary
+		- first and last name parsing improved with dictionary
+
+## 5.1.0
+
+- iOS updates:
+	- Added support for Slovakian and German ID cards
+	- Added support for Austrian driver's license
+	- Improved scanning performance of Croatian ID cards
+
+- iOS bugfixes:
+	-Fixed localization issues
+
+## 5.0.3
+
+- iOS fixes:
+	- Fixed issue where scanning didn't work when user first accepted camera permission
+
+## 5.0.2
+
+- iOS fixes:
+	- CFBundleSUpportedPlatforms removed from Info.plist files
+	- Applying affine transformation to `PPQuadrangle` now correctly assigns points.
+	- When using both Direct API and `PPCameraCoordinator`, scanning results will now be correctly outputted to `PPCoordinatorDelegate` and `PPScanningDelegate` respectively
+	- Fixed crashes related to camera permissions and added dummy view when camera permission is disabled
+	- Fixed issues related to topLayoutGuide on iOS6
+	- Improved performance of CroID recognizers
+	- USDL elements can now be separated by \r
+	- Improved performance of Date parser
+	- Improved Macedonian reference and account parsers
+
+## 5.0.1
+
+- iOS updated:
+	- exposed new features of PPPriceOcrParserFactory
+
+## 5.0.0
+
+- iOS updates:
+
+	- Implemented `PPCameraCoordinator`. `PPCameraCoordinator` assumes the role of `PPCoordinator` from previous versions while new `PPCoordinator` is used for Direct API (image processing without camera out management).
+	- Increased speed of scanning for barcode type recognizers.
+	- Implemented `PPImage`. When using Direct API you can wrap `UIImage` and `CMSampleBufferRef` into `PPImage` to ensure optimal performance.
+	- Improved performance of Direct API. In addition, you can now use Direct API with your own camera management without any performance drawbacks.
+	- Added method `isCameraPaused` to `PPScanningViewController`.
+	- Added option to fllip input images upside down for processing with `cameraFlipped` property of `PPCameraSettings`.
+	- Implemented `PPViewControllerFactory` for managing creation of `PPScanningViewController` objects.
+	- `PPImageMetadata` now contains `PPImageMetadataType` property, which describes which image type was outputted
+	- Added option to mirror camera frames in 'PPCameraSettings'
+	- Added recognizer for Singapore ID
+	- Added recognizer for Austrian ID
+	- Added recognizer for Czech ID
+	- Improved Macedonian parsers
+	
+- iOS bugfixes:
+	- PPOcrEngineOptions are now applyed correctly when set
+
+## 4.6.4
+
+- Improved Parsing of Croatian reference number parser
+
+## 4.6.2
+
+- iOS bugfixes:
+
+- Fixed issue with presentation of some overlay subviews
+- Fixed issue with parsing amount on Swedish payment slips
+
+- Implemented templating API
+
+- Templating API allows implementing custom document scanners, linking specific parsers to specific locations on detected documents
+
+- Added license plate parser
+
+## 4.6.1
+
+- iOS bugfixes:
+
+    - Fixed issue with starting camera after first help display.
+    - Fixed possible deadlock in some cases when MRTD documents are scanned.
+
+- PhotoPay improvements
+
+    - Fixed issue with IBAN scanning on Slovenian UPN-s when 1D barcode is located on the slip
+    - Fixed Belgian reading of amounts on Belgian slips which are less than 1.00 EUR
+    - Added support for scanning Receiver name on Dutch Acceptgiros
+    - Added support for Scanning Slovakian and Czech QR codes
+    - SweGiroParser can now parse both BankGiro and PlusGiro
+    - fixed missing last digit (check digit) in SweReferenceParser
+    
+- ID scanning improvements
+
+    - Added EUDL recognizer (replaced UKDL recognizer). EUDL is capable of automatically detecting various EU Drivers licenses. Currently it works only on German and UK DLs.
+    - Fixed issue with 0 and O misclassifications in MRTD recognition
+    - Added support for Austrian MRTD ID documents
+
+- Internal changes:
+
+    - Implementeded Templating API for easier implementation of new document types
+    - Implemented Face detection
+    - Implemented support for Eastern Arabic numeral characters
+    
+## 4.6.0
+
+- PPOverlayViewController changed the way Overlay Subviews are added to the view hierarchy. Instead of calling `addOverlaySubview:` (which automatically added a view to view hierarachy), you now need to call `registerOverlaySubview:` (which registers subview for scanning events), and manually add subview to view hierarchy using `addSubview:` method. This change gives you more flexibility for adding views and managing autolayout and autoresizing masks.
+
+- Localization Macros MB_LOCALIZED and MB_LOCALIZED_FORMAT can now be overriden in your app to provide completely custom localization mechanisms.
+
+- `PPPhotoPayUiSettings` now has an option to display dots UI effect, when QR code is scanned. To enable it, use:
+
+```objective-c
+PPSettings* settings = [[PPSettings alloc] init];
+
+PPPhotoPayUiSettings *ppUiSettings = [[PPPhotoPayUiSettings alloc] init];
+ppUiSettings.displayBarcodeDots = YES;
+
+settings.uiSettings = ppUiSettings;
+```
+
+- Fixed issue with OCR speed on arm7 devices when Accelerate framework was used.
+
+- Improvements in Slovenian slip recognition
+
+    - fixed hang that occurred in slovenian PhotoPay on some poor quality slips
+    - improved quality and robustness of slovenian reference number parsing
+    - improved OCR quality of slovenian slip containing courier condensed font
+    
+- Improvements in Croatian slip recognition
+
+    - Fixed crash which happened when device was pointed something other than a payment slip
+    - Added scanning of Payer information from HUB1 and HUB3 barcodes
+    
+- Improvements in Segment scan
+
+    - Added Montenegro parsers
+    - Added Regex parser
+    
+- Improved detection of German payslips
+
+- Dramatically increased OCR engine initialization speed
+
+- Increased speed of scanning cancellation when Cancel button is pressed.
+
+## 4.5.1
+
+- Improved recognition of Slovenian payment slips
+
+    - Added support for RF references
+    - Reference is no longer required field for scanning, meaning payment slips which don't have reference number are now scanned much faster 
+
+## 4.5.0
+    
+- Improvements in Hungarian payslip scanning
+    - Fixed issue which caused dictionary not to be used while scanning beneficiary name
+    - Added reading of Amount from the upper part of the payslip
+    
+- Library format updated
+    - Smaller library size using link time optimizations
+    - Fewer exported symbols.
+    - Library is now static instead of Relocatable Object File
+    
+- Resource bundle updated
+    - Fixed issue with MicroBlinkResources.bundle while archiving application (Invalid `CFBundleExecutable` key)
+    - Renamed MicroBlinkResoucres.bundle to MicroBlink.bundle
+    
+- Better Swift interoperability
+    - Support for modules
+    - Added nullability annotations
+    
+- Bugfixes and tweaks in camera management code
+    - fixed potential deadlock when multiple instances of `PPCoordinator` objects are instantiated.
+    - exiting from the scanning when user presses "cancel" button is now faster
+    
+- Refactored `PPMetadataSettings` 
+    - Added debug metadata settings for debugging payslip detection and image processing
+    - `successfulScanFrame` renamed to `successfulFrame`
+    - `currentVideoFrame` renamed to `currentFrame`
+
+## 4.4.1
+
+- Improvements in Hungarian payslips scanning:
+
+    - Added dictionary postprocessing of recipient names
+    - fixed issue where payer ID was parsed as an account number
+    - small improvements in payslip detection
+
+- New Stuzza QR format supported in German recognition. Also, QR codes without BIC are now allowed.
+     
+- Fixed race condition which potentially crashed the scanner when user exited and entered camera screen consecutively very fast. 
+
+- Data extraction now exits immediately when user cancels scanning. 
+
+## 4.4.0
+
+- Framework is now distributed as a .framework + .bundle, instead of .embeddedframework. This helps keep resources in a separate "namespace", and avoids mistakes
+- The library inside the framework is now static library. This makes it easier to include the library inside other libraries.
+- PhotoPay on boarding is moved outside the library itself. The intention is to make it easier to modify and extend to the users of the library.
+
+- Improvements in the recognition process:
+    
+    - Added support for Hungarian White payslips
+    - Improved support for scanning Recipient name in Hungarian Yellow payslips.
+    - Improved support for scanning Reference numbers in Slovenina payslips
+    - Added Stuzza 2.0 QR code format in AusQRRecognizer
+
+- Bugfixes and tweaks in camera management code
+
+## 4.3.0
+
+- Added support for scanning recipient name in Hungarian payslips
+- Added bitcode support for Xcode 7
+
+## 4.2.0
+
+- iOS 9 introduced new app multitasking features Split View and Slide Over. When the scanner is on screen and one of those features are used, iOS automatically pauses the Camera (this behaviour is default as of iOS 9 beta 5). This SDK version introduces new setting in `PPUISettings` class, called `cameraPausedView`, where you can define the `UIView` which is presented centered on screen when this happens.
+
+- Frame quality estimation can now be enabled using `PPScanSettings frameQualityEstimationMode` property:
+    - when set to `PPFrameQualityEstimationModeOn`, frame quality estimation is always enabled
+    - when set to `PPFrameQualityEstimationModeOff`, frame quality estimation is always disabled
+    - when set to `PPFrameQualityEstimationModeDefault`, frame quality estimation is enabled internally, if the SDK determines it makes sense
+    
+- Better frame quality estimation: only the sharpest and the most focused frames now go to OCR processing
+
+- `PPScanningViewController` methods `pauseScanning`, `isScanningPaused`, and `resumeScanningAndResetState:` should now be called only from Main thread, and they are effective immediately. E.g., if `pauseScanning` is called and there is a video frame being processed, result of processing of that frame will be discarded, if `resumeScanningAndResetState:` isn't called in the meantime.
+
+- Added support for `PPCameraPresetPhoto` camera preset. Use this if you need the same zoom level as in iOS Camera app. The resolution for video feed when using this preset is the same as devices screen resolution.
+
+- Known issue: if you use Autorotate overlay feature, present `PPScanningViewController` as a modal view controller, and support Split View iOS 9 feature, then autorotation of camera overlays isn't correct. The best way is to opt-out of Split View feature (which Apple suggests for camera-centric apps), and wait for PhotoPay fix when iOS 9 comes out of beta.
+
+
+## 4.1.1
+- Worked around Apple bug in [NSString stringEncodingForData], which resulted with non-deterministic Croatian slip QR code scanning 
+
+## 4.1.0
+- Internal refactoring and cleanup
+- PPImageMetadata now correctly handles image rotation.
+- Direct API and regular camera management API can now be used simultaneously. 
+- Added feature for using native iOS orientation handling methods in `PPScanningViewController`
+
+## 4.0.3
+- Bugfixes and improvements in OCR engine and payslip scanning
+
+## 4.0.2
+- Improved BIC extraction
+- Bugfixes in Slovenian scanning
+
+## 4.0.1
+- Peformance improvements in OCR engine
+- Added Direct processing API
+- Added scanning of Optional data in croatian payment QR codes
+
+## 4.0.0
+- New API
+
+## 3.5.0
+- Tweaks in text parsing methods (Sieve algorithm)
+- PhotoPay.h renamed to PPScanner.h
+- PPPhotoPayDelegate renamed to PPScanDelegate
+- methods of the delegate renamed
+- These updates are performed for upcoming 4.0 version
+
+## 3.4.0
+- Added callback method for handling case when user doesn't authorise Camera access. In this method you have the chance to update the CameraViewController (or OverlayViewController) UI so that user knows why scanning won't work. 
+- Removed ViewfinderMoveable property
+
+## 3.3.0
+- Bug fixes and performance improvements
+- Added support for Swiss payslips
+
+## 3.2.1
+- Updated icons and launch images in Sample app
+
+## 3.2.0
+- Status bar is no longer set with [[UIApplication sharedApplication] setStatusBarStyle:statusBarStyle animated:animated], because this caused problems with FormSheet and PageSheet presentation styles.
+- Users of the library are now responsible for proper handling of status bar on pre iOS7 devices.
+- Help view fix for FormSheet and PageSheet modes
+
+## 3.1.1
+- Added OCR line support for new fonts for UK
+- Fixed amount reuse bug with consecutive scans when UINavigationController is used for presenting camera
+- Sample app converted to ARC
+- Documentation is split into two parts - README describing general PhotoPay integration, and CustomUI describing API for creating custom Camera Overlays.
+
+## 3.1.0
+- Default camera overlay is now improved for a better user experience
+- Added support for SEPA payslips in german scanner
+- Improved detection of German payslips
+- Fixed internal bugs and API inconsistencies
+
+- 3.1.0 includes changes to resource files in the framework. Some resource files were added, some were changed, and some were deleted. To avoid erros in building your app, it's best to remove the old PhotoPay.embeddedframework from your project, and add it again by drag-and-droping the new one to the Frameworks group. 
+
+After that, clean-build your application.
+
+## 3.0.6
+- Fix for crashing on pre iOS 7 devices
+
+## 3.0.5
+- Utility ID in Kosovo now returned without check digit
+- Fixed status bar style in camera view on fist app run
+
+## 3.0.4
+- Fixed scanning for Croatian Reference model 11
+
+## 3.0.3
+- Fixed problems with autorotation callbacks in overlay view not being called when autorotation is disabled
+- Camera can now be presented on UIPageViewController
+
+## 3.0.2
+- Removed unnecessary log outputs in run-time
+- Fixed whitespace handling in Austrian scanner
+
+## 3.0.1
+- Removed status bar properties from PPScanningViewController protocol. Replaced with preferredStatusBarStyle and prefersStatusBarHidden in PPOverlayViewController
+- Default PhotoPay Overlay for Austria, Croatia, Germany, Slovenia and Belgium is now rotation independent.
+- kPPHudOrientation replaced with kPPOverlayShouldAutorotate.
+  - HUD orientation is now determined optimally inside PhotoPay library
+  - Autorotation can now be explicitly disallowed, e.g when presenting camera on NavigationController or when presenting as FormSheet or PageSheet 
+- Removed deprecated methods from PPOverlayViewController
+- Fixed crash when Overlay those orientations which are not supported by the app. Now overlay works in that situations.
+- Fixes in Austrian Amount and Bank Account number scanning
+- Added additonal scanning fields in German QR code scanning
+
+## 3.0.0
+- By Semantic versioning, since this version is not completely backwards compatible with previous versions, we increased the Major version number.
+- Tweaks to OCR engine and text recognition
+- Bugfixes in Austrian OCR recognition
+- `PPRecognitionResult` object no longer has convenience properties for, e.g., account number, iban, reference number, etc. You can access that values using `fields` dictionary.
+- Changes to API method for retrieving recognition results:
+
+instead of using 
+
+	- (void)cameraViewController:(UIViewController<PPScanningViewController>*)cameraViewController
+         	 didFinishWithResult:(PPRecognitionResult*)result;
+         
+Use:
+
+	- (void)cameraViewController:(UIViewController<PPScanningViewController>*)cameraViewController
+            	didOutputResults:(NSArray*)results;
+            
+New method adds an additional layers of abstraction to result obtaining. It makes possible several new features, most importantly, returning more than one recognition result, and returning results other than payslip scanning results (for example, pure OCR or barcode scanning results).
+
+Objects passed in NSArray* `results` are always of type `PPBaseResult`. `PPRecognitionResult` (object passed in the all callback method) is now a subclass of `PPBaseResult`.
+
+How to implement the new API?
+
+1. Rename `cameraViewController:didFinishWithResult` to, i.e. `processRecognitionResult`
+2. Implement `cameraViewController:didOutputResults`. Commonly, it can be implemented in the following way:
+
+		- (void)cameraViewController:(UIViewController<PPScanningViewController> *)cameraViewController
+            		didOutputResults:(NSArray *)results {
+    		// find the first recognition result and present it.
+    		// you can have more complex logic here, which can, for example compare fields in multiple results
+
+    		[results enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        		PPBaseResult* result = (PPBaseResult*)obj;
+        		if ([result resultType] == PPBaseResultTypePhotoPay) {
+            		PPRecognitionResult* recognitionResult = (PPRecognitionResult*)result;
+            		[self processRecognitionResult:recognitionResult];
+            		*stop = YES;
+        		}
+    		}];
+
+    		[self dismissCameraViewControllerModal:useModalCameraView];
+		}
+3. Test to see if it works.
+
+## 2.5.1
+- Fixed model and reference parsing when there was no whitespace between the fields on Croatian payslips
+- Improved reading on Kosovo slips with Generalized OCR Line detector
+- Fixed check digit inclusion on Kosovo data
+- Added ROI for scanning Kosovo slips
+- Fixed drawing of OCR results when ROI is used
+
+## 2.5.0
+- support for reading `Payer name` in Croatia
+- support for turning reading of `Payer name` and `Payment description` on or off on Croatian slips
+- added branding for HSBC app
+- added a feature for customising camera view status bar appearance and visibility
+
+## 2.4.0
+- Added HUB3 QR Code for Croatian scanning
+- Enabled use of integrated barcode scanner
+- Code 39 and Code 128 are now handled by a completely new and improved algorithm
+- Fixed autofocus problem on iPod Touch 4th Gen
+- Improved scanning on iPod Touch 5th gen by enforcing 720p resolution
+- Added OCR result drawing for countries which have OCR line scanning (Dutch, UK, Kosovo...)
+- Package now contains additional file (buildCommit.txt) for easier point version bugfixes
+- Fixed issue with scanning Account number on German SEPA QR code
+- Implemented initial scanning of payslips for Kosovo
+
+## 2.3.5
+- Added full support for UK Bank Giro Credit scanning
+- Updated demo app effect when the bill is paid
+
+## 2.3.4
+- Support for Xcode 5.1. Updated project settings
+
+## 2.3.3
+- Support for basic UK Giro slip scanning
+
+## 2.3.2
+- Croatian reference model now returns HR prefix if it exists on the payslip
+- All strings returned by PhotoPay now have ASCII encoding fallback. This means no more "Error in encoding!" messages should appear in scanning results.
+
+## 2.3.1
+- fixed Austrian STUZZA QR code parsing - now supports both LF and CRLF line endings and does not confuse reference number and payment description
+
+## 2.3.0
+- improved croatian reference extraction
+- determining croatian refernence status
+- several bugfixes in detection algorithm
+
+## 2.2.2
+- Added simple OCR result drawing in camera overlay
+- Improved payment description reading for Croatian payslips
+- Fixed issue with Austrian QR codes containing ECI encoding
+
+## 2.2.1
+- Updated Hungarian build for old and legendary yellow payslips  
+
+## 2.2.0
+- Improved OCR for Croatian payslips
+- Added new field for Croatian scanning "Reference number insecure"
+- Fixed issue with returning completely empty results in some cases when scanning timeout occurs 
+
+## 2.1.0
+- Added data sanitization for Croatian payslips
+- Additional bugfixes and improvements
+- Fixed Barcodes with LF chars on Austrian payslips
+- Fixed issue with visible status bar when using View controller-based status bar appearance
+
+## 2.0.5
+- Improvements to Slovenian slip scanning
+- Fixed issue with presenting camera view on navigation view controller.
+
+## 2.0.4
+- Support for setting custom language via API
+- Optimization for Sieve algorithm for OCR result aligning
+
+## 2.0.3
+- Fix to UIStatusBarStyle change issue when returning from CameraViewController
+- OverlayViewController appearance callback are now correctly forwarded
+
+## 2.0.2
+- Orientation of payment slip detection can now be specified according to OverlayViewController orientation.
+- Dutch payslip scanning now supports scanning in all orientations specified by Overlay View Controller.
+
+## 2.0.1
+- Fixes to duplicate class names in Demo app in this SDK
+
+## 2.0.0
+- Simplifications to UI overlay concept
+- Support for form/page sheet modal styles on iPad
+- New options for setting the position of viewfinder for Dutch builds
+- Improved PDF417 barcode scanning
+- More advanced API - added support for pausing/resuming scanning which can be used to scan multiple payslips/barcodes before proceeding to checkout
+- Issue with isPhotoPayUnsupported method resolved, now recognizes devices without camera
+- Devices with high camera resolution can now be held much higher than before when scanning Dutch payslips. This solves some of the scanning issues.
+- Status bar style is now set only for iOS 6 and older devices. Also, tests performed with status bar style, since the old style is popped from a stack in viewWillDissapear of CameraViewController, it shouldn't interfere with style of the caller
+
+## 1.8.5
+- Minimum iOS deployment target is now set to 5.0
+- Added support for armv7s architectures
+- Chanaged standard c++ library from libstdc++ to libc++
+
+## 1.8.4
+- Improved image processing with smarter threshold calculation
+- Payment description scanning in croatian slips now more reliable
+- Added scanning of recipient address for barcodes on croatian slips
+- Faster frame quality estimation and image initialization
+- New ABBYY version
+- Other stability improvements and bugfixes
+- Support for unlimited text lengths in help screens
+
+## 1.8.3
+- Major refactor of UI layer
+- Quicker camera load
+- Improved focus management, meaning now frames that are coming to OCR are less blurred which results with faster and
+more reliable scanning
+- New localization files (Slovenian, French)
+
+## 1.8.2
+- new QR code features for Austria
+- Hardware accelerated viewfinder
+
+## 1.8.1
+- Slovenian version now scans payment description
+- Bugfix for scanning with sudden movements of the phone
+- Updated strings
+- Support for Austrian payslips with nonstandard amount printed on the bottom
+- Support for arbitrary length austrian reference numbers
+
+## 1.8.0
+- More advanced algorithm for Dictionary
+- Focused frame selection bugfix
+
+## 1.7.9
+- Added Dictionary checking for tokens returned by Ocr Engine
+
+## 1.7.8
+- Added sound on successful scan
+- Fix for Austrian amounts in format like ==3.600,--
+- Whitespace fix for text recognition
+- More improvements to Sieve boosting algorithm
+- Added help screen with a message to check results
+
+## 1.7.7
+- Sieve algorithm improved, results are not boosted between results
+- Belegart recognition in Austria improved, detection algorithm for non SEPA slips improved
+- Positioning of some elements fixed, especially on wide screen phones
+- In Austria, detection frame is now unmovable. 
+
+## 1.7.6
+- Multiple recognitions of receiver name in Austrian slips
+- Implemented basic Sieve method for video OCR algorithm
+
+## 1.7.5
+- Autoupdate functionality made more reliable
+- Testing app more robust, serial dispatch queue used for saving of usage data
+- PDF417 update for Croatian payslips
+
+## 1.7.4
+- Added autoupdate functionality
+
+## 1.7.3
+- Reading of Prufziffer and Belegnr. for Austrian slips
+- Slightly modified status text on camera view (larger text, darker background)
+- Kundendaten is returned on non-Sepa slips. Otherwise reference number is returned.
+
+## 1.7.1
+- Implemented Slovenian check digit calculators
+- Slovenian recognition updated to new image processing algorithm and processing by regions
+- Austrian recognition handles tax slips
+- Fixed problem with recognition of Austrian BLZs
+- Payment description recognized if reference is not present on Austrian slips
+
+## 1.7.0
+- Added polishers which fix some obvious gramatical errors in recognition results
+- Fixed german localization
+- Additional stability and bug fixes
+
+## 1.6.8
+- Framework is now ARC ready.
+- Viewfinder color can now be modified externally
+- Fixed to some german localisation strings
+- Added formatting of IBANs in groups of 4 chars in demo app
+- Some stability issues solved
+- Added DataType property in RecognitionResult, this enables users of the library to know what was scanned (QR code or some slip type)
+
+## 1.6.7
+- modifications for iPad
+
+## 1.6.6
+- Tweaks to Austrian recognition, especially TextBlock extractor
+- Toast messages now have minimum duration - fixed problem on too fast devices which caused messages to be unreadable
+- Camera management improvements
+
+## 1.6.4
+- Changed internal structure of recognition result - now fields are stored inside NSDictionary object
+- Existing properties are not changed
+- Updated documentation to for new result obtaining method
+- Numerous bugfixes in austrian recognition
+- Removed alert view for partial recognition - now after timeout you receive the data on `cameraViewController:didFinishWithResult delegate method.
+
+## 1.6.3
+- Simplified distribution method for iphone
+- Fixed problem with new help view which was not displayed on viewWillAppear
+- Sample app uses modal camera view controller
+- Language checks are now performed. If language is not set, or set to unsupported language, language is set to phone's default language.
+- Fixed autorotation problem on iOS 6
+
+## 1.6.1
+- Added kontocheck - collection of algorithms for checking validity of german and austrian bank account numbers
+
+## 1.6.0
+- New image processing algorithm
+- Payment forms are now recognized field by field instead all fields at once
+- New UI, supports all orientations, depending on the payment slip dimensions
+- Added QR code support for Austrian BDT format
+- Improved detection algorithm with robust thresholding and new scan line generation strategy
+
+## 1.5.2
+- Faster image preprocessing for QR codes
+- Fix for hangs in BIC recognition
+
+## 1.5.0
+- QR Code recognition made more robust in combination with OCR
+- Tweaked Austrian recognition
+- Fixed bug in recognition of empty elements
+
+## 1.4.5
+- Fixed a problem with autofocus
+- Added support for high res video frames
+- Increased resolution of processed frames before OCR
+- Tweaked postprocessing for germany
+
+## 1.4.3
+- Added device specific recognition parameters and camera options
+- Improved recognition confidence with reusing subsequent recognition results
+- Accelerometer control changes - now high pass filter to get more accurate measurements
+
+## 1.4.0
+- Improved detection algorithm generation with internal tools
+- Fixed image deformation problem with GPU dewarping
+
+## 1.3.8
+- Fixed bug with pre iOS 5 video orientation
+- Fixed bug with ROI in image preprocessing
+
+## 1.3.7
+- Updated to Xcode 4.5
+- Updated to new version of Ocr engine
+- License file for ocr engine now needed to initialize Ocr engine
+
+## 1.3.6
+- Added support for reading QR codes
+
+## 1.3.5
+- Using single OpenGL context which additionally speeds up the processing and fixes the hanging bug
+- Added arbitrary text block extractor
+- Updated ACS algorithm 
+
+## 1.3.1
+- Further improvements to adaptive contrast stretching
+- Detection algorithm allows more flexibility
+
+## 1.3.0
+- Added adaptive contrast stretching for improving recognition in bad light conditions
+- Improved recognition speed with doing ocr by regions
+- Fixed a memory leak with patterns file
+- Improved postprocessing of croatian amounts
+
+## 1.2.7
+- Added automatic white balance detection for improving detection
+- Small corrections to contrast stretching method
+- Rectangle sent to recognition now stretched to allow errors in slip printing
+- Improved speed of detection algorithm witch non constant number of iterations
+
+## 1.2.5
+- Fixed a problem with detection of croatian slips
+
+## 1.2.4
+- Added options for disabling toast messages and setting the partial recognition time interval
+
+## 1.2.3
+- Fixed bug which disabled OpenGL support
+- Added additional checks for OpenGL geometry operations which fallback to CPU on special events
+- Log.h now private header
+- Localization macros now defined only if not defined before so users can provide their own localization methods
+- Disabled sound that marked successful detection because it became too fast on faster phones
+
+## 1.2.2
+- Added croatian localization for "photopay_camera_too_high" string
+- Timer for recognition timeout now starts on first failed recognition and lasts for 15 seconds
+- Fixed toast message lifecycle in some situations (weird behavior on partial recognition followed by camera too high)
+
+## 1.2.1
+- Fixes to alert view showing partial recognition results
+
+## 1.2.0
+- Improved recognition speed with geometry transformation moved to GPU
+- Detection algorithm made more robust
+- OCR speed increase
+
+## 1.1.2
+- Fixed errors in iPhone simulator builds
+
+## 1.1.1
+- Improvements to detection algorithm
+- Improvements to OCR postprocessing algorithm for recognition of slovenian reference numbers
+
+## 1.1.0
+- HUB3, UPN standard support
+- Added detection of payment form and perspective correction
+- Added UI animation
+- Added tap to focus support
+- Library now distributed as a framework
+
+## 1.0.0
+- Basic functionality
