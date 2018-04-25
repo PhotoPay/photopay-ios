@@ -1,5 +1,110 @@
 # Release notes
 
+## 5.14.1
+
+- Bugfixes
+    - Fixed errors related to fetching document number from Egyptian ID
+    - Fixed errors related to fetching validFrom and validUntil dates from Malaysian DL
+    - Fixed errors related to returning and encoding face and full document images when using `PPJordanIDCombinedRecognizerSettings`
+    - Fixed dateOfExpiry property type from `NSString` to `NSDate` on  `PPJordanIDCombinedRecognizerSettings`
+    - Fixed crashes that happened when trying to activate the torch while video input hasn't loaded
+    - Fixed rare OpenGL crash that happened on resigning VC activities
+    - Fixed error where app upload to the store would be rejected because of missing bitcode
+    - Fixed document number fetching from Egyptian ID result
+    - Fixed return types of date field on Malaysian DL
+
+## 5.14.0
+
+- Updates and additions
+    - added support for reading front and back side of Jordan ID - use `PPJordanIDFrontRecognizerSettings` and `PPJordanIDBackRecognizerSettings`
+    - added Jordan Combined Recognizer - use `PPJordanIDCombinedRecognizerSettings`
+    - added support for reading Egyptian ID Front - use `PPEgyptIDFrontRecognizerSettings`
+    - added support for reading Malaysian DL Front - use `PPMalaysianDLFrontRecognizerSettings`
+    - added support for reading Malaysian Passport IMM13P MRTD - be sure to set `allowSpecialCharacters` to `true` when creating `PPMrtdRecognizerSettings`
+
+- Improvements in ID scanning performance
+    - Improved reading Malaysian MyKad and MyTentera
+    - Improved reading VINs
+    - Improved parsing of USDL
+
+- Bugfixes
+    - Fixed reading amount, reference and bic on Slovenian payment slip
+    - Fixed expiry date for magnetic stripe USDL subtype - using day of birth not last day of the month for license expiry day
+    - Fixed rare crashes that sometimes happened when trying to fetch unparsed dates
+
+
+
+## 5.13.0
+
+- Updates and additions
+    - added support for reading front side of Hong Kong ID - use `PPHongKongIDFrontRecognizerSettings`
+    - added support for reading front and back side of Colombian ID - use `PPColombiaIDFrontRecognizerSettings` and `PPColombiaIDBackRecognizerSettings`
+    - added support for reading front and back side of United Arab Emirates ID - use `PPUnitedArabEmiratesIDFrontRecognizerSettings` and `PPUnitedArabEmiratesIDBackRecognizerSettings`
+    - added support for reading front side of New Zealand drivers license - use `PPNewZealandDLFrontRecognizerSettings`
+    - added support for reading back side of Malaysian MyKad - use `PPMyKadBackRecognizerSettings`
+    - added support for reading Malaysian MyTentera documents - use `PPMyTenteraRecognizerSettings`
+    - added support for reading Malaysian MyTentera documents with MyKad recognizer - use `PPMyKadFrontRecognizerSettings` and enable reading of army number
+    - added support for setting DPI for full document images returned by `PPMyKadFrontRecognizerSettings`, `PPMyKadBackRecognizerSettings`, `PPMyKadFrontRecognizerSettings` and `PPIKadRecognizerSettings`:
+    - use `fullDocumentImageDPI` on the corresponding recognizer settings
+    - added full support for iPhone X layout for all SDK's overlay views
+
+- Minor API changes
+    - renamed `PPMyKadRecognizerSettings` and `PPMyKadRecognizerResult` to `PPMyKadFrontRecognizerSettings` and `PPMyKadFrontRecognizerResult`
+
+- Improvements in ID scanning performance
+    - Improved reading of Belgium ID BRZ OPT2 field
+    - added support for reading Belgium MRZ with partial date of birth - `PPMrtdRecognizerSettings.allowUnverifiedResults` must be set to `true`
+    - added support for reading Kenya MRZ - `PPMrtdRecognizerSettings.allowUnverifiedResults` must be set to `true`
+    - improved `MyKadFrontSideRecognizer` and `MyTenteraRecognizer`:
+        - better reading of name field
+        - better reading of address field
+    - improved `PPAustraliaDLFrontRecognizer`:
+        - improved reading of names and addresses
+        - added support for reading first names with more words
+    - improved `PPSingaporeIDFrontRecognizer`:
+        - tuned ID card data extraction positions
+    - improved Malaysian `IKadRecognizer`:
+        - better reading of date of expiry and employer fields
+
+- Bugfixes
+    - fixed incorrect setting of missing dates to current date in MRTD recognizers. If date is not present in MRTD, the corresponding getter will now return nil
+    - fixed an error where application would sometimes crash because of `PPModernToastOverlaySubview` constraints
+	- when setting DPI for full document image in concrete recognizer settings that has property `fullDocumentImageDPI`, exception is thrown if DPI value is not in the expected range `[100, 400]`
+	- fixed a crash in Templating API caused by using a `MultiDetector` with `DetectorRecognizer`
+        - fixed returning of face image when using `PPUnitedArabEmiratesIDFrontRecognizer`:
+            - fixed face image position
+    - fixed crash in `PPDocumentFaceRecognizer`
+
+
+## 5.12.1
+
+- Bugfixes:
+    - fixed an issue where toast messages were not displayed when set
+    - fixed reading of Czech QR codes which contain encoded URLs
+    - fixed reading of Croatian HUB3 payment PDF417 barcodes:
+    - added support for reading barcodes whose encoding is not explicitly defined and encoding is cp1250
+    
+## 5.12.0
+
+- Updates and additions
+    - added support for reading back side of new Australian Driver's licence for state Victoria - use `PPAustraliaDLBackRecognizerSettings` and `PPAustraliaDLBackRecognizerResult`
+    - added support for reading front side of Indonesian ID - use `PPIndonesianIDFrontRecognizerSettings` and `PPIndonesianIDFrontRecognizerSettings`
+    - added support for Malaysian visa with document code TS - use `PPMrtdRecognizerSettings` and `PPMrtdRecognizerResult`
+    - added support for setting DPI for full document images returned by `PPMrtdRecognizerSettings`, `PPAustraliaDLBackRecognizerSettings`, `PPAustraliaDLFrontRecognizerSettings` and `PPEudlRecognizerSettings`:
+        - use `fullDocumentImageDPI` on the corresponding recognizer settings
+    - added full support for iPhone X layout for all SDK's overlay views
+
+- Minor API changes
+    - removed `imageDPI` property on `PPTemplatingRecognizerSettings`        
+
+- Improvements in ID scanning performance:
+    - `PPCroSlipRecognizer`: added support for Croatian references with models 64, 26, 35, 40, 69
+    - improved parsing of payment QR codes
+    - improved reading of Malaysian MyKad address   
+
+- Bugfixes:
+    - added missing document classifier property `documentClassifier` to `PPTemplatingRecognizerSettings`   
+
 ## 5.11.0
 
 - Updates and additions
