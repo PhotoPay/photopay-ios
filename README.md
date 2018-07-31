@@ -13,6 +13,11 @@ PhotoPay SDK is a delightful component for quick and easy scanning of payment sl
 - data parsing from payment slips and barcode standards
 
 PhotoPay is a part of family of SDKs developed by [MicroBlink](http://www.microblink.com) for optical text recognition, barcode scanning, ID document scanning, payment slips and barcodes and many others.
+
+## SDK download
+
+To download the SDK, please contact us at sales@microblink.com.
+
 # Table of contents
 
 * [Requirements](#requirements)
