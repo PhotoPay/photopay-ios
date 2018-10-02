@@ -1,5 +1,67 @@
 # Release notes
 
+## 7.1.0
+
+- Updates and additions
+    - Added support for reading front side of Spain Driver's License - use `MBSpainDlFrontRecognizer`
+    - Added support for reading front side of UAE Driver's License - use `MBUnitedArabEmiratesDlFrontRecognizer`
+    - Added support for reading front side of Cyprus ID card - use `MBCyprusIdFrontRecognizer`
+    - Added support for reading back side of Cyprus ID card - use `MBCyprusIdBackRecognizer`
+    - Added support for reading front side of Kuwait ID card - use `MBKuwaitIdFrontRecognizer`
+    - Added support for reading back side of Kuwait ID card - use `MBKuwaitIdBackRecognizer`
+    - Added support for reading front side of Payment Card - use `MBPaymentCardFrontRecognizer`
+    - Added support for reading back side of Payment Card - use `MBPaymentCardBackRecognizer`
+    - Added support for reading front and back side of Payment Card - use `MBPaymentCardCombinedRecognizer`
+    - Added support for optional protocol method implementation in `MBDocumentVerificationOverlayViewControllerDelegate` - `documentVerificationOverlayViewControllerDidFinishScanningFirstSide:`
+    - Added support for reading back side of Morocco ID card - use `MBMoroccoIdBackRecognizer`
+    - Added support for reading Singapore Changi Employee ID card - use `MBSingaporeChangiEmployeeIdRecognizer`
+    - Added support for reading front side of Irish Driver's License - use `MBIrelandDlFrontRecognizer`
+    - Added support for reading front side of Colombian Driver's License - use `MBColombiaDlFrontRecognizer`
+    - Added support for reading residential status on front side of Hong Kong ID Card
+    - Added support for reading partial dates on all MRTD documents
+    - Added support for returning encoded images on all recognizers that support image return
+    - Added support for checking if scanning is unsupported for camera type on `MBRecognizerRunnerViewController`
+    - Added support for reading sticker with new address on back side of Singapore ID card
+    - Added missing `oldNric` property on `MBMyKadBackRecognizerResult`
+    - Added missing `currencyCode` property on `MBSwitzerlandSlipRecognizerResult`
+    - Added `allowUnparsedResults` and `allowUnverifiedResults` properties on `MBMrtdCombinedRecognizer`
+    - Added `required` property on `MBParser` which defines whether the parser configured with this parser settings object will be required or optional
+
+- Improvements in ID scanning performance
+    - Added support for reading sticker with new address on back side of Singapore ID card with `MBSingaporeCombinedRecognizer`
+    - Performance improvements
+    - Improved reading of New Zealeand Driver's License
+    - Improved reading of Malaysian Driver's License
+    - Improved reading of Croatian PDF417 payment codes
+    - Better name and nationality extraction on `MBUnitedArabEmiratesIdFrontRecognizer`
+
+- Minor API changes
+    - Renamed properties in `MBCroatiaIdBackRecognizerResult`:
+        - `address` to `residence`
+        - `documentForNonResident` to `isDocumentForNonResident`
+        - `issuingAuthority` to `issuedBy`
+        - MRZ fields are available through `MBMrzResult` which can be obtained by using property `mrzResult`
+    - Renamed properties in `MBSingaporeIdFrontRecognizerResult`:
+        - `cardNumber` to `identityCardNumber`
+    - Renamed properties in `MBSingaporeCombinedRecognizerResult`:
+        - `cardNumber` to `identityCardNumber`
+        - `bloodGroup` to `bloodType`
+    - Renamed properties in `MBCroatiaIdFrontRecognizerResult`:
+        - `identityCardNumber` to `documentNumber`
+    - Renamed properties in `MBMalaysiaDlFrontRecognizer`:
+        - `state` to `ownerState`
+        - `zipCode` to `zipcode`
+    - Renamed properties in `MBIndonesiaIdFrontRecognizer`:
+        - `validUntil` to `dateOfExpiry`
+        - `validUntilPermanent` to `dateOfExpiryPermanent`
+    - `isScanningUnsupportedForCameraType:` is now class method of `MBMicroblinkSDK`    
+
+- Bugfixes
+    - Fixed bug where SDK crashed with exception when the user wanted to use custom resource bundle
+    - Fixed memory leak when image is created using CMSampleBuffer
+    - Fixed signing identifier when creating custom builds
+    - Various other bug fixes and improvements
+
 ## 7.0.0
 
 - new API, which is not backward compatible. Please check [README](README.md) and updated demo applications for more information, but the gist of it is:
@@ -11,6 +73,25 @@
     - introduced `MBProcessor` concept. For more information, check updated code samples, [README](README.md) and [this blog post](https://microblink.com/blog/major-change-of-the-api-and-in-the-license-key-formats)
 - new licence format, which is not backward compatible. Full details are given in [README](README.md) and in updated applications, but the gist of it is:
     - licence can now be provided with either file, byte array or base64-encoded bytes
+
+## 5.15.0
+    
+- Updates and additions
+    - Added support for reading front side of Swedish Driver's License- use `PPSwedenDLFrontRecognizerSettings`
+    - Added ability to extend full document cropping zone on `PPGermanIDFrontRecognizerSettings`
+    - Added support for CAN number extraction on German ID Front
+    - Added support for iKAD MM55 ID's
+    
+- Improvements in ID scanning performance
+    - Improved reading of document number on Hong Kong ID
+    - Improvements when returning partial data in Document Face Recognizer
+    - Improvements in USDL data parsing
+    - when `PPDocumentFaceRecognizer` is activated at the same time with another more specific recognizer(s) (e.g. EUDL Recognizer), preference is given to the more specific recognizer which means that it will get a chance to extract additional data from the concrete document type
+    
+- Bugfixes
+    - Added support for nonstandard pdf417 barcodes  which wrongly encode number of data codewords
+    - `coordinatorDidDealloc` method in `PPCoordinatorDelegate` is now correctly called when all resources are released
+    - fixed reading of IBAN and BIC numbers in payment CzechQRCodeRecognizer
 
 ## 5.14.1
 
@@ -115,7 +196,7 @@
     - improved reading of Malaysian MyKad address   
 
 - Bugfixes:
-    - added missing document classifier property `documentClassifier` to `PPTemplatingRecognizerSettings`   
+    - added missing document classifier property `documentClassifier` to `PPTemplatingRecognizerSettings`    
 
 ## 5.11.0
 
@@ -173,7 +254,7 @@
 - Bug fixes
     - fixed amount parsing from German BezahlCode
         - 0.8 is now parsed as 80 cents, not as 8 cents anymore
-    - fixed autorotation of overlay view controller
+    - fixed autorotation of overlay view controller  
 
 ## 5.10.1
 
