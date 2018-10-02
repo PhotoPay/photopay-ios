@@ -13,11 +13,6 @@ PhotoPay SDK is a delightful component for quick and easy scanning of payment sl
 - data parsing from payment slips and barcode standards
 
 PhotoPay is a part of family of SDKs developed by [MicroBlink](http://www.microblink.com) for optical text recognition, barcode scanning, ID document scanning, payment slips and barcodes and many others.
-
-## SDK download
-
-To download the SDK, please contact us at sales@microblink.com.
-
 # Table of contents
 
 * [Requirements](#requirements)
@@ -44,7 +39,6 @@ To download the SDK, please contact us at sales@microblink.com.
         * [BlinkInput recognizer](#blinkInputRecognizer)
         * [Detector recognizer](#detectorRecognizer)
         * [BlinkID recognizers by countries](#blinkIdRecognizersByCountry)
-        * [PhotoPay recognizers by countries](#photopayRecognizersByCountry)
     * [`Field by field` feature](#fieldByFieldFeature)
 * [`MBProcessor` and `MBParser`](#processorsAndParsers)
     * [The `MBProcessor` concept](#processorConcept)
@@ -72,6 +66,7 @@ To download the SDK, please contact us at sales@microblink.com.
     * [List of available detectors](#detectorList)
         * [Document Detector](#documentDetector)
         * [MRTD Detector](#mrtdDetector)
+* [Creating customized build of PhotoPay SDK](#customizedBuild)
 * [Troubleshooting](#troubleshoot)
     * [Integration problems](#integrationTroubleshoot)
     * [SDK problems](#sdkTroubleshoot)
@@ -686,291 +681,346 @@ This recognizer can be used in any overlay view controller, but it works best wi
 
 #### <a name="austriaBlinkId"></a> Austria
 
-The [`MBAustriaIdFrontRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBAustriaIdFrontRecognizer.html) is recognizer specialised for scanning front side of Austrian ID.
+The [`MBAustriaIdFrontRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBAustriaIdFrontRecognizer.html) is recognizer specialised for scanning front side of Austrian ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
-The [`MBAustriaIdBackRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBAustriaIdBackRecognizer.html) is recognizer specialised for scanning back side of Austrian ID.
+The [`MBAustriaIdBackRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBAustriaIdBackRecognizer.html) is recognizer specialised for scanning back side of Austrian ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
-The [`MBAustriaPassportRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBAustriaPassportRecognizer.html) is recognizer specialised for scanning Austrian Passports.
+The [`MBAustriaPassportRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBAustriaPassportRecognizer.html) is recognizer specialised for scanning Austrian Passports.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
-The [`MBAustriaCombinedRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBAustriaCombinedRecognizer.html) is recognizer specialised for scanning both front and back side of Austrian ID.
+The [`MBAustriaCombinedRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBAustriaCombinedRecognizer.html) is recognizer specialised for scanning both front and back side of Austrian ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentVerificationOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentVerificationOverlayViewController.html), which has UI best suited for both side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentVerificationOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentVerificationOverlayViewController.html), which has UI best suited for both side document scanning.
 
 #### <a name="australiaBlinkId"></a> Australia
 
-The [`MBAustraliaDlFrontRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBAustraliaDlFrontRecognizer.html) is recognizer specialised for scanning front side of Australian Driver's License.
+The [`MBAustraliaDlFrontRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBAustraliaDlFrontRecognizer.html) is recognizer specialised for scanning front side of Australian Driver's License.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
-The [`MBAustraliaDlBackRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBAustraliaDlBackRecognizer.html) is recognizer specialised for scanning back side of Australian Driver's License.
+The [`MBAustraliaDlBackRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBAustraliaDlBackRecognizer.html) is recognizer specialised for scanning back side of Australian Driver's License.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
 #### <a name="colombiaBlinkId"></a> Colombia
 
-The [`MBColombiaIdFrontRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBColombiaIdFrontRecognizer.html) is recognizer specialised for scanning front side of Colombian ID.
+The [`MBColombiaIdFrontRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBColombiaIdFrontRecognizer.html) is recognizer specialised for scanning front side of Colombian ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
-The [`MBColombiaIdBackRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBColombiaIdBackRecognizer.html) is recognizer specialised for scanning back side of Colombian ID.
+The [`MBColombiaIdBackRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBColombiaIdBackRecognizer.html) is recognizer specialised for scanning back side of Colombian ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+
+The [`MBColombiaDlFrontRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBColombiaDlFrontRecognizer.html) is recognizer specialised for scanning front side Colombian Driver's License.
+
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
 #### <a name="croatiaBlinkId"></a> Croatia
 
-The [`MBCroatiaIdFrontRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBCroatiaIdFrontRecognizer.html) is recognizer specialised for scanning front side of Croatian ID. It always extracts
+The [`MBCroatiaIdFrontRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBCroatiaIdFrontRecognizer.html) is recognizer specialised for scanning front side of Croatian ID. It always extracts
 identity card number, first and last name of ID holder while extracting other elements is optional.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
-The [`MBCroatiaIdBackRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBCroatiaIdBackRecognizer.html) is recognizer specialised for scanning back side of Croatian ID. It always extracts
+The [`MBCroatiaIdBackRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBCroatiaIdBackRecognizer.html) is recognizer specialised for scanning back side of Croatian ID. It always extracts
 MRZ zone and address of ID holder while extracting other elements is optional.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
-The [`MBCroatiaCombinedRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBCroatiaCombinedRecognizer.html) is recognizer specialised for scanning both front and back side of Croatian ID.
+The [`MBCroatiaCombinedRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBCroatiaCombinedRecognizer.html) is recognizer specialised for scanning both front and back side of Croatian ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentVerificationOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentVerificationOverlayViewController.html), which has UI best suited for both side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentVerificationOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentVerificationOverlayViewController.html), which has UI best suited for both side document scanning.
+
+#### <a name="cyprusBlinkId"></a> Cyprus
+
+The [`MBCyprusIdFrontRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBCyprusIdFrontRecognizer.html) is recognizer specialised for scanning front side of Czprus ID.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+
+The [`MBCyprusIdBackRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBCyprusIdBackRecognizer.html) is recognizer specialised for scanning back side of Croatian ID.
+
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
 #### <a name="czechiaBlinkId"></a> Czechia
 
-The [`MBCzechiaIdFrontRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBCzechiaIdFrontRecognizer.html) is recognizer specialised for scanning front side of Czech ID.
+The [`MBCzechiaIdFrontRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBCzechiaIdFrontRecognizer.html) is recognizer specialised for scanning front side of Czech ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
-The [`MBCzechiaIdBackRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBBackIdBackRecognizer.html) is recognizer specialised for scanning back side of Czech ID.
+The [`MBCzechiaIdBackRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBBackIdBackRecognizer.html) is recognizer specialised for scanning back side of Czech ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
-The [`MBCzechiaCombinedRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBCzechiaCombinedRecognizer.html) is recognizer specialised for scanning both front and back side of Czech ID.
+The [`MBCzechiaCombinedRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBCzechiaCombinedRecognizer.html) is recognizer specialised for scanning both front and back side of Czech ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentVerificationOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentVerificationOverlayViewController.html), which has UI best suited for both side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentVerificationOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentVerificationOverlayViewController.html), which has UI best suited for both side document scanning.
 
 #### <a name="eudlBlinkId"></a> European Driver License
 
-The [`MBEudlRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBEudlRecognizer.html) is recognizer specialised for scanning EU Driver License. Supported countries are Austria, Germany, United Kingdom and any (generic) EU driver license. List can be found in [`MBEudlCountry`](http://photopay.github.io/photopay-ios/Enums/MBEudlCountry.html)
+The [`MBEudlRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBEudlRecognizer.html) is recognizer specialised for scanning EU Driver License. Supported countries are Austria, Germany, United Kingdom and any (generic) EU driver license. List can be found in [`MBEudlCountry`](http://photopay.github.io/blinkid-ios/Enums/MBEudlCountry.html)
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
 #### <a name="egyptBlinkId"></a> Egypt
 
-The [`MBEgyptIdFrontRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBEgyptIdFrontRecognizer.html) is recognizer specialised for scanning front side of Egypt ID.
+The [`MBEgyptIdFrontRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBEgyptIdFrontRecognizer.html) is recognizer specialised for scanning front side of Egypt ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
 #### <a name="croatiaBlinkId"></a> Germany
 
-The [`MBGermanyIdFrontRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBGermanyIdFrontRecognizer.html) is recognizer specialised for scanning front side of German ID.
+The [`MBGermanyIdFrontRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBGermanyIdFrontRecognizer.html) is recognizer specialised for scanning front side of German ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
-The [`MBGermanyIdBackRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBGermanyIdBackRecognizer.html) is recognizer specialised for scanning back side of German ID.
+The [`MBGermanyIdBackRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBGermanyIdBackRecognizer.html) is recognizer specialised for scanning back side of German ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
-The [`MBGermanyCombinedRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBGermanyCombinedRecognizer.html) is recognizer specialised for scanning both front and back side of German ID.
+The [`MBGermanyCombinedRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBGermanyCombinedRecognizer.html) is recognizer specialised for scanning both front and back side of German ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentVerificationOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentVerificationOverlayViewController.html), which has UI best suited for both side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentVerificationOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentVerificationOverlayViewController.html), which has UI best suited for both side document scanning.
 
-The [`MBGermanOldIDRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBGermanOldIDRecognizer.html) is recognizer specialised for scanning old German ID.
+The [`MBGermanOldIDRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBGermanOldIDRecognizer.html) is recognizer specialised for scanning old German ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
-The [`MBGermanyPassportRecognizer.h`](http://photopay.github.io/photopay-ios/Classes/MBGermanyPassportRecognizer.h.html) is recognizer specialised for scanning German Passports.
+The [`MBGermanyPassportRecognizer.h`](http://photopay.github.io/blinkid-ios/Classes/MBGermanyPassportRecognizer.h.html) is recognizer specialised for scanning German Passports.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
 #### <a name="hongkongBlinkId"></a> Hong Kong
 
-The [`MBHongKongIdFrontRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBHongKongIdFrontRecognizer.html) is recognizer specialised for scanning front side of Hong Kong ID.
+The [`MBHongKongIdFrontRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBHongKongIdFrontRecognizer.html) is recognizer specialised for scanning front side of Hong Kong ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
 #### <a name="indonesiaBlinkId"></a> Indonesia
 
-The [`MBIndonesiaIdFrontRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBIndonesiaIdFrontRecognizer.html) is recognizer specialised for scanning front side of Indonesian ID.
+The [`MBIndonesiaIdFrontRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBIndonesiaIdFrontRecognizer.html) is recognizer specialised for scanning front side of Indonesian ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+
+#### <a name="irelandBlinkId"></a> Ireland
+
+The [`MBIrelandDlFrontRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBIrelandDlFrontRecognizer.html) is recognizer specialised for scanning front side of Irish Driver's License.
+
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
 #### <a name="jordanBlinkId"></a> Jordan
 
-The [`MBJordanIdFrontRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBJordanIdFrontRecognizer.html) is recognizer specialised for scanning front side of Jordan ID.
+The [`MBJordanIdFrontRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBJordanIdFrontRecognizer.html) is recognizer specialised for scanning front side of Jordan ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
-The [`MBJordanIdBackRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBJordanIdBackRecognizer.html) is recognizer specialised for scanning back side of Jordan ID.
+The [`MBJordanIdBackRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBJordanIdBackRecognizer.html) is recognizer specialised for scanning back side of Jordan ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
-The [`MBJordanCombinedRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBJordanCombinedRecognizer.html) is recognizer specialised for scanning both front and back side of Jordan ID.
+The [`MBJordanCombinedRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBJordanCombinedRecognizer.html) is recognizer specialised for scanning both front and back side of Jordan ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentVerificationOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentVerificationOverlayViewController.html), which has UI best suited for both side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentVerificationOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentVerificationOverlayViewController.html), which has UI best suited for both side document scanning.
+
+#### <a name="kuwaitBlinkId"></a> Kuwait
+
+The [`MBKuwaitIdFrontRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBKuwaitIdFrontRecognizer.html) is recognizer specialised for scanning front side of Kuwait ID.
+
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
 #### <a name="malaysiaBlinkId"></a> Malaysia
 
-The [`MBMalaysiaDLFrontRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBMalaysiaDLFrontRecognizer.html) is recognizer specialised for scanning Malaysian Driver's License.
+The [`MBMalaysiaDLFrontRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBMalaysiaDLFrontRecognizer.html) is recognizer specialised for scanning Malaysian Driver's License.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
-The [`MBMyKadFrontRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBMyKadFrontRecognizer.html) is recognizer specialised for scanning front side of MyKad.
+The [`MBMyKadFrontRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBMyKadFrontRecognizer.html) is recognizer specialised for scanning front side of MyKad.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
-The [`MBMyKadBackRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBMyKadBackRecognizer.html) is recognizer specialised for scanning back side of MyKad.
+The [`MBMyKadBackRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBMyKadBackRecognizer.html) is recognizer specialised for scanning back side of MyKad.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
-The [`MBMyTenteraRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBMyTenteraRecognizer.html) is recognizer specialised for scanning MyTentera.
+The [`MBMyTenteraRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBMyTenteraRecognizer.html) is recognizer specialised for scanning MyTentera.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
-The [`MBiKadRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBiKadRecognizer.html) is recognizer specialised for scanning iKad.
+The [`MBiKadRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBiKadRecognizer.html) is recognizer specialised for scanning iKad.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
 #### <a name="moroccoBlinkId"></a> Morocco
 
-The [`MBMoroccoIdFrontRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBMoroccoIdFrontRecognizer.html) is recognizer specialised for scanning front side of Morocco ID.
+The [`MBMoroccoIdFrontRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBMoroccoIdFrontRecognizer.html) is recognizer specialised for scanning front side of Morocco ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+
+The [`MBMoroccoIdBackRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBMoroccoIdBackRecognizer.html) is recognizer specialised for scanning back side of Morocco ID.
+
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
 #### <a name="newZealandBlinkId"></a> New Zealand
 
-The [`MBNewZealandDLFrontRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBNewZealandDLFrontRecognizer.html) is recognizer specialised for scanning front side of New Zealand Driver's License.
+The [`MBNewZealandDLFrontRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBNewZealandDLFrontRecognizer.html) is recognizer specialised for scanning front side of New Zealand Driver's License.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+
+#### <a name="paymentCardBlinkId"></a> Payment Card
+
+The [`MBPaymentCardFrontRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBPaymentCardFrontRecognizer.html) is recognizer specialised for scanning front side of Payment Card.
+
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+
+The [`MBPaymentCardBackRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBPaymentCardBackRecognizer.html) is recognizer specialised for scanning back side of Payment Card.
+
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+
+The [`MBPaymentCardCombinedRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBPaymentCardCombinedRecognizer.html) is recognizer specialised for scanning both front and back side of Payment Card.
+
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentVerificationOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentVerificationOverlayViewController.html), which has UI best suited for both side document scanning.
 
 #### <a name="polandBlinkId"></a> Poland
 
-The [`MBPolandIdFrontRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBPolandIdFrontRecognizer.html) is recognizer specialised for scanning front side of Polish ID.
+The [`MBPolandIdFrontRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBPolandIdFrontRecognizer.html) is recognizer specialised for scanning front side of Polish ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
-The [`MBPolandIdBackRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBPolandIdBackRecognizer.html) is recognizer specialised for scanning back side of Polish ID.
+The [`MBPolandIdBackRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBPolandIdBackRecognizer.html) is recognizer specialised for scanning back side of Polish ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
-The [`MBPolandCombinedRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBPolandCombinedRecognizer.html) is recognizer specialised for scanning both front and back side of Polish ID.
+The [`MBPolandCombinedRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBPolandCombinedRecognizer.html) is recognizer specialised for scanning both front and back side of Polish ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentVerificationOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentVerificationOverlayViewController.html), which has UI best suited for both side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentVerificationOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentVerificationOverlayViewController.html), which has UI best suited for both side document scanning.
 
 #### <a name="romaniaBlinkId"></a> Romania
 
-The [`MBRomaniaIdFrontRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBRomaniaIdFrontRecognizer.html) is recognizer specialised for scanning front side of Romanian ID.
+The [`MBRomaniaIdFrontRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBRomaniaIdFrontRecognizer.html) is recognizer specialised for scanning front side of Romanian ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
 #### <a name="serbiaBlinkId"></a> Serbia
 
-The [`MBSerbiaIdFrontRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBSerbiaIdFrontRecognizer.html) is recognizer specialised for scanning front side of Serbian ID.
+The [`MBSerbiaIdFrontRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBSerbiaIdFrontRecognizer.html) is recognizer specialised for scanning front side of Serbian ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
-The [`MBSerbiaIdBackRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBSerbiaIdBackRecognizer.html) is recognizer specialised for scanning back side of Serbian ID.
+The [`MBSerbiaIdBackRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBSerbiaIdBackRecognizer.html) is recognizer specialised for scanning back side of Serbian ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
-The [`MBSerbiaCombinedRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBSerbiaCombinedRecognizer.html) is recognizer specialised for scanning both front and back side of Serbian ID.
+The [`MBSerbiaCombinedRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBSerbiaCombinedRecognizer.html) is recognizer specialised for scanning both front and back side of Serbian ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentVerificationOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentVerificationOverlayViewController.html), which has UI best suited for both side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentVerificationOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentVerificationOverlayViewController.html), which has UI best suited for both side document scanning.
 
 #### <a name="singaporeBlinkId"></a> Singapore
 
-The [`MBSingaporeIdFrontRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBSingaporeIdFrontRecognizer.html) is recognizer specialised for scanning front side of Singapore ID.
+The [`MBSingaporeIdFrontRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBSingaporeIdFrontRecognizer.html) is recognizer specialised for scanning front side of Singapore ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
-The [`MBSingaporeIdBackRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBSingaporeIdBackRecognizer.html) is recognizer specialised for scanning back side of Singapore ID.
+The [`MBSingaporeIdBackRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBSingaporeIdBackRecognizer.html) is recognizer specialised for scanning back side of Singapore ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
-The [`MBSingaporeCombinedRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBSingaporeCombinedRecognizer.html) is recognizer specialised for scanning both front and back side of Singapore ID.
+The [`MBSingaporeCombinedRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBSingaporeCombinedRecognizer.html) is recognizer specialised for scanning both front and back side of Singapore ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentVerificationOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentVerificationOverlayViewController.html), which has UI best suited for both side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentVerificationOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentVerificationOverlayViewController.html), which has UI best suited for both side document scanning.
 
-The [`MBSingaporeDlFrontRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBSingaporeDlFrontRecognizer.html) is recognizer specialised for scanning front side of Singapore Driver's License.
+The [`MBSingaporeDlFrontRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBSingaporeDlFrontRecognizer.html) is recognizer specialised for scanning front side Singapore Driver's License.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+
+The [`MBSingaporeChangiEmployeeIdRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBSingaporeChangiEmployeeIdRecognizer.html) is recognizer specialised for scanning Singapore Changi Employee ID.
+
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
 #### <a name="slovakiaBlinkId"></a> Slovakia
 
-The [`MBSlovakiaIdFrontRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBSlovakiaIdFrontRecognizer.html) is recognizer specialised for scanning front side of Slovakian ID.
+The [`MBSlovakiaIdFrontRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBSlovakiaIdFrontRecognizer.html) is recognizer specialised for scanning front side of Slovakian ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
-The [`MBSlovakiaIdBackRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBSlovakiaIdBackRecognizer.html) is recognizer specialised for scanning back side of Slovakian ID.
+The [`MBSlovakiaIdBackRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBSlovakiaIdBackRecognizer.html) is recognizer specialised for scanning back side of Slovakian ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
-The [`MBSlovakiaCombinedRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBSlovakiaCombinedRecognizer.html) is recognizer specialised for scanning both front and back side of Slovakian ID.
+The [`MBSlovakiaCombinedRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBSlovakiaCombinedRecognizer.html) is recognizer specialised for scanning both front and back side of Slovakian ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentVerificationOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentVerificationOverlayViewController.html), which has UI best suited for both side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentVerificationOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentVerificationOverlayViewController.html), which has UI best suited for both side document scanning.
 
 #### <a name="sloveniaBlinkId"></a> Slovenia
 
-The [`MBSloveniaIdFrontRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBSloveniaIdFrontRecognizer.html) is recognizer specialised for scanning front side of Slovenian ID.
+The [`MBSloveniaIdFrontRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBSloveniaIdFrontRecognizer.html) is recognizer specialised for scanning front side of Slovenian ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
-The [`MBSloveniaIdBackRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBSloveniaIdBackRecognizer.html) is recognizer specialised for scanning back side of Slovenian ID.
+The [`MBSloveniaIdBackRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBSloveniaIdBackRecognizer.html) is recognizer specialised for scanning back side of Slovenian ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
-The [`MBSloveniaCombinedRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBSloveniaCombinedRecognizer.html) is recognizer specialised for scanning both front and back side of Slovenian ID.
+The [`MBSloveniaCombinedRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBSloveniaCombinedRecognizer.html) is recognizer specialised for scanning both front and back side of Slovenian ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentVerificationOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentVerificationOverlayViewController.html), which has UI best suited for both side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentVerificationOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentVerificationOverlayViewController.html), which has UI best suited for both side document scanning.
+
+#### <a name="spainBlinkId"></a> Spain
+
+The [`MBSpainDlFrontRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBSpainDlFrontRecognizer.html) is recognizer specialised for scanning front side Spanish Driver's License.
+
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
 #### <a name="swedenBlinkId"></a> Sweden
 
-The [`MBSwedenDlFrontRecognizer.h`](http://photopay.github.io/photopay-ios/Classes/MBSwedenDlFrontRecognizer.html) is recognizer specialised for scanningSwedish Driver's License.
+The [`MBSwedenDlFrontRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBSwedenDlFrontRecognizer.html) is recognizer specialised for scanning front side Swedish Driver's License.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
 #### <a name="switzerlandBlinkId"></a> Switzerland
 
-The [`MBSwitzerlandIdFrontRecognizer.h`](http://photopay.github.io/photopay-ios/Classes/MBSwitzerlandIdFrontRecognizer.html) is recognizer specialised for scanning front side of Swiss ID.
+The [`MBSwitzerlandIdFrontRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBSwitzerlandIdFrontRecognizer.html) is recognizer specialised for scanning front side of Swiss ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
-The [`MBSwitzerlandIdBackRecognizer.h`](http://photopay.github.io/photopay-ios/Classes/MBSwitzerlandIdBackRecognizer.html) is recognizer specialised for scanning back side of Swiss ID.
+The [`MBSwitzerlandIdBackRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBSwitzerlandIdBackRecognizer.html) is recognizer specialised for scanning back side of Swiss ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
-The [`MBSwitzerlandPassportRecognizer.h.h`](http://photopay.github.io/photopay-ios/Classes/MBSwitzerlandIdBackRecognizer.html) is recognizer specialised for scanning of Swiss Passports.
+The [`MBSwitzerlandPassportRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBSwitzerlandIdBackRecognizer.html) is recognizer specialised for scanning of Swiss Passports.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
-The [`MBSwitzerlandDlFrontRecognizer.h`](http://photopay.github.io/photopay-ios/Classes/MBSwitzerlandDlFrontRecognizer.html) is recognizer specialised for scanning front side of Swiss Driver's License.
+The [`MBSwitzerlandDlFrontRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBSwitzerlandDlFrontRecognizer.html) is recognizer specialised for scanning front side Swiss Driver's License.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
 #### <a name="uaeBlinkId"></a> United Arab Emirates
 
-The [`MBUnitedArabEmiratesIdFrontRecognizer.h`](http://photopay.github.io/photopay-ios/Classes/MBUnitedArabEmiratesIdFrontRecognizer.html) is recognizer specialised for scanning front side of UAE ID.
+The [`MBUnitedArabEmiratesIdFrontRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBUnitedArabEmiratesIdFrontRecognizer.html) is recognizer specialised for scanning front side of UAE ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
-The [`MBUnitedArabEmiratesIdBackRecognizer.h`](http://photopay.github.io/photopay-ios/Classes/MBUnitedArabEmiratesIdBackRecognizer.html) is recognizer specialised for scanning back side of UAE ID.
+The [`MBUnitedArabEmiratesIdBackRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBUnitedArabEmiratesIdBackRecognizer.html) is recognizer specialised for scanning back side of UAE ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+
+The [`MBUnitedArabEmiratesDlFrontRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBUnitedArabEmiratesDlFrontRecognizer.html) is recognizer specialised for scanning front side UAE Driver's License.
+
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
 #### <a name="unitedStatesBlinkId"></a> United States
 
-The [`MBUsdlRecognizer.h`](http://photopay.github.io/photopay-ios/Classes/MBUsdlRecognizer.html) is recognizer specialised for scanning back side of US Driver's License.
+The [`MBUsdlRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBUsdlRecognizer.html) is recognizer specialised for scanning back side of US Driver's License.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
-The [`MBUsdlCombinedRecognizer.h`](http://photopay.github.io/photopay-ios/Classes/MBUsdlCombinedRecognizer.html) is recognizer specialised for scanning both front and back side of US Driver's License.
+The [`MBUsdlCombinedRecognizer`](http://photopay.github.io/blinkid-ios/Classes/MBUsdlCombinedRecognizer.html) is recognizer specialised for scanning both front and back side of US Driver's License.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentVerificationOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBDocumentVerificationOverlayViewController.html), which has UI best suited for both side document scanning.
-
-### <a name="photopayRecognizersByCountry"></a> PhotoPay recognizers by countries
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentVerificationOverlayViewController`](http://photopay.github.io/blinkid-ios/Classes/MBDocumentVerificationOverlayViewController.html), which has UI best suited for both side document scanning.### <a name="photopayRecognizersByCountry"></a> PhotoPay recognizers by countries
 
 #### <a name="austriaPhotoPay"></a> Austria
 
@@ -1449,6 +1499,84 @@ Method `- (void)setMrtdSpecifications:(NSArray<__kindof MBMrtdSpecification *> *
 If `MBMrtdSpecifications` are not set, all supported MRTD formats will be detectable.
 
 For the list of all available configuration methods see [`MBMrtdDetector`](http://photopay.github.io/photopay-ios/Classes/MBMrtdDetector.html) doc, and for available result content see [`MBMrtdDetectorResult`](http://photopay.github.io/photopay-ios/Classes/MBMrtdDetectorResult.html) doc.
+
+# <a name="customizedBuild"></a> Creating customized build of PhotoPay SDK
+
+If your final app size is too large, you can create a customised build of _MicroBlink.framework_ and _MicroBlink.bundle_ which will contain only features and resources that you really need.
+
+In order to create customised build of BlinkID SDK, you first need to download the static distribution of BlinkID SDK. A valid production licence key is required in order to gain access to the download link of BlinkID SDK static distribution. Once you have a valid production licence key, please contact our [support team](http://help.microblink.com) and ask them to provide you with the download link. After they give you access to the static distribution of BlinkID SDK, you will be able to download it from you account at [MicroBlink Developer Dashboard](https://www.microblink.com/login).
+
+The static distribution of BlinkID SDK is a large zip file (several hundred megabytes) which contains static libraries of BlinkID SDK's native code, all assets and resources and a script which will create the customised build for you.
+
+### Prerequisites for creating customised build
+
+In order to create customised build of BlinkID SDK, you will need following tools:
+
+- XCode and latest iOS SDK
+- CMake - you can install it from Homebrew with `brew install cmake`, or you can download it from [official page](https://cmake.org/download/)
+	- please note that command-line version of CMake is required, so if you have downloaded CMake from official page, make sure you install command-line support as well
+
+### Steps for creating customised build
+
+1. Obtain the static distribution of BlinkID SDK by [contacting us](http://help.microblink.com)
+2. Download the zip from link that you will be provided
+3. Unzip the file into an empty folder
+4. Edit the file `enabled-features.cmake`
+	- you should enable only features that you need to use by setting appropriate variables to `ON`. 
+	- the list of all possible feature variables can be found in `features.cmake` 
+		- for each `feature_option` command, first parameter defines the feature variable, and the second is the description of the feature, i.e. what it provides. Other parameters are information for script to work correctly.
+	- you should not edit any file except `enabled-features.cmake` (except if instructed so by our support team) to ensure creation of customised build works well
+5. Open terminal and navigate to folder with zip's contents.
+6. Execute command `./create-custom-build.sh` and select whether you want static or dynamic frameowk.
+	- when asked, enter `s` to build static framework or `d` to build dynamic framework
+7. After several minutes (depedending of CPU speed of your computer), customised build will appear in the `Release` folder. Use that bundle and framework in your app instead of default one.
+
+#### Warning:
+
+Attempt to use feature within your app which was not enabled in customised build will cause a linker error when linking against the customised framework.
+
+### Troubleshooting:
+
+#### Getting `unrecognized selector sent to instance` when using customised static framework, while everything works OK with dynamic framework
+
+This happens when your app has not been linked with `-ObjC` flag against static framework. The problem is related to using Objective C categories within static library which are thrown away by linker. You can see more information in [official Apple documentation](https://developer.apple.com/library/content/qa/qa1490/_index.html).
+
+#### App crashing when scanning starts with log message _Failed to load resource XX. The program will now crash._
+
+This means that a required resource was not packaged into final app. This usually indicates a bug in our script that makes the customised build. Please [contact us](http://help.microblink.com) and send your version of `enabled-features.cmake` and crash log.
+
+#### CMake error while running script.
+
+You probably have a typo in `enabled-features.cmake`. CMake is very sensitive language and will throw an non-understandable error if you have a typo or invoke any of its commands with wrong number of parameters.
+
+#### Linker error while running the script.
+
+This sometimes happens when XCode's link time optimizer runs out of memory. Usually running the script again solves the problem. Please reboot your Mac if this keeps happening.
+
+#### Keeping only `FEATURE_MRTD` creates rather large `MicroBlink.bundle`
+
+`FEATURE_MRTD` marks the _MRTD recognizer_. However, _MRTD recognizer_ can also be used in _Templating API_ mode where non-MRZ data can be scanned. To perform OCR of non-MRZ data, a rather large OCR model must be used, which supports all fonts. If you only plan to scan MRZ part of the document, you can edit the `features.cmake` in following way:
+
+- find the following line:
+
+```
+feature_resources( FEATURE_MRTD model_mrtd model_general_blink_ocr model_micr model_arabic )
+```
+
+- keep only `model_mrtd` in the list, i.e. modify the line so that it will be like this:
+
+```
+feature_resources( FEATURE_MRTD model_mrtd )
+```
+
+This will keep only support for reading MRZ zone in OCR - you will not be able to scan non-MRZ data with such configuration using _MRTD recognizer_, however you will reduce the `MicroBlink.bundle` and then final app size by more than 4MB.
+
+##### More information about OCR models in `FEATURE_MRTD`
+
+- `model_mrtd` is OCR model for performing OCR of MRZ zone
+- `model_arabic` is OCR model for performing OCR of digits used in arabic languages - text scanning is not supported
+- `model_micr` is OCR model for performing OCR of [Magnetic Ink Characters](https://en.wikipedia.org/wiki/Magnetic_ink_character_recognition)
+- `model_general_blink_ocr` is OCR model for performing general-purpose OCR. This model is usually required for performing OCR of non-MRZ text on documents.
 
 # <a name="troubleshoot"></a> Troubleshooting
 
