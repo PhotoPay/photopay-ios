@@ -1,5 +1,10 @@
 # Release notes
 
+## 7.1.1
+
+- Updated and additions
+    - Added support for hiding `help` button on `MBPhotoPayOverlayViewController` with `displayHelpButton` proeprty on `MBPhotopayOverlaySettings`
+
 ## 7.1.0
 
 - Updates and additions
