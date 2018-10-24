@@ -1,5 +1,15 @@
 # Release notes
 
+## 7.1.2
+
+- Updated and additions
+    - Added method `photopayOverlayViewControllerDidTapHelp:` on delegate `MBPhotopayOverlayViewControllerDelegate`
+    - Added missing support for reading Slovenian QR Payment Codes - use `MBSloveniaQrCodeRecognizer`
+
+- Bugfixes
+    - Fixed issue when orientation changed notification recevied before creating preview layer on iOS 12
+
+
 ## 7.1.1
 
 - Updated and additions
