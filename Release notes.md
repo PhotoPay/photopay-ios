@@ -1,5 +1,217 @@
 # Release notes
 
+## 7.2.0
+
+- Updated and additions
+    - Added support for reading front side of Ireland Driver's License  - use `MBIrelandDlFrontRecognizer`
+    - Added support for reading front side of Colombia Driver's License - use `MBColombiaDlFrontRecognizer`
+    - Added support for reading front side of Italy Driver's License - use `MBItalyDlFrontRecognizer`
+    - Added standalone recognizer for reading front side of Austria Driver's License - use `MBAustriaDlFrontRecognizer`
+    - Added support for reading front and back side of elite Payment / Debit cards - use `MBElitePaymentCardFrontRecognizer`, `MBElitePaymentCardBackRecognizer` and `MBElitePaymentCardCombinedRecognizer`
+    - Added support for reading back side of German Driver's License with B10 support - use `MBGermanyDlBackRecognizer`
+    - Added support for reading front side of Mexican Voter Id card - use `MBMexicoVoterIdFrontRecognizer`
+    - Added support for reading  ExpiresOn date on `MBCyprusIdBackRecognizer`
+    - Added support for image(s) anonymization on `MBPaymentCardFrontRecognizer`
+        - use `anonymizeCardNumber` and `anonymizeOwner`
+    - Added support for image(s) anonymization on `MBPaymentCardBackRecognizer`
+        - use `anonymizeCvv`
+    - Added support for image(s) anonymization on `MBPaymentCardCombinedRecognizer`
+        - use `anonymizeCardNumber`, `anonymizeOwner` and `anonymizeCvv`
+    - Added support for image(s) anonymization on `MBElitePaymentCardFrontRecognizer`
+        - use `anonymizeOwner`
+    - Added support for image(s) anonymization on `MBElitePaymentCardBackRecognizer`
+        - use `anonymizeCvv` and `anonymizeCardNumber`
+    - Added support for image(s) anonymization on `MBElitePaymentCardCombinedRecognizer`
+        - use `anonymizeCardNumber`, `anonymizeOwner` and `anonymizeCvv`
+    - Added support for full document image extension factors on `MBUsdlCombinedRecognizer`
+    - Added support for reading front side of Brunei ID - use `MBBruneiIdFrontRecognizer`
+    - Added support for reading front and back side of Cyprus ID, issued after 2015.  - use `MBCyprusIdFrontRecognizer` and `MByprusIdBackRecognizer`
+    - Added support for reading front side of Malaysian MyKAS - use `MBMalaysiaMyKasFrontRecognizer`
+    - Added support for reading front side of Malaysian MyPR - use `MBMalaysiaMyPrFrontRecognizer`
+    - Enabled capturing high resolution camera frames:
+        - When custom UI integration is performed, use `- (void)captureHighResImage:(MBCaptureHighResImage)highResoulutionImageCaptured` on `MBRecognizerRunnerViewController`
+        - When using provided scan overlay view controllers, high resolution full camera frames taken at the moment of successful scan are returned if this option is enabled through `MBOverlaySettings`. Concrete `MBDocumentOverlaySettings` and `MBDocumentVerificationOverlaySettings` have property `captureHighResImage` to support this feature and new optional delegate on respective delegates
+    - Added support for reading front side of German Driver's License - use `MBGermanyDlFrontRecognizer`
+    - Added support for reading back side of Brunei ID - use `MBBruneiIdBackRecognizer`
+    - Added support for reading front side of Brunei Residence Permit - use `MBBruneiResidencePermitFrontRecognizer`
+    - Added support for reading back side of Brunei Residence Permit - use `MBBruneiResidencePermitBackRecognizer`
+    - Updated overlay view controllers with new icons for `close` and `torch` buttons
+
+- Improvements in ID scanning performance
+    - improved `MBMrtdCombinedRecognizer`:
+        - added option to allow unparsed and unverified MRZ results - use `allowUnparsedResults` and `allowUnverifiedResults`
+    - improved `MBMalaysiaDlFrontRecognizer`:
+        - added support for reading Malaysia Dl for foreigners 
+    - improved `MBUsdlRecogniezr`:
+        - added support for reading dates on Nigerian Driver's licenses
+    - added support for setting full document image extension factors for almost all ID document recognizers, they implement interface `MBFullDocumentImageExtensionFactors`
+    - added support for setting the number of stable detections threshold on `MBDocumentFaceRecognizer` and recognizers which use it internally: `MBMrtdCombinedRecognizer` and `MBUsdlCombinedRecognizer` - use `numStableDetectionsThreshold`. This can help to avoid returning of blurry images.
+    - improved `MBEudlRecognizer`:
+        - better reading accuracy for UK Driver's license
+    - moved these recognizers to DeepOCR engine (improved reading accuracy): `MBSingaporeIdFrontRecognizer`, `MBSingaporeIdBackRecognizer`, `MBCroatiaIdFrontRecognizer`,  `MBCroatiaIdBackRecognizer`
+    - improved DeepOCR accuracy
+    - improved reading of Swiss front side ID cards
+    - improved reading of German front side ID cards
+    - improved `MBMalaysiaMyTenteraFrontRecognizer` with DeepOcr support
+    - improved reading of Singapore front side Driver's Licenses with DeepOcr support
+    - improved reading of Croatian front side ID cards
+    - improved personal number extraction on Slovakian ID cards
+    - improved reading of Indonesian front side ID cards with DeepOcr support
+    - updated image return processor 
+        - the processor now estimates detected (dewarped) document image quality and returns the best quality dewarped image from the best quality detection
+    - improved reading accuracy for the following recognizers (**DeepOCR** support):
+        - `MBHongKongIdFrontRecognizer`
+        - `MBMalaysiaMyKadFrontRecognizer`
+        - `MBMalaysiaMyKadBackRecognizer`
+        - `MBMalaysiaMyTenteraFrontRecognizer`
+        - `MBMalaysiaDlFrontRecognizer`
+        - `MBNewZealandDlFrontRecognizer`
+        - `MBMalaysiaMyKadBackRecognizer`
+    - improved `MBPaymentCard` recognizers:
+        - better OCR and data extraction
+        - added support for reading payment card numbers in 4x6x4 and 4x6x5 format
+    - improveed UAE recognizers:
+        - glare detection is enabled for all images returned from `MBUnitedArabEmiratesDlFrontRecognizer`, `MBUnitedArabEmiratesIdBackRecognizer` and `MBUnitedArabEmiratesIdFrontRecognizer` recognizers
+    - improved `MBMrtdRecognizer`:
+        - added option to set extension factors for full document image: use method `fullDocumentImageExtensionFactors`
+        - added option to encode `fullDocumentImage` and `mrzImage` to JPEG and save them to `MBMrtdRecognizerResult`: use `encodeMrzImage` and `encodeFullDocumentImage` to enable encoding
+    - updated `MBSerbiaQrCodeRecognizer` with support for new Serbia QR code standard
+        - renamed `MBSerbiaBarcodePaymentResult` result member: `accountNumber` to `recipientAccountNumber`
+            - added result members: `identificationCode`, `payerAccountNumber`, `paymentCode`, `merchantCodeCategory`, `oneTimePaymentCode`, `merchantReference` and `rawBarcodeData`
+    - improved Swiss payment slip scanning
+    - improved QR code scanning for images
+    - updated `MBCzechiaQrCodeRecognizer` with support for default currency
+
+- Minor API changes
+    - renamed properties in `MBMalaysiaDlFrontRecognizerResult`:
+        - `state` to `ownerState`
+        - `zipCode` to `zipcode`
+    - renamed properties in `MBIndonesiaIdFrontRecognizerResult`:
+        - `validUntil` to `dateOfExpiry`
+        - `validUntilPermanent` to `dateOfExpiryPermanent`
+    - renamed property in `MBSingaporeIdFrontRecognizerResult`:
+        - `bloodType` to `bloodGroup`
+    - renamed property in `MBSingaporeCombinedRecognizerREsult`:
+        - `bloodType` to `bloodGroup`
+    - renamed `MBMyTenteraRecognizer` to `MBMalaysiaMyTenteraFrontRecognizer`
+    - renamed `MBMyTenteraRecognizerResult` to `MBMalaysiaMyTenteraFrontRecognizerResult` and properties
+        - `nricNumber` to `nric`
+        - `ownerAddress` to `fullAddress`
+        - `ownerAddressCity` to `city`
+        - `ownerAddressState` to `ownerState`
+        - `ownerAddressZipCode` to `zipcode`
+        - `ownerAddressStreet` to `street`
+        - `ownerBirthDate` to `birthDate` and it is now of type `MBDateResult`
+        - `ownerFullName` to `fullName`
+        - `ownerReligion` to `religion`
+        - `ownerSex` to `sex`
+    - renamed properties in `MBGermanyIdFrontRecognizerResult`
+        - `firstName` to `givenNames`
+        - `lastName` to `surname`
+        - `dateOfBirth` adn `dateOfExpiry` are now of type `MBDateResult`
+    - renamed `MBIkadRecognizer` to `MBMalaysiaIkadFrontRecognizer` and  methods in recognizer and its `Result`:
+        - `expiryDate` to `dateOfExpiry `
+        - `sex ` to `gender`
+    - renamed `MBMyKadFrontRecogniezer` to `MBMalaysiaMyKadFrontRecognizer` and  methods in recognizer and its `Result`:
+        - `ownerFullName ` to `fullName`
+        - `ownerAddress ` to `fullAddress`
+        - `addressStreet ` to `street`
+        - `ownerAddressZipCode ` to `zipcode`
+        - `ownerAddressCity ` to `city `
+        - `ownerAddressState ` to `ownerState`
+        - `ownerBirthDate ` to `birthDate`
+        - `ownerSex ` to `sex`
+        - `ownerReligion ` to `religion`
+        - `nricNumber ` to `nric`
+    - `MBMalaysiaMyKadFrontRecognizer` does not extract `armyNumber` anymore, use `MBMalaysiaMyTenteraFrontRecognizer` for scanning `MyTentera`
+    - `MBMrtdRecognizer`: 
+        - method `saveImageDPI` which has been used to set DPI for full document and MRZ image is replaced with methods `fullDocumentImageDpi` and `mrzImageDpi`
+    - renamed methods in `MBSwitzerlandIdBackRecognizer` and its `Result`: 
+        - `nonMrzDateOfExpiry` to `dateOfExpiry`
+        - `nonMrzSex` to `sex`
+    - renamed methods in `MBSwitzerlandPassportRecognizer` and its `Result`:
+        - `placeOfBirth` to `placeOfOrigin`
+        - `nonMrzDateOfBirth` to `dateOfBirth`
+        - `nonMrzDateOfExpiry` to `dateOfExpiry`
+        - `nonMrzSex` to `sex`
+    - removed `sex` and `signatureImage` properties from `MBMalaysiaMyKadBackRecognizer`
+    - renamed properties in `MBCroatiaCombinedRecognizerResult`:
+        - `identityCardNumber` to `documentNumber`
+        - `address` to `residence`
+        - `issuingAuthority` to `issuedBy`
+        - `personalIdentificationNumber` to `oib`
+        - `nonResident` to `documentForNonResident`
+    - removed `mrzImage` from `MBMrtdCombinedRecognizer` and `MBMrtdCombinedRecognizerResult`
+    - renamed properties in `MBAustraliaDlFrontRecognizerResult`:
+        - `name` to `fullName`
+        - `dateOfExpiry` to `licenceExpiry`
+    - renamed `eyeColour` to `colourOfEyes` in `MBGermanyIdBackRecognizerResult`
+    - recognizers that are deprecated:
+        - `MBSerbiaIdBackRecognizer` and `MBSerbiaIdBackRecognizerResult`
+        - `MBSerbiaIdFrontRecognizer` and `MBSerbiaIdFrontRecognizerResult`
+        - `MBSerbiaCombinedRecognizer` and `MBSerbiaCombinedRecognizerResult`
+    - all properties that are deprecated for recognizers:
+        - `MBHongKongIdFrontRecognizerResult`:
+            - `commercialCode`
+        - `MBIndonesiaIdFrontRecognizerResult`:
+            - `bloodType`
+            - `district`
+            - `kelDesa`
+            - `rt`
+            - `rw`
+        - `MBNewZealandDlFrontRecognizerResult`:
+            - `donorIndicator`
+            - `cardVersion`
+        - `MBMalaysiaMyKadBackRecognizerResult`:
+            - `extendedNric`
+        - `MBMexicoVoterIdFrontRecognizerResult`:
+            - `electorKey`
+        - `MBIrelandDlFrontRecognizerResult`:
+            - `driverNumber`
+        - `MBSwedenDlFrontRecognizerResult`:
+            - `referenceNumber`
+        - `MBMalaysiaIkadFrontRecognizerResult`:
+            - `passportNumber`    
+        - `MBAustriaIdBackRecognizerResult`:
+            - `principalResidence`
+            - `height`
+            - `eyeColour`
+        - `MBAustriaPassportRecognizerResult`:
+            - `height`
+         - `MBGermanyIdBackRecognizerResult`:
+            - `colourOfEyes`
+            - `height`
+        - `MBSwitzerlandIdBackRecognizerResult`:
+            - `height`
+        - `MBSwitzerlandPassportRecognizerResult`:
+            - `height`
+         - `MBSingaporeIdBackRecognizerResult`:
+            - `bloodGroup`
+        - `MBColombiaIdBackRecognizerResult`:
+            - `bloodGroup`
+        - `MBSwitzerlandPassportRecognizerResult`:
+            - `height`
+        - `MBPolandIdFrontRecognizerResult`:
+            - `familyName`
+            - `parentsGivenNames`
+        - `MBMoroccoIdBackRecognizerResult`:
+            - `fathersName`
+            - `mothersName`
+        - `MBRomaniaIdFrontRecognizerResult`:
+            - `parentNames`
+
+- Bugfixes
+    - enabled wrapping of combined recogniezrs with `MBSuccessFrameGrabberRecognizer`
+    - fixed bug in `MBEudlRecognizer` which caused that sometimes face image is not returned, even if the recognition was successful
+    - updated overlay view controllers for iPhone X Series
+    - various other bug fixes and improvements
+    - fix memory issue while using current frame grabber
+    - fix UI bug on `MBDocumentVerificationOverlayViewController` - now showing `Document scanning done` when scanning finish
+    - all combined recognizers are not optional any more in Swift
+    - MBDocumentFaceRecognizer now correctly applies DPI settings to returned face and full document images
+    - fixed a crash which happened when scanning region was set before overlay view controller loaded, but after it was initialized
+    - fixed missing `init` in `MBDotsResultSubview` for Swift
+
 ## 7.1.2
 
 - Updated and additions
