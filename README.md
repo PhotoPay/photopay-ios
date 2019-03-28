@@ -45,7 +45,6 @@ PhotoPay is a part of family of SDKs developed by [MicroBlink](http://www.microb
         * [US / Canada driver's license barcode recognizer](#user-content-us_dl_recognizer)
         * [US / Canada driver's license combined recognizer](#user-content-us_dl_combined_recognizer)
         * [EU Driver's License recognizer](#user-content-eudlRecognizer)
-        * [Payment / Debit card recognizers ](#user-content-payment_card_recognizers)
         * [Document face recognizer](#user-content-documentFaceRecognizer)
     * [BlinkID recognizers by countries](#user-content-blinkIdRecognizersByCountry)
         * [Austria](#user-content-austriaBlinkId)
@@ -753,23 +752,11 @@ The [`MBEudlRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBEudlRe
 
 You can find information about usage context at the beginning of [this section](#blinkid_recognizers).
 
-
-### <a name="payment_card_recognizers"></a> Payment / Debit card recognizers 
-
-For all recognizers, you can find information about usage context at the beginning of [this section](#blinkid_recognizers).
-
-#### <a name="payment_card_single"></a> Payment / Debit card front and back side recognizers
-The [`MBPaymentCardFrontRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBPaymentCardFrontRecognizer.html) and [`MBPaymentCardBackRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBPaymentCardBackRecognizer.html) are used for scanning the [front and back side of Payment / Debit card](https://en.wikipedia.org/wiki/Payment_card).
-
-#### <a name="payment_card_combined"></a> Payment / Debit card combined recognizer
-The [`MBPaymentCardCombinedRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBPaymentCardBackRecognizer.html) scans back side of Payment / Debit card after scanning the front side and combines data from both sides.
-
-#### <a name="elite_payment_card_single"></a> Elite Payment / Debit card front and back side recognizers
-The [`MBElitePaymentCardFrontRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBElitePaymentCardFrontRecognizer.html) and [`MBElitePaymentCardBackRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBElitePaymentCardBackRecognizer.html) are used for scanning the front and back side of elite Payment / Debit card.
+#### <a name="payment_card_combined"></a> Payment / Debit card front and back side recognizers
+The [`MBBlinkCardRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkCardRecognizer.html)is used for scanning the [front and back side of Payment / Debit card](https://en.wikipedia.org/wiki/Payment_card).
 
 #### <a name="elite_payment_card_combined"></a> Elite Payment / Debit card combined recognizer
-The [`MBElitePaymentCardCombinedRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBElitePaymentCardCombinedRecognizer.html) scans back side of elite Payment / Debit card after scanning the front side and combines data from both sides.
-
+The [`MBBlinkCardEliteRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkCardEliteRecognizer.html) scans back side of elite Payment / Debit card after scanning the front side and combines data from both sides.
 
 ### <a name="documentFaceRecognizer"></a> Document face recognizer
 The [`MBDocumentFaceRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBDocumentFaceRecognizer.html) is a special type of recognizer that only returns face image and full document image of the scanned document. It does not extract document fields like first name, last name, etc. This generic recognizer can be used to obtain document images in cases when specific support for some document type is not available.
@@ -798,13 +785,21 @@ The [`MBAustraliaDlBackRecognizer`](http://photopay.github.io/photopay-ios/Class
 
 ### <a name="bruneiBlinkId"></a> Brunei
 
-The [`MBBruneiIdFrontRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBBruneiIdFrontRecognizer.html) is recognizer specialised for scanning front side of Brunei ID.
+The [`MBBruneiIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBruneiIdFrontRecognizer.html) is recognizer specialised for scanning front side of Brunei ID.
 
-The [`MBBruneiIdBackRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBBruneiIdBackRecognizer.html) is recognizer specialised for scanning front side of Brunei ID.
+The [`MBBruneiIdBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBruneiIdBackRecognizer.html) is recognizer specialised for scanning front side of Brunei ID.
 
-The [`MBBruneResidencePermitFrontRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBBruneResidencePermitBackRecognizer.html) is recognizer specialised for scanning back side of Brunei Residence Permit.
+The [`MBBruneiResidencePermitFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBruneiResidencePermitBackRecognizer.html) is recognizer specialised for scanning back side of Brunei Residence Permit.
 
-The [`MBBruneResidencePermitBackRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBBruneResidencePermitBackRecognizer.html) is recognizer specialised for scanning back side of Brunei Residence Permit.
+The [`MBBruneiResidencePermitBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBruneiResidencePermitBackRecognizer.html) is recognizer specialised for scanning back side of Brunei Residence Permit.
+
+The [`MBBruneiTemporaryResidencePermitFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBruneiTemporaryResidencePermitBackRecognizer.html) is recognizer specialised for scanning back side of Brunei Residence Permit.
+
+The [`MBBruneiTemporaryResidencePermitBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBruneiTemporaryResidencePermitBackRecognizer.html) is recognizer specialised for scanning back side of Brunei Residence Permit.
+
+The [`MBBruneiMilitaryIdBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBruneiMilitaryIdBackRecognizer.html) is recognizer specialised for scanning back side of Brunei Military ID.
+
+The [`MBBruneiMilitaryIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBruneiMilitaryIdFrontRecognizer.html) is recognizer specialised for scanning front side of Brunei Military ID.
 
 ### <a name="colombiaBlinkId"></a> Colombia
 

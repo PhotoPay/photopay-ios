@@ -1,5 +1,153 @@
 # Release notes
 
+## 7.3.0
+
+**Important notice on MRTD recognizer in the latest PhotoPay SDK release (v7.3.0)**
+
+Please note that we have significantly improved accuracy for MRZ/MRTD scanning because now we switched to the newest OCR technology based on machine learning.
+To be more precise, we measured and compared existing vs. new MRTD scanning. The new OCR system based on machine learning achieves 99.9% accuracy on the character level, which results with a 50% reduction in the error rate in MRZ extraction.
+
+In order to use new *MrtdRecognizer* or *MrtdCombinedRecognizer* or to continue using any additional *Recognizer for scanning any ID with the MRZ (machine readable zone)* within the latest PhotoPay SDK update, you *must* have a new license key. Before updating to the SDK version 7.3.0, please contact your account manager or send an email to support@microblink.com to obtain the *new production license key*.
+
+**Important notes**:
+
+- The MRTD scanning with the older PhotoPay SDK versions (v7.2.0 and below) will continue to work without any problems - until you decide to update.
+- If you upgrade to the SDK version 7.3.0 without a new license key scanning of MRTD/MRZ documents will not work.
+- Contact us at support@microblink.com to obtain a new license key if you plan to update your app with the latest release.
+
+For any questions, you might have, we stand at your service.
+
+- Updated and additions
+    - added support for reading front and back side of Brunei Military ID - use `MBBruneiMilitaryIdFrontRecognizer` and `MBBruneiMilitaryIdBackRecognizer`
+    - added support for reading front and back side of Brunei Temporary Residence Permit - use `MBBruneiTemporaryResidencePermitFrontRecognizer` and `MBBruneiTemporaryResidencePermitBackRecognizer`
+    - added `MBBlinkCardOverlayViewController` to be used with BlinkCard recognizers
+
+- Improvements in ID scanning performance
+    - improved reading accuracy for all MRZ recognizers
+    - enabled reading year-only dates of birth on **Kuwait IDs**
+    - improved `MBSingaporeIdBackRecognizer`:
+        - better reading of documents with sticker
+    - improved `MBMrtdRecognizer`:
+        - added `allowSpecialCharacters` option which is required for parsing Malaysian Passport IMM13P MRZ type
+    - all recognizers now reset their results on shake, except Combined recognizers
+    - `MBBlinkCardRecognizer` returns card issuer
+
+- Minor API changes
+    - renamed `MBAustriaQrCodeRecognizer` to `MBAustriaQrCodePaymentRecognizer` and fields in its `Result`:
+        - `IBAN` to `iban`
+        - `BIC` to `bic`
+        - `referenceNumber` to `reference`
+    - renamed `MBGermanyQrCodeRecognizer` to `MBGermanyQrCodePaymentRecognizer` and updated fields in its `Result`:
+        - `authority` is returned as `String`
+        - renamed fields:
+            - `IBAN` to `iban`
+            - `BIC` to `bic`
+            - `paymentReference` to `reference`
+            - `BLZ` to `bankCode`
+        - added fields:
+            - `creditorId`
+            - `dateOfSignature`
+            - `displayData`
+            - `formFunction`
+            - `formType`
+            - `formVersion`
+            - `mandateId`
+            - `periodicFirstExecutionDate`
+            - `periodicLastExecutionDate`
+            - `periodicTimeUnit`
+            - `periodicTimeUnitRotation`
+            - `postingKey`
+    - renamed `MBKosovoCode128Recognizer` to `MBKosovoCode128PaymentRecognizer` and updated fields in its `Result`:
+        - removed `currency` field
+        - renamed fields:
+            - `payerAccount` to `payerAccountNumber`
+            - `referenceNumber` to `reference`
+            - `slipID` to `slipId`
+    - removed `MBSerbiaIdFrontRecognizer`, `MBSerbiaIdBackRecognizer` and `MBSerbiaCombinedRecognizer`
+    - fields that are **not** deprecated anymore:
+        - Sweden DL - reference number
+        - Ireland DL - driver number
+        - Malaysia iKad - passport number
+        - Hong Kong ID - commercial code
+    - deprecated the following methods in `MBUsdlRecognizerResult` and `MBUsdlCombinedRecognizerResult`: (they have been replaced with new getters):
+        - getField(UsdlKeys)
+        - optionalElements
+    - added new getters to following results:
+        - `MBUsdlRecognizerResult` and `MBUsdlCombinedRecognizerResult`:
+            - `firstName`
+            - `lastName`
+            - `fullName`
+            - `address`
+            - `documentNumber`
+            - `sex`
+            - `restrictions`
+            - `endorsements`
+            - `vehicleClass`
+            - `dateOfBirth`
+            - `dateOfIssue`
+            - `dateOfExpiry`
+        - `MBMrzResult`:
+           - `sanitizedOpt1`
+           - `sanitizedOpt2`
+           - `sanitizedNationality`
+           - `sanitizedIssuer`
+    - renamed methods in the following recognizers and its results:
+        - `MBCzechiaCombinedRecognizer`:
+            - `lastName` to `surname`
+            - `firstName` to `givenNames`
+            - `identityCardNumber` to `documentNumber`
+            - `address` to `permanentStay`
+            - `issuingAuthority` to `authority`
+            - `personalIdentificationNumber` to `personalNumber`
+        - `MBGermanyCombinedRecognizer`:
+            - `lastName` to `surname`
+            - `firstName` to `givenNames`
+            - `identityCardNumber` to `documentNumber`
+            - `issuingAuthority` to `authority`
+            - `eyeColor` to `colourOfEyes`
+        - `MBJordanCombinedRecognizer`:
+            - `issuer` to `issuedBy`
+        - `MBPolandCombinedRecognizer`:
+            - `issuer` to `issuedBy`
+        - `MBRomaniaIdFrontRecognizer`:
+           - `lastName` to `surname`
+           - `cardNumber` to `documentNumber` from `MrzResult`
+           - `parentNames` to `parentName`
+           - `nonMRZNationality` to `nationality`
+           - `nonMRZSex` to `sex`
+           - `validFrom` to `dateOfIssue`
+           - `validUntil` to `dateOfExpiry`
+           - removed field `idSeries`
+           - removed field `cnp`
+           - MRZ fields are available through `MBMrzResult` which can be obtained by using `mrzResult` property
+        - `MBSlovakiaCombinedRecognizer`:
+           - `issuingAuthority` to `issuedBy`
+           - `personalIdentificationNumber` to `personalNumber`
+        - `MBSloveniaIdFrontRecognizer`:
+           - `lastName` to `surname`
+           - `firstName` to `givenNames`
+        - `MBSloveniaIdBackRecognizer`:
+           - `authority` to `administrativeUnit`
+           - MRZ fields are available through `MBMrzResult` which can be obtained by using `mrzResult` property
+        - `MBSloveniaCombinedRecognizer`:
+           - `lastName` to `surname`
+           - `firstName` to `givenNames`
+           - `identityCardNumber` to `documentNumber`
+           - `citizenship` to `nationality`
+           - `issuingAuthority` to `administrativeUnit`
+           - `personalIdentificationNumber` to `pin`
+    - `MBMrtdRecognizer` and `MBMrtdCombinedRecognizer` do not return MRZ image any more
+    - `MBMrtdCombinedRecognizer` does not have glare detection options (it does not detect glare anymore)
+    - replaced `MBPaymentCardFrontRecognizer`, `MBPaymentCardBackRecognizer` and `MBPaymentCardCombinedRecognizer` with single recognizer - `MBBlinkCardRecognizer`
+    - replaced `MBElitePaymentCardFrontRecognizer`, `MBElitePaymentCardBackRecognizer` and `MBElitePaymentCardCombinedRecognizer` with single recognizer - `MBBlinkCardEliteRecognizer`
+
+- Bugfixes
+    - fixed bug in `MBSlovakiaQrCodeRecognizer`
+    - fixed bug in `MBIbanParser` for **Romanian IBANs**
+    - `MBMrtdRecognizer` result state is now properly invalidated after detection fails
+    - templating recognizers no longer execute callbacks with `valid` state once they are `valid` on every frame even if nothing is 'detected'
+    - various other bug fixes and improvements
+
 ## 7.2.0
 
 - Updated and additions
