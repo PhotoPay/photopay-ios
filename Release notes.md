@@ -1,5 +1,88 @@
 # Release notes
 
+## 7.5.0
+
+- Updates and additions:
+    - added `MBBlinkIdRecognizer` for scanning front side of ID cards and `MBBlinkIdCombinedRecognizer` for combined scanning of front and back side of ID cards
+        - for now, these recognizers classify and extract data from **87** different classes of **United States driver's licenses** (front and back side)
+        - in the upcoming releases, we are planning to add support for more document types from different countries
+    - completely new UX for scanning ID cards with scan overlay view controller: `MBBlinkIdOverlayViewController`:
+        -  best suited for scanning with `MBBlinkIdRecognizer` and `MBBlinkIdCombinedRecognizer`
+        - other single side and combined document recognizers are also supported
+    - added support for reading back side of Nigerian Voter ID card - use `MBNigeriaVoterIdBackRecognizer`
+    - added support for reading front and back side of Belgium ID - use `MBBelgiumIdFrontRecognizer`, `MBBelgiumIdBackRecognizer` and `MBelgiumCombinedRecognizer`
+    - added support for reading all visa documents containing Machine Readable Zone - use `MBVisaRecognizer`
+
+- Improvements in ID scanning performance:
+    - improved `MBRomaniaIdFrontRecognizer`
+        - now extracts `CNP` number
+    - improved `MBSloveniaIdFrontRecognizer` and `MBloveniaCombinedRecognizer`:
+        - return boolean flag which indicates whether **date of expiry** is permanent - use `dateOfExpiryPermanent`
+    - improved `MBGermanyPassportRecognizer`:
+        - better passport classification
+    - improved `MBColombiaIdFrontRecognizer`:
+        - support for document number in format 1-3-3
+    - improved `MBSlovakiaIdFrontRecognizer`:
+        - support for German letters
+    - Malaysia:
+        - `MBMalaysiaMyTenteraFrontRecognizer` supports 6-digit army number
+        - `MBMalaysiaIkadFrontRecognizer` - better extraction of the following fields (DeepOCR support): date of birth, sector, employer, address and date of expiry
+    - United Arab Emirates:
+        - glare detection is disabled by default for `MBUnitedArabEmiratesIdFrontRecognizer` and `MBUnitedArabEmiratesIdBackRecognizer` 
+        - `MBUnitedArabEmiratesIdBackRecognizer` - optimized detection for black backgrounds
+        - improved `MBMrtdRecognizer`: 
+        - added support for documents with non-binary gender specification (symbol X)
+    - improved `MBDocumentFaceRecognizer`:
+        - improved scanning time (faster scan)
+        - added support for vertical IDs
+        - removed the `tryBothOrientations` option (improved scan in all directions is enabled by default)
+    - improved scanning time (faster scan) for `MBPassportRecognizer`
+
+- Minor API changes:
+    - renamed following recognizers:
+        - `MBCroatiaPdf417Recognizer` to `MBCroatiaPdf417PaymentRecognizer`
+        - `MBCroatiaQrCodeRecognizer` to `MBCroatiaQrCodePaymentRecognizer`
+        - `MBSepaQrCodeRecognizer` to `MBSepaQrCodePaymentRecognizer`
+        - `MBSlovakiaCode128Recognizer` to `MBSlovakiaCode128PaymentRecognizer`
+        - `MBSlovakiaDataMatrixRecognizer` to `MBSlovakiaDataMatrixPaymentRecognizer`
+        - `MBSlovakiaQrCodeRecognizer` to `MBSlovakiaQrCodePaymentRecognizer`
+        - `MBSloveniaQrCodeRecognizer` to `MBSloveniaQrCodePaymentRecognizer`
+        - `MBSwitzerlandQrCodeRecognizer` to `MBSwitzerlandQrCodePaymentRecognizer`
+        - `MBUnitedKingdomQrCodeRecognizer` to `MBUnitedKingdomQrCodePaymentRecognizer`
+
+- Bugfixes:
+    - fixed bug in `MBDocumentFaceRecognizer` which caused that DPI settings has not been applied to dewarped image
+    - fixed bug in `MBBlinkCardOverlayViewController` which caused memory issues
+    - fixed bug in `MBSloveniaQrCodeRecognizer` which caused invalid parsing
+
+## 7.4.0
+
+**This release fixes issues with Xcode 10.2**
+
+- Updates and additions:
+    - added support for reading all passports with MRZ - use `MBPassportRecognizer`
+    - added setting on `MBDocumentFaceRecognizer` for control over face image processor - use `tryBothOrientations`
+    - added result property on `MBGermanyCombinedRecognizerResult` to get full mrz string result - use `rawMrzString`
+
+- Improvements in ID scanning performance:
+    - added support for reading commercial code in two rows for `MBHongKongIdFrontRecognizer`
+    - added support for `MBHongKongIdFrontRecognizer` 2018 version
+    - improved reading accuracy for the following recognizers (**DeepOCR** support):
+    - `MBMalaysiaIKadFrontRecognizer`
+    - improved scanning time of all Malaysian ID front recognizers: MyKad, MyKAS, MyPR, MyTentera
+
+- Minor API changes:
+    - `partialRecognitionTimeout` in `MBRecognizerCollection` default value has been changed to **0** which means no timeout will be reported in which partial scanning results will be returned to the user
+
+- Bugfixes:
+    - fixed issue with combining surnames in `MBGermanyCombinedRecognizer`'s logic
+    - fixed a validation issue for the gender field in `MBSloveniaCombinedRecognizer`
+    - fixed DPI options on images are now correctly applied to dewarped image results in `MBDocumentFaceRecognizer`
+    - fixed bug in `MBDocumentFaceRecognizer` which caused that DPI settings has not been applied to dewarped image
+    - fixed bug in `MBBlinkCardOverlayViewController` which caused memory issues
+
+
+
 ## 7.3.0
 
 **Important notice on MRTD recognizer in the latest PhotoPay SDK release (v7.3.0)**
