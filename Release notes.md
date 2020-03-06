@@ -1,5 +1,7 @@
 # Release notes
 
+## 7.7.0
+
 ## 7.5.0
 
 - Updates and additions:
