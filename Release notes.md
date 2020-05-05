@@ -1,6 +1,141 @@
 # Release notes
 
+## 7.8.0
+
+### New features:
+
+- Introducing support for new framework format - XCFramework:
+	- it contains all the necessary device and simulator architecture slices
+	- no neeed to remove simulator slices before distributing your app to the App Store as described [here](https://github.com/BlinkID/blinkid-ios#unsupported-architectures-when-submitting-app-to-app-store)
+- We added a new recognizer specialized for scanning and parsing barcodes on various identity cards - `IdBarcodeRecognizer`. Supported document types are:
+    - AAMVA compliant (US DL, Canada DL, etc.)
+    - Argentina ID
+    - Panama ID
+    - Colombia ID
+    - South Africa ID
+    - Nigeria Voter ID and driver license
+- We added age verification feature:
+    - Now you can more easily obtain the age of the document owner in years and check whether it is above some age limit
+	- available on `MBMrzResult`, `MBBlinkIdRecognizerResult`, `MBBlinkIdCombinedRecognizerResult`, `MBUsdlRecognizerResult`, `MBUsdlCombinedRecognizerResult` and `MBIdBarcodeRecognizerResult`
+- Added presets for camera - Preset1080p, and 4K; Optimal always chooses the highest quality
+- We added the option to disable Microblink logs in the console output. Use `MBLogger` class and conform to `MBLoggerDelegate` in `AppDelegate`. To disable logs, implement delegate method `- (void)log:(MBLogLevel)level format:(const char *)format arguments:(va_list)arguments`. Be careful with this option. We need full log outputs from the application for support purposes. In case of having problems with scanning certain items, undesired behavior on the specific device(s), crashes inside SDK or anything unmentioned, we will need a full log from your side. If you disable Microblink logging, you won't be able to provide us this information. Hence support might be limited.
+
+### Improvements for existing features:
+
+- We added support for new document types in `MBBlinkIdCombinedRecognizer` and `MBBlinkIdRecognizer`:
+	- Australia - Australian Capital Territory - Driving Licence / front only
+	- Australia - Northern Territory - Driving Licence / BETA
+	- Australia - Tasmania - Driving Licence / front only / BETA
+	- Canada - Alberta - ID Card / BETA
+	- Canada - British Columbia - Driver License/Public Services Card (Combined)
+	- Canada - British Columbia - ID Card / BETA
+	- Canada - British Columbia - Public Services Card
+	- Canada - New Brunswick - Driving Licence
+	- Canada - Nova Scotia - Driving Licence / BETA
+	- Canada - Yukon - Driving Licence / BETA
+	- Panama - Driving Licence / front only / BETA
+	- Panama - ID Card / front only
+	- Singapore - Work Permit / BETA
+	- Taiwan - ID Card / front only / BETA
+	- USA - Alabama - ID Card
+	- USA - Alaska - ID Card / BETA
+	- USA - District Of Columbia - Driver License / BETA
+	- USA - Idaho - ID Card / BETA
+	- USA - Indiana - ID Card / BETA
+	- USA - Kentucky - ID Card / BETA
+	- USA - Massachusetts - ID Card
+	- USA - Oregon - ID Card
+	- USA - Washington - ID Card
+	- Back side supported:
+		- Australia - Western Australia - Driving Licence
+		- Mexico - Voter ID
+		- Netherlands - Driving Licence
+
+- Additional improvements in `BlinkIdCombinedRecognizer` and `BlinkIdRecognizer`:
+    - When the back side of the document is not fully supported by the `MBBlinkIdCombinedRecognizer`, we will capture and return the back side image without performing data extraction. You can disable this behaviour by using `skipUnsupportedBack`.
+    - We are now returning color status for the scanned document (black and white or color) in the following result fields:
+        - `documentImageColorStatus` in `MBBlinkIdRecognizerResult`.
+        - `documentFrontImageColorStatus` and `documentBackImageColorStatus` in `MBBlinkIdCombinedRecognizerResult`
+    - We are now returning `ClassInfo` which holds the following information about the scanned document: `Country`, `Region`, and `Type` of the document. Use  `classInfo`
+    - We introduced `ClassFilter` which determines whether a document should be processed or is filtered out, based on its `ClassInfo`. Use  `classFilter`
+    - To improve the scanning performance, we added additional feedback for users that ensures a detected document is entirely inside the frame. When a document is too close to the edge of the camera frame, we will display an appropriate message to the user in `MBBlinkIdOverlayController`. You can configure the minimum distance from the edge of the frame by using the `paddingEdge` settings method
+    - New recognizer options: `allowUnparsedMrzResults` and `allowUnverifiedMrzResults`
+    - New result field: `dateOfExpiryPermanent`
+
+- Improvements in `MBBlinkIdOverlayViewController `:
+    - When a document is too close to the edge of the camera frame, we display *`Move the document from the edge`* message.
+    - We added better user instructions when barcodes are being scanned in `MBUsdlCombinedRecognizer`. We display *`Scan the barcode`* message.
+- We are now delivering the complete list of open source dependencies used in the SDK. Please check the `open-source-software-used` directory
+- We improved document detection with `MBDocumentCaptureRecognizer`
+- Better scanning experience with `MBDocumentCaptureOverlayController`:
+   - Added capture button animation which shows that automatic capture is in progress
+   - More precise messages which guide the user through the scanning process
+- `MBBlinkCardRecognizer` now extracts IBAN from the Payment / Debit card
+- We added new result fields in `MBMrzResult`, returned by all recognizers which scan MRZ (Machine Readable Zone):
+    - `issuerName`
+    - `nationalityName`
+- Enabled reading ITF barcodes with length 4
+- Support for non-standard (floating point) amounts in QR code
+
+### Bug fixes:
+
+- Fixed animation on back side scanning on `MBBlinkIdOverlayViewController` when recognizer is wrapped in `MBSuccessFrameGrabberRecognizer`
+- Large memory consumption introduced in v5.3.0 is due to 4K video session on all 4K eligible iPhones; we introduced new camera presets 1080p and 4K, so to reduce your app memory consumption set camera preset on 1080p or 720p
+- Fixed `Torch` activation for all iOS versions
+- Fixed OpenGL code which was fragile and sensitive to crashes if used from multiple threads
+
 ## 7.7.0
+
+- Major API changes:
+    - Swift Module has been renamed from `MicroBlink` to `Microblink`
+
+- New features:
+    - added support for capturing cropped images (without data extraction) of documents of any format:
+        - use `MBDocumentCaptureRecognizer` and `MBDocumentCaptureOverlaySettings`
+        - use `MBDocumentCaptureOverlayViewController`, which is designed for taking **high resolution** document images and guides the user through the image capturing process. It can be used only with `MBDocumentCaptureRecognizer`
+    - `MBBlinkIdRecognizer` and `MBBlinkIdCombinedRecognizer` now support new document types from different countries, all supported document types are listed in [`documentation/BlinkIDRecognizer.md`](documentation/BlinkIDRecognizer.md)
+    - Updated `MBBelgiumCombinedRecognizer`:
+        - added `nationalRegisterNumber` to result
+    - added support for reading front and back side of Nigerian Voter ID card - use `MBNigeriaCombinedRecognizer`
+    - new options in `MBBlinkIdOverlaySettings`:
+        - option to disable displaying of "Document Not Supported" dialog when `MBBlinkIdRecognizer` or `MBBlinkIdCombinedRecognizer` is used in combination with other recognizers - use method `showNotSupportedDialog`
+        - option to configure back side scanning timeout - use `backSideScanningTimeout`
+
+- Improvements in ID scanning performance:
+    - **overall size impact on application reduced for almost 4 MB** when PhotoPay  SDK v7.7 is used, relative to size impact of the previous v7.5
+    - improved `MBSwitzerlandSlipRecognizer`:
+        - new result member `ocrLineResult` which returns raw OCR line
+    - improved `MBBelgiumSlipRecognizer`:
+        - better `amount` and `reference` extraction
+        - now it is possible to enable/disable reading of free form, unstructured references - use `freeFormReferenceEnabled`
+    - improved `MBBlinkCardRecognizer`:
+        - now extracts IBAN from the Payment / Debit card
+    - added option to anonymize Netherlands MRZ area in document image returned by the `MBPassportRecognizer` - use `anonymizeNetherlandsMrz`
+    - enabled setting `MBMrzFilter` on `MBMrtdCombinedRecognizer`:
+        - determines whether document should be processed or it is filtered out, based on its MRZ (Machine Readable Zone)
+        - this feature is also available for `MBMrtdRecognizer`
+    - added property `localizedName` to `MBBlinkIdRecognizerResult`, `MBBlinkIdCombinedRecognizerResult` and `MBHongKongIdFrontRecognizerResult` (CCC to chinese alphabet conversion for Hong Kong ID)
+    - enabled digital signing of `MBBlinkIdCombinedRecognizer.Result`
+    - improved `MBVinParser`:
+        - added support for Renewal Identification Number (RIN) - DMV California format
+    - added new fields in `MBMrzResult`:
+        - `sanitizedDocumentCode`
+        - `sanitizedDocumentNumber`
+    - improved `MBlinkIdRecognizer` and `MBBlinkIdCombinedRecognizer`:
+        - introduced blur filter that discards blurred frames and prevents reading data from them. This option is enabled by default, it can be disabled by using `allowBlurFilter`
+
+- Minor API changes:
+    - in combined recognizers results, `documentDataMatch` value is now returned as `MBDataMatchResult` enum with three possible values: `NotPerformed`,  `Failed` and `Success`
+    - methods `pauseScanning` and `resumeScanningAndResetState` in `MBRecognizerRunnerViewController` do not return anymore `BOOL`
+        - use `isScanningPaused` to check if scanning is paused
+
+- Bugfixes:
+    - fixed issue with utf8 encoding in MBSloveniaQrCodePaymentRecognizer
+    - fixed bug in `MBBlinkCardRecognizer`:
+        - `anonymizeCvv` now works independently of any other anonymization setting
+    - `MBBlinkIdCombinedRecognizer` - fixed issue when the front side of a document was returned as a back side
+    - fixed memory leaks that could cause crashes in some cases
+    - fixed turning on/off flashlight on iOS 13.1.3
 
 ## 7.5.0
 
