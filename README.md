@@ -118,7 +118,7 @@ The source code of the sample app can be used as the reference during the integr
 ### 1. Initial integration steps
 
 
--[Download](https://github.com/PhotoPay/photopay-ios/releases) latest release (Download .zip or .tar.gz file starting with BlinkID. DO NOT download Source Code as GitHub does not fully support Git LFS)
+-[Download](https://github.com/PhotoPay/photopay-ios/releases) latest release (Download .zip or .tar.gz file starting with PhotoPay. DO NOT download Source Code as GitHub does not fully support Git LFS)
 
 OR
 
@@ -608,7 +608,7 @@ Typical actions which need to be allowed to the user are:
 - a way to cancel the scanning, typically with a "cancel" or "back" button
 - a way to power on and off the light (i.e. "torch") button
  
-BlinkID SDK always provides it's own default implementation of the Overlay View Controller for every specific use. Your implementation should closely mimic the default implementation as it's the result of thorough testing with end users. Also, it closely matches the underlying scanning technology. 
+PhotoPay SDK always provides it's own default implementation of the Overlay View Controller for every specific use. Your implementation should closely mimic the default implementation as it's the result of thorough testing with end users. Also, it closely matches the underlying scanning technology. 
 
 For example, the scanning technology usually gives results very fast after the user places the device's camera in the expected way above the scanned object. This means a progress bar for the scan is not particularly useful to the user. The majority of time the user spends on positioning the device's camera correctly. That's just an example which demonstrates careful decision making behind default camera overlay view.
 
@@ -1049,7 +1049,7 @@ The [`MBUnitedKingdomSlipRecognizer`](http://photopay.github.io/photopay-ios/Cla
 This recognizer can be used in any overlay view controller, but it works best with the [`MBPhotopayOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBPhotopayOverlayViewController.html), which has UI best suited for both side document scanning.
 # <a name="processors-and-parsers"></a> `MBProcessor` and `MBParser`
 
-The `MBProcessors` and `MBParsers` are standard processing units within *BlinkID* SDK used for data extraction from the input images. Unlike the [`MBRecognizer`](#recognizer-concept), `MBProcessor` and `MBParser` are not stand-alone processing units. `MBProcessor` is always used within `MBRecognizer` and `MBParser` is used within appropriate `MBProcessor` to extract data from the OCR result.
+The `MBProcessors` and `MBParsers` are standard processing units within *PhotoPay* SDK used for data extraction from the input images. Unlike the [`MBRecognizer`](#recognizer-concept), `MBProcessor` and `MBParser` are not stand-alone processing units. `MBProcessor` is always used within `MBRecognizer` and `MBParser` is used within appropriate `MBProcessor` to extract data from the OCR result.
 
 ## <a name="processor-concept"></a> The `MBProcessor` concept
 
@@ -1063,7 +1063,7 @@ To support common use cases, there are several different `MBProcessor` implement
 
 ##  <a name="available-processors"></a> List of available processors
 
-This section will give a list of `MBProcessor` types that are available within *BlinkID* SDK and their purpose.
+This section will give a list of `MBProcessor` types that are available within *PhotoPay* SDK and their purpose.
 
 ### <a name="image-processors"></a> Image Return Processor
 
@@ -1090,7 +1090,7 @@ If we put `MBAmountParser` in one `MBParserGroupProcessor` and `MBEmailParser` i
 
 `MBParserGroupProcessor` is most commonly used `MBProcessor`. It is used whenever the OCR is needed. After the OCR is performed and all parsers are run, parsed results can be obtained through parser objects that are enclosed in the group. `MBParserGroupProcessor` instance also has associated inner `MBParserGroupProcessorResult` whose state is updated during processing and its property [`ocrLayout`](http://photopay.github.io/photopay-ios/Classes/MBParserGroupProcessor.html) can be used to obtain the raw [`MBOcrLayout`](http://photopay.github.io/photopay-ios/Classes/MBOcrLayout.html) that was used for parsing data.
 
-Take note that `MBOcrLayout` is available only if it is allowed by the *BlinkID* SDK license key. `MBOcrLayout` structure contains information about all recognized characters and their positions on the image. To prevent someone to abuse that, obtaining of the `MBOcrLayout` structure is allowed only by the premium license keys.
+Take note that `MBOcrLayout` is available only if it is allowed by the *PhotoPay* SDK license key. `MBOcrLayout` structure contains information about all recognized characters and their positions on the image. To prevent someone to abuse that, obtaining of the `MBOcrLayout` structure is allowed only by the premium license keys.
 
 ## <a name="parser-concept"></a> The `MBParser` concept
 
@@ -1148,7 +1148,7 @@ Templated document is any document which is defined by its template. Template co
 
 ## <a name="defining-document-detection"></a> Defining how document should be detected
 
-Before performing OCR of the document, _BlinkID_ first needs to find its location on a camera scene. In order to perform detection, you need to define [MBDetector](#detector-concept). 
+Before performing OCR of the document, _PhotoPay_ first needs to find its location on a camera scene. In order to perform detection, you need to define [MBDetector](#detector-concept). 
 
 You have to set concrete `MBDetector` when instantiating the `MBDetectorRecognizer` as a parameter to its constructor.
 
@@ -1265,13 +1265,13 @@ If `MBMrtdSpecifications` are not set, all supported MRTD formats will be detect
 
 For the list of all available configuration methods see [`MBMrtdDetector`](http://photopay.github.io/photopay-ios/Classes/MBMrtdDetector.html) doc, and for available result content see [`MBMrtdDetectorResult`](http://photopay.github.io/photopay-ios/Classes/MBMrtdDetectorResult.html) doc.
 
-# Creating customized build of BlinkID SDK
+# Creating customized build of PhotoPay SDK
 
 If your final app size is too large, you can create a customised build of _MicroBlink.framework_ and _MicroBlink.bundle_ which will contain only features and resources that you really need.
 
-In order to create customised build of BlinkID SDK, you first need to download the static distribution of BlinkID SDK. A valid production licence key is required in order to gain access to the download link of BlinkID SDK static distribution. Once you have a valid production licence key, please contact our [support team](http://help.microblink.com) and ask them to provide you with the download link. After they give you access to the static distribution of BlinkID SDK, you will be able to download it from you account at [MicroBlink Developer Dashboard](https://www.microblink.com/login).
+In order to create customised build of PhotoPay SDK, you first need to download the static distribution of PhotoPay SDK. A valid production licence key is required in order to gain access to the download link of PhotoPay SDK static distribution. Once you have a valid production licence key, please contact our [support team](http://help.microblink.com) and ask them to provide you with the download link. After they give you access to the static distribution of PhotoPay SDK, you will be able to download it from you account at [MicroBlink Developer Dashboard](https://www.microblink.com/login).
 
-The static distribution of BlinkID SDK is a large zip file (several hundred megabytes) which contains static libraries of BlinkID SDK's native code, all assets and resources and a script which will create the customised build for you.
+The static distribution of PhotoPay SDK is a large zip file (several hundred megabytes) which contains static libraries of BlinkID SDK's native code, all assets and resources and a script which will create the customised build for you.
 
 ### Prerequisites for creating customised build
 
@@ -1283,7 +1283,7 @@ In order to create customised build of PhotoPay SDK, you will need following too
 
 ### Steps for creating customised build
 
-1. Obtain the static distribution of BlinkID SDK by [contacting us](http://help.microblink.com)
+1. Obtain the static distribution of PhotoPay SDK by [contacting us](http://help.microblink.com)
 2. Download the zip from link that you will be provided
 3. Unzip the file into an empty folder
 4. Edit the file `enabled-features.cmake`
