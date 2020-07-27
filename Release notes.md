@@ -1,5 +1,144 @@
 # Release notes
 
+## 7.9.0
+
+### New features:
+
+- In `MBBlinkIdCombinedRecognizer` and `MBBlinkIdRecognizer` we added:
+    - Support for obtaining full document image for IDs with barcodes. Now you can capture document image and extract barcode data with a single scan.
+    - Scanning & data extraction for  travel visas and passports.
+    - Field validation - we validate if the results from certain fields match predefined character sets.
+        - If validation fails, the recognizer's state is `MBRecognizerResultStateUncertain`.
+        - Use `validateResultCharacters`to enable or disable validation.
+
+    - Support for US documents with **vertical** orientations:
+        - Alabama DL
+        - Arizona DL
+        - California DL
+        - Colorado DL
+        - Connecticut DL
+        - Georgia DL
+        - Illinois DL
+        - Iowa DL
+        - Kansas DL
+        - Kentucky DL
+        - Maryland DL
+        - Massachusetts DL
+        - Minnesota DL
+        - Missouri DL
+        - New Jersey DL
+        - Ohio DL
+        - Pennsylvania DL
+        - South Carolina DL
+        - Tennessee DL
+        - Texas DL
+        - Utah DL
+        - Washington DL
+        - Wisconsin DL
+        
+    - Support for new document types:
+        - Australia New South Wales - ID Card / Front only / BETA
+        - Brazil - Driver License / BETA
+        - Brunei - Military ID / BETA
+        - Brunei - Residence Permit / BETA
+        - Brunei - Temporary Residence Permit / BETA
+        - Croatia Health Insurance Card / front side / BETA
+        - Ecuador ID / front side
+        - El Salvador ID / BETA
+        - Ghana - Driver License / Front only
+        - Latvia - ID Card
+        - Norway - Driving Licence / Front only / BETA
+        - Oman - ID Card
+        - Saudi Arabia - ID Card / BETA
+        - Sri Lanka ID / BETA
+        - Sweden - Social Security Card / Front only
+        - USA - Social Security Card / BETA
+        - Back side supported:
+            - Malaysia - MyTentera
+
+    - No longer BETA:
+        - Australia Tasmania - Driving Licence
+        - Canada British Columbia - ID Card
+        - Canada Nova Scotia DL
+        - Canada Yukon DL        - Germany - Residence Permit
+        - Morocco - ID Card
+        - Nigeria - Voter ID
+        - Norway DL
+        - Singapore - Work Permit
+        - USA Alaska - ID Card
+        - USA District Of Columbia - Driver License
+        - USA Indiana - ID Card
+        - USA Kentucky - ID Card
+    
+    - Back side support:
+        - Kenya ID
+        
+    - Barcode scanning on the following documents:
+        - Argentina ID
+        - Colombia ID
+        - Nigeria Voter ID
+        - South Africa ID
+
+    - **Result anonymization** - with this option enabled, results are not returned for protected fields on documents listed here. The full document image will also have this data blacked out.
+        - Protected fields are:
+            - Document number on Hong Kong ID
+            - MRZ on Hong Kong passports
+            - Personal ID number on Netherlands DL
+            - Personal ID number and MRZ on Netherlands ID
+            - MRZ on Netherlands passports
+            - Document number on Singapore DL, ID, Fin Card, Resident ID
+            - Personal ID number on Singapore Employment Pass
+            - Document number and personal ID number on Singapore Work Permit
+            - MRZ on Singapore passports.
+        - By using `anonymizationMode` method, you can choose the `MBAnonymizationMode` : `ImageOnly`, `ResultFieldsOnly`, `FullResult` or `None`.
+        - `FullResult` anonymization (both images and data) is set by default.
+
+- We added support for new **MRZ** formats:
+    - Guatemala ID
+    - Kenya ID
+
+### Improvements for existing features:
+
+- Improvements in `MBBlinkIdCombinedRecognizer` and `MBBlinkIdRecognizer`:
+    - Documents discarded with the class filter are now reported as not supported
+        - `onDocumentSupportStatus` will be called if a documents is filtered out by the `MBClassFilter`
+    - For Malaysian MyKad we are now returning if a Moire pattern is present on the scanned document (detected or not detected).
+        - use `imageAnalysisResult.documentImageMoireStatus` in `MBBlinkIdRecognizer`.
+        - use `frontImageAnalysisResult.documentImageMoireStatus` and `backImageAnalysisResult.documentImageMoireStatus` in `MBBlinkIdCombinedRecognizer `.
+
+- We made changes to the result structure of `MBBlinkIdCombinedRecognizer` and `MBBlinkIdRecognizer`:
+    - Barcode data is now encapsulated in its own result structure: `MBBarcodeResult`.
+    - Data from all OCR-ed fields, without MRZ data, is now encapsulated in a `MBVizResult` structure, representing the "Visual Inspection Zone" data. In `MBBlinkIdCombinedRecognizer`, front side data is available in its own structure (`frontVizResult`), back side data in its own (`backVizResult`), so you can now **access data from each side separately**.
+    - The main part of the result, outside these structures, is filled according to these rules:
+        - Document number is filled with data from the MRZ, if present.
+        - Remaining data is then filled with barcode data.
+        - Remaining data is filled from the back side's visual inspection zone (OCR data outside of MRZ).
+        - Remaining data is filled from the front side's visual inspection zone.
+        - Remaining data is filled with data from the MRZ.
+
+- We added digital signature support to `MBPassportRecognizer`. 
+- We updated `MBIdBarcodeRecognizerResult` with specific driving license info.
+    - Use `restrictions`, `endorsements` and `vehicleClass`.
+- We updated `MBUsdlRecognizerResult` and `MBIdBarcodeRecognizerResult` with additional address fields:
+    - `street`, `postalCode`, `city` and `jurisdiction` 
+- We added `expired` method to `MBBlinkIdRecognizerResult`, `MBBlinkIdCombinedRecognizerResult` and `MBIdBarcodeRecognizerResult`.
+    - It compares the current time on the device with the date of expiry and checks whether the document has expired or not. 
+
+### Minor API changes:
+
+- We moved `MBBlinkIdRecognizerResult` member `colorStatus` to the result's `imageAnalysisResult` (`frontImageAnalysisResult` and `backImageAnalysisResult` in `MBBlinkIDCombinedRecognize.Result`).
+- We moved all resources inside framework, we are not shipping `Microblink.bundle` anymore
+
+### Bug fixes:
+
+- We fixed bug in IBAN parsing which caused that reference number was sometimes read as part of the IBAN number.
+- We fixed amount extraction in `MBSerbiaQrCodePaymentRecognizer` and `MBSerbiaPdf417PaymentRecognizer`.
+- We fixed bug in `MBBlinkIdCombinedRecognizer` and `MBBlinkIdRecognizer` which caused that dates on Belgian ID cards are not parsed correctly in cases when month is July.
+- We fixed US driver's license address extraction (Oregon, Mississippi, Rhode Island).
+- Fixed check mark confirmation image and flip animation image appearing sometimes one over another on back side scanning on `MBBlinkIdOverlayViewController`
+- Fixed immediately back side scanning on `MBBlinkIdOverlayViewController` which sometimes caused not getting full document back side image.
+- We removed OpenGL entirely which was causing unexpected crashes.
+
 ## 7.8.0
 
 ### New features:
