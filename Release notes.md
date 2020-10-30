@@ -1,5 +1,104 @@
 # Release notes
 
+## 7.10.0
+
+### New features:
+
+- In the latest release, PhotoPay extracts data from:
+    - **Hungary** QR code
+        - New `MBHungaryQrCodePaymentRecognizer`
+        - Support for the Hungary QR code payment standard
+- And has improved parsing of:
+    - **Serbia** Barcode
+        - We improved parsing for the recipient and sender’s name and address fields
+- We have translated complete SDK to following languages: **Croatian**, **Czech**, **English**, **French**, **German**, **Italian**, **Portuguese**, **Slovak**, **Spanish**, **Malay**, **Dutch**, **Hungarian**, **Indonesian**, **Arabic(UAE)**, **Romanian**, **Chinese traditional**, **Chinese simplified**, **Thai**, **Hewbrew** and **Vietnamese**.
+- We added user feedback when turning on the flashlight on `MBBlinkIdOverlayViewcontroller`:
+	- It prompts user to watch out for flashlight glare
+	- It can be disabled by setting `showFlashlightWarning` property to NO/false on `MBBlinkIdOverlaySettings`
+- We added `MBBlinkIdOverlayViewController` customization:
+	- Set font, text color, corner radius and custom images
+	- Use `MBBlinkIdOverlayTheme`
+- `MBBlinkIdRecognizer` and `MBBlinkIdCombinedRecognizer`:
+	- Please check out `BlinkIDRecognizer.md` and `BlinkIDRecognizerResult.md` for all new supported documents.
+
+
+### iOS version support change:
+
+- From now on, we are not supporting **iOS 8** version.
+
+### Major API change:
+
+ - We added `errorCallback` on `MBMicroblinkSDK` methods which needs to be implemented for properly setting up the license key.
+
+### Minor API changes:
+
+- We have made some changes to the **MBBlinkIdRecognizer** and **MBBlinkIdCombinedRecognizer**:
+	- We renamed `MBDocumentImageMoireStatus` to `MBImageAnalysisDetectionStatus`.
+	- We grouped the `conditions` member from the results with the `MBDriverLicenseDetailedInfo` structure.
+- We renamed `MBRecogitionMode` to `MBRecognitionDebugMode` in `MBRecognizerCollection`.
+- Swift:
+	- We renamed all `sharedInstance` to `shared`.
+	- All enums are now `Int`.
+	- All `unsigned integers` are now `Int`.
+
+### Deprecated recognizers
+
+- We have deprecated following recognizers:
+	- `MBPassportRecognizer`, `MBVisaRecognizer`, `MBAustraliaDlFrontRecognizer`, `MBAustriaDlFrontRecognizer`, `MBAustriaIdFrontRecognizer`, `MBBelgiumIdFrontRecognizer`, `MBBruneiIdFrontRecognizer`, `MBColombiaDlFrontRecognizer`, `MBColombiaIdFrontRecognizer`, `MBCyprusIdFrontRecognizer`, `MBCyprusOldIdFrontRecognizer`, `MBEgyptIdFrontRecognizer`, `MBEudlRecognizer`, `MBHongKongIdFrontRecognizer`, `MBIndonesiaIdFrontRecognizer`, `MBIrelandDlFrontRecognizer`, `MBItalyDlFrontRecognizer`, `MBJordanIdFrontRecognizer`, `MBKuwaitIdFrontRecognizer`, `MBMalaysiaDlFrontRecognizer`, `MBMalaysiaIkadFrontRecognizer`, `MBMalaysiaMyKadFrontRecognizer`, `MBMalaysiaMyPrFrontRecognizer`, `MBMalaysiaMyTenteraFrontRecognizer`, `MBMexicoVoterIdFrontRecognizer`, `MBMoroccoIdFrontRecognizer`, `MBNewZealandDlFrontRecognizer`, `MBRomaniaIdFrontRecognizer`, `MBSingaporeDlFrontRecognizer`, `MBSingaporeIdFrontRecognizer`, `MBSloveniaIdFrontRecognizer`, `MBSpainDlFrontRecognizer`, `MBSwedenDlFrontRecognizer`, `MBSwitzerlandIdFrontRecognizer`, `MBUnitedArabEmiratesIdFrontRecognizer`, `MBUnitedArabEmiratesDlFrontRecognizer ` 
+		-  **use `BlinkIdCombinedRecognizer` or `BlinkIdRecognizer` instead**
+	- `MBMrtdCombinedRecognizer`, `MBAustraliaDlBackRecognizer`, `MBAustriaCombinedRecognizer`, `MBAustriaIdBackRecognizer`, `MBBelgiumCombinedRecognizer`, `MBBelgiumIdBackRecognizer`, `MBBruneiIdBackRecognizer`, `MBColombiaIdBackRecognizer`, `MBCyprusIdBackRecognizer`, `MBCyprusOldIdBackRecognizer`, `MBJordanCombinedRecognizer`, `MBJordanIdBackRecognizer`, `MBKuwaitIdBackRecognizer`, `MBMalaysiaMyKadBackRecognizer`, `MBMoroccoIdBackRecognizer`, `MBNigeriaVoterIdBackRecognizer`, `MBPolandIdBackRecognizer`, `MBSingaporeCombinedRecognizer`, `MBSingaporeIdBackRecognizer`, `MBSloveniaCombinedRecognizer`, `MBSloveniaIdBackRecognizer`, `MBSwitzerlandIdBackRecognizer`, `MBUnitedArabEmiratesIdBackRecognizer`, `MBPolandCombinedRecognizer`, `MBNigeriaCombinedRecognizer`
+		- **use `BlinkIdCombinedRecognizer` instead**
+	- `MBDocumentFaceRecognizer`
+	- `MBMrtdRecognizer`
+		- **Use `MBBlinkIdRecognizer` instead**
+	- `MBMrtdCombinedRecognizer`
+	- `MBPassportRecognizer`
+	- `MBVisaRecognizer`
+		- **Use `MBBlinkIdRecognizer` or `MBBlinkIdCombinedRecongizer` instead**
+
+### Improvements to existing features:
+
+- We have improved parsing of **MRZ** formats deviating from the ISO/IEC 7501 standard:
+	- Document discriminator was in place of the document number on driver licenses and IDs from:
+		- **New York** 
+		- **Michigan** 
+		- **Canada**
+	- Different check digit calculation for **Mexico** (Consular) ID
+	- Recognition of the unofficial `XCT` country code for Northern **Cyprus** ID
+	- Recognition of different country codes and check digit calculation on **China** Mainland Travel Permit for Hong Kong and Macao Residents
+- We added **anonymization** support for:
+	- MRZ on the Mainland Travel Permit for Hong Kong and Macao Residents
+- We have made some changes to the **MBBlinkIdRecognizer** and **MBBlinkIdCombinedRecognizer**
+	- You can now see `MBProcessingStatus` in the results to inspect potential processing errors, such as when barcode detection fails, a mandatory field is missing, etc. 
+	- You can now also see a more detailed `MBImageAnalysisResult` showing you when: 
+		- Face image is detected
+		- MRZ is detected
+		- Barcode is detected
+	- We added a `MBRecognitionModeFilter` settings group. You can toggle flags on this object to control the recognition mode of the recognizer:
+		- `enableMrzId` lets you scan MRZ on all identity documents except visas and passports.
+		- `enableMrzVisa` lets you scan MRZ on visa documents.
+		- `enableMrzPassport` lets you scan MRZ on passports.
+		- `enablePhotoId` lets you scan photo IDs. Use it to enable or disable document and face image extraction on unsupported documents.
+		- `enableFullRecognition` lets you scan all data from our documents.
+		- Your license key still controls which of the above recognition modes are allowed.
+	- We have added a `MBRecognitionMode` result member describing which recognition mode was used to produce the results.
+	-  We are now retrieving sex and nationality fields from the MRZ in cases where those two fields cannot be found in the document’s VIZ. Previously, we only used to do this for dates, name fields and document numbers. 
+	- We are now preserving the original string (raw data) of the dates we couldn’t parse.
+- We have improved the thresholds for card detection feedback messages ("move closer" and "move farther"). This will improve the UX when scanning in landscape mode as the document can now be closer to the camera.
+- We added `disableMicroblinkLogging` method to `MBLogger` for easier implementation
+	- This also enables disabling Microblink logging in Swift.
+- We updated `MBUsdlRecognizerResult` and `MBIdBarcodeRecognizer.Result` with additional address fields:
+    - `street`, `postalCode`, `city` and `jurisdiction` 
+- We added `expired` (in Swift `isExpired`) property to `MBBlinkIdRecognizerResult`, `MBBlinkIdCombinedRecognizerResult` and `MBIdBarcodeRecognizerResult`.
+    - It compares the current time on the device with the date of expiry and checks whether the document has expired or not. 
+
+### Bug fixes:
+
+- We added a `nullable` attribute to the `recognizerRunnerViewControllerWithOverlayViewController` to fix a force unwrapping issue in Swift that could occur if the camera is broken or not working.
+- We improved the data match logic for **Guatemala Consular ID** in `MBBlinkID(Combined)Recognizer`.
+- We fixed race conditions and camera asserts that could sometimes cause crashes.
+- We fixed camera reticle animation on `MBBlinkIdOverlayViewController` when user would go to the background.
+
 ## 7.9.0
 
 ### New features:
