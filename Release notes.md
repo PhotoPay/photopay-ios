@@ -1,5 +1,363 @@
 # Release notes
 
+## 7.13.0
+
+### Newly supported identity documents:
+
+We’ve added 174 new documents:
+
+#### Europe
+- Albania - Driver Card (front only)
+- Albania - Professional Driver License (front only)
+- Belarus - Driver License (front only, beta)
+- Belgium - Minors ID (beta)
+- Czechia - Residence Permit
+- Finland - Alien ID
+- Finland - Residence Permit (beta)
+- Georgia - Driver License (front only)
+- Greece - Residence Permit
+- Ireland - Passport Card
+- Ireland - Public Services Card (beta)
+- Kosovo - Driver License (front only, beta)
+- Latvia - Alien ID
+- Luxembourg - ID Card
+- Moldova - ID Card (beta)
+- North Macedonia - Driver License (front only)
+- North Macedonia - ID Card
+- Poland - Passport (beta)
+- Slovenia - Residence Permit (beta)
+- Spain - Alien ID
+- UK - Passport (beta)
+- North Macedonia - Polycarbonate Passport
+- Austria - Paper Passport 
+- Belarus - Paper Passport
+- Belgium - Paper Passport (beta)
+- Bulgaria - Paper Passport
+- Estonia - Paper Passport
+- France - Paper Passport (beta)
+- Georgia - Paper Passport (beta)
+- Germany - Paper Passport 
+- Greece - Paper Passport
+- Hungary- Paper Passport
+- Italy - Paper Passport (beta)
+- Kosovo - Paper Passport
+- Moldova - Paper Passport (beta)
+- Poland - Paper Passport
+- Portugal - Paper Passport
+- Spain - Paper Passport
+- Switzerland - Paper Passport
+- UK - Paper Passport
+
+#### Middle East and Africa 
+- Algeria - Driver License
+- Burkina Faso - ID Card
+- Cameroon - ID Card
+- Democratic Republic Of The Congo - Driver License (front only, beta)
+- Egypt - Driver License (beta)
+- Ghana - ID Card
+- Iraq - ID Card
+- Ivory Coast - Driver License (front only, beta)
+- Ivory Coast - ID Card
+- Lebanon - ID Card (beta)
+- Morocco - Driver License
+- Mozambique - Driver License (front only, beta)
+- Oman - Driver License (beta)
+- Rwanda - ID Card (front only)
+- Senegal - ID Card
+- Tanzania - Driver License (front only, beta)
+- Tunisia - Driver License (front only)
+- Uganda - Driver License (front only, beta)
+- Botswana - ID Card
+- Sudan - Polycarbonate Passport
+- Algeria - Paper Passport (beta)
+- Egypt - Paper Passport (beta)
+- Eswatini - Paper Passport 
+- Ghana - Paper Passport
+- Iran - Paper Passport (beta)
+- Iraq - Paper Passport (beta)
+- Israel - Paper Passport (beta)
+- Jordan - Paper Passport (beta)
+- Kenya - Polycarbonate Passport
+- Libya - Polycarbonate Passport (beta)
+- Morocco - Paper Passport (beta)
+- Nigeria - Paper Passport
+- Nigeria - Polycarbonate Passport (beta)
+- Qatar - ID Card (front only, beta)
+- Saudi Arabia - Paper Passport
+- Syria - Paper Passport
+- Tanzania - ID Card (beta)
+- Tanzania - Voter ID (front only, beta)
+- Tunisia - Paper Passport
+- Turkey - Paper Passport
+- Zimbabwe - Paper Passport
+
+#### Latin America & the Caribbean
+- Argentina - Alien ID
+- Bahamas - ID Card (front only, beta)
+- Bolivia - Minors ID
+- Jamaica - Driver License
+- Mexico - Residence Permit (beta)
+- Mexico - Chiapas - Driver License (front only)
+- Mexico - Coahuila - Driver License (beta)
+- Mexico - Durango - Driver License(front only, beta)
+- Mexico - Guerrero-cocula - Driver License (beta)
+- Mexico - Guerrero-juchitan - Driver License (beta)
+- Mexico - Guerrero-tepecoacuilco - Driver License (front only, beta)
+- Mexico - Guerrero-tlacoapa - Driver License (front only, beta)
+- Mexico - Hidalgo - Driver License
+- Mexico - Mexico - Driver License (beta)
+- Mexico - Morelos - Driver License (front only)
+- Mexico - Oaxaca - Driver License
+- Mexico - Puebla - Driver License (front only, beta)
+- Mexico - San Luis Potosi - Driver License (front only)
+- Mexico - Sinaloa - Driver License (front only, beta)
+- Mexico - Sonora - Driver License (beta)
+- Mexico - Tabasco - Driver License (beta)
+- Mexico - Yucatan - Driver License (beta)
+- Mexico - Zacatecas - Driver License (beta)
+- Mexico - Baja California Sur - Driving License (beta)
+- Mexico - Campeche - Driving License (beta)
+- Mexico - Colima - Driving License (beta)
+- Panama - Temporary Residence Permit (beta)
+- Peru - Minors ID (beta)
+- Trinidad And Tobago - Driver License (front only, beta)
+- Trinidad And Tobago - ID Card
+- Argentina - Paper Passport
+- Brazil - Paper Passport (beta)
+- Guatemala - Paper Passport
+- Haiti - Paper Passport
+- Honduras - Paper Passport (beta)
+- Mexico - Paper Passport (beta)
+- Mexico - Nayarit - Driving Licence (beta)
+
+#### Oceania
+- Australia - South Australia - Proof Of Age Card (front only, beta)
+- Australia - Health Insurance Card (front only, beta)
+- Australia - Paper Passport
+
+#### Asia
+- Armenia - ID Card
+- Bangladesh - Driver License (beta)
+- Cambodia - Driver License (front only, beta)
+- India - Gujarat - Driving Licence (front only, beta)
+- India - Karnataka - Driving Licence (front only)
+- India - Kerala - Driving Licence (beta)
+- India - Madhya Pradesh - Driving Licence (front only, beta)
+- India - Punjab - Driving Licence (front only, beta)
+- India - Tamil Nadu - Driving Licence (beta)
+- Kyrgyzstan - ID Card
+- Malaysia - Mypolis (beta)
+- Malaysia - Refugee ID (front only)
+- Myanmar - Driver License (beta)
+- Pakistan - Punjab - Driving Licence (front only)
+- Sri Lanka - Driving Licence (front only)
+- Thailand - Alien ID (front only)
+- Thailand - Driver License (beta)
+- Uzbekistan - Driver License (front only, beta)
+- Azerbaijan - Polycarbonate Passport (beta)
+- Tajikistan - Polycarbonate Passport (beta)
+- Bangladesh - Paper Passport
+- China - Paper Passport (beta)
+- India - Paper Passport
+- Indonesia - Paper Passport
+- Japan - Paper Passport
+- Nepal - Paper Passport
+- Pakistan - Paper Passport
+- Philippines - Paper Passport
+- South Korea - Paper Passport (beta)
+- Sri Lanka - Paper Passport
+- Uzbekistan - Paper Passport
+
+#### Northern America
+- Canada - Tribal ID (beta)
+- Canada - Nova Scotia - ID Card (beta)
+- Canada - Saskatchewan - ID Card (beta)
+- USA - Border Crossing Card (front only)
+- USA - Global Entry Card
+- USA - Nexus Card (beta)
+- USA - Veteran ID (front only)
+- USA - Work Permit
+- USA - Mississippi - ID Card (beta)
+- USA - Montana - ID Card
+- USA - New Mexico - ID Card
+- USA - Wisconsin - ID Card
+- Canada - Citizenship Certificate (beta)
+- Canada - Ontario - Health Insurance Card (front only)
+- Canada - Quebec - Health Insurance Card (front only, beta)
+- USA - Military ID Card 
+- USA - Rhode Island - ID Card
+- USA - South Carolina - ID Card
+- Canada - Paper Passport
+- Canada - Weapon Permit (front only, beta)
+- USA - Paper Passport (beta)
+
+#### Back side support added:
+- Hungary - Residence Permit
+- Luxembourg - Residence Permit (no longer beta)
+- Mauritius - ID Card
+- Colombia - Alien ID (no longer beta)
+- Mexico - Baja California - Driver License
+- Mexico - Chihuahua - Driver License
+- Mexico - Guanajuato - Driver License
+- Mexico - Michoacan - Driver License
+- Malaysia - MyKid
+- Malaysia - MyPR
+- Mexico - Puebla - Driving License 
+- Singapore - S PASS
+- Greece - ID Card
+- Democratic Republic of the Congo - Driving Licence
+- Mexico - Veracruz - Driving Licence
+
+#### No longer beta:
+- Albania - Passport
+- Malta - Residence Permit
+- Switzerland - Residence Permit
+- Bolivia - Driver License
+- Chile - Passport
+- El Salvador - ID Card
+- Peru - ID Card
+- Singapore - S Pass
+- Finland - Polycarbonate Passport
+- Ireland - Polycarbonate Passport
+- Kosovo - Driving License 
+- Latvia - Polycarbonate Alien Passport
+- Latvia - Polycarbonate Passport 
+- Poland - Polycarbonate Passport 
+- Cameroon - ID Card 
+- Ghana - ID Card 
+- Iraq - ID Card 
+- Tanzania - Driving Licence
+- Turkey - Polycarbonate Passport
+- Uganda - Driving Licence
+- Chile - Driving Licence
+- Ecuador - Driving Licence
+- Haiti - Driving Licence
+- Belarus - Driving Licence
+- UK - Polycarbonate Passport
+- Bahamas - Driving Licence
+- Mexico - Durango - Driving Licence
+- Venezuela - ID Card
+- USA - Kansas - ID Card
+
+### Changes to the BlinkId(Combined)Recognizer
+- You can now retrieve an image of the document owner along with cropped images of the document itself whenever you’re scanning an AAMVA-compliant ID: 
+
+	- Using `BarcodeId` as a `RecognitionMode` lets you scan US driver licenses and IDs that BlinkID can’t read from the Visual Inspection Zone (VIZ) alone. Use it to extract:
+		- A face image from the front side
+		- Barcode data from the back side
+		- Cropped document images of both sides
+	- You can disable this `RecognitionMode` by setting `enableBarcodeId` to `false` in the `RecognitionModeFilter`.
+- We've improved data extraction through the MRZ:
+	- We now allow standard M/F values for gender on Mexican documents (along with localized H/M values)
+- We're now converting dates to the Gregorian calendar for:
+	- Taiwan documents with Republic of China (ROC) calendar dates
+	- Saudi documents with Islamic calendar dates
+- We're now auto-filling all ‘partial’ dates found on identity documents (showing year or month-year only):
+	- Date of issue will be converted to the first day of the (first) month
+		- E.g. '1999' will be converted to '01.01.1999.'
+		- E.g. '03.1999.' will be converted to '01.03.1999.'
+	- Date of expiry will be converted to the last day of the (last) month
+		- E.g. '1999' will be converted to '31.12.1999.'
+		- E.g. '03.1999.' will be converted to '31.03.1999.'
+- We've added the parameter `maxAllowedMismatchesPerField` to settings. When this is set to a non-zero value, DataMatch will pass as long as the number of mismatched characters doesn't exceed the specified value.
+- We've enabled the return of image and back-side data results, even when the `State` is `Uncertain`. Keep in mind that returned images, in this case, might be blurry or low quality.
+    - This applies to all images: face image, full document image, and signature image.
+- We’ve renamed the Swaziland country to Eswatini in results and ClassInfo
+- Improved result validation 
+	- `FieldIdentificationFailed` processing status is used to indicate if unexpected fields are present on the document. Those fields are then deleted from the result
+- We are filling out COUNTRY and REGION fields in ClassInfo, without the field TYPE of document, when using BarcodeID mode for scanning documents where the Front side is not supported, and back side results are extracted from AAMVA compliant barcodes
+	- This applies only if `ClassInfo` isn’t already prepopulated in some other way and when you’re not in `FullRecognition` mode
+
+### Changes to the BlinkCardRecognizer
+
+- We've added support for new horizontal card layouts
+- We've added a new feature that lets you anonymize extracted results, images or both:
+	- Choose which fields you want to mask:
+		- Card number
+		- Card number prefix
+		- CVV
+		- Owner
+		- IBAN
+	- Choose a `BlinkCardAnonymizationMode` for each field:
+		- `None`
+		- `ImageOnly` - Black boxes will cover chosen data on the extracted image, results are not anonymized
+		- `ResultFieldsOnly` - String data is redacted from the result, images are not anonymized
+		- `FullResult` - Both images and string data (results) are anonymized
+	- You can customize the way you anonymize the card number through `CardNumberAnonymizationSettings`:
+		- `prefixDigitsVisible` - Defines how many digits at the beginning of the card number remain visible after anonymization
+		- `suffixDigitsVisible` - Defines how many digits at the end of the card number remain visible after anonymization
+
+#### ImageCapture
+- Added support for including or excluding groups of documents supported by the current license with the `captureModeFilter` setting
+	- Scanning of documents with AAMVA compliant barcodes with BarcodeID mode
+	- Scanning of all licensed documents in BlinkID FullRecognition mode
+
+### Improvements
+- We can now extract information from NRIC numbers on Malaysian documents that have the asterisk (*) character in it.
+- While using `FullRecognitionMode` for scanning unsupported Passports, we are now taking `ClassInfo` from MRZ
+- We are now correctly handling fully cropped vertical images
+- Fix for correct parsing of Bermuda Driving Licence AAMVA-compliant barcode dates
+- Fix for correct calculation of check digit for Saudi Arabia ID Card MRZ
+- We can now extract the date of birth from the document number on the South Korean identity card and from the personal identification number on the driving licence
+
+#### Postprocess improvement
+- We are splitting names and descriptors into two different results (e.g., Nom d’ usage, Epouse, Geb. etc.), where descriptors are in their separate field `name_additional_info`,  for these documents:
+    - France
+        - ID Card
+        - Residence Permit
+    - Germany    
+        - ID Card
+    - Luxembourg
+        - ID Card
+    - Netherlands
+        - Driving Licence
+        - Polycarbonate Passport
+​
+        
+#### Sanitization of names
+- We are removing title prefixes (e.g., Mrs., Mr., Ing., etc.) from `full_name`, `first_name` and `last_name` for these documents:
+    - Austria
+        - Driving Licence
+        - ID Card
+    - Czechia
+        - Driving Licence
+    - Germany
+        - ID Card
+    - Thailand
+        - ID Card
+    - UK
+        - Driving Licence
+
+#### Anonymization
+- We've added anonymization support for new documents:
+    - Document number on Germany Polycarbonate Passport
+    - Document number on Hong Kong Polycarbonate Passport
+    - Document number, personal ID number on Singapore Polycarbonate Passport
+	- Document number on Germany paper bio-data page Passport
+	- Document number on South Korea Identity Card
+	- Personal identification number on South Korea driving licence 
+	- Personal identification number on South Korea paper bio-data page Passport
+
+### Minor API changes:
+
+- We've deprecated `Pdf417Recognizer` — use `BarcodeRecognizer` instead.
+- Renamed MicroblinkApp `instance` to `sharedInstance` (Objective C) / `shared` (Swift)
+
+### Fixes
+
+- We've fixed missing CFBundleVersion and CFBundleVersionShort from frameworks Info.plist
+- We've fixed a crash when switching to the front camera
+- We've fixed the orientation of an image obtained via [captureHighResImage](http://blinkid.github.io/blinkid-ios/Protocols/MBRecognizerRunnerViewController.html#/c:objc(pl)MBRecognizerRunnerViewController(im)captureHighResImage:)
+- We've fixed minor UI/layout issues on phones with the notch
+
+### `BlinkCard` improvements and fixes:
+- We've added support for vertical payment cards
+- As of this release, BlinkCard supports the Visa Quick Read format (the one where the card number spans through four lines)
+- We've changed the threshold for "Camera too far" and "Camera too near" callbacks. From now on, the card needs to be closer to the camera  
+- We've fixed the landscape orientation of the BlinkCard scanning screen (`BlinkCardOverlayViewController`)
+- From now on, BlinkCard reads and extracts the expiry date in MM/YYYY format
+- We now support landscape orientation on [BlinkCardEditViewController](https://blinkcard.github.io/blinkcard-ios/Classes/MBCBlinkCardEditViewController.html) screen
+
 ## 7.12.0
 
 ### New features:
@@ -50,10 +408,6 @@
 - We’ve updated our default UI with new error messages that appear when a user doesn’t place the card within a frame.
 - We’re no longer hiding the security code on the edit results screen.
 - We’re now displaying whatever data we manage to extract before a user chooses to enter card details by hand.
-
-### Minor API changes
-
-- We've replaced `Using time-limited license!` warning with `Using trial license!` warning. The warning message is displayed when using a trial license key. To disable it, use `showTrialLicenseWarning` on `MBMicroblinkSDK`.
 
 ## 7.11.0
 
