@@ -1,5 +1,20 @@
 # Release notes
 
+## 8.0.0
+
+### Changes to the SDK
+
+- We renamed the SDK from `Microblink` to `PhotoPay`.
+- The prefix for SDK classes changed from `MB` to `MBP`.
+- The SDK now includes only `PhotoPay` and `BlinkInput` recognizers. For `BlinkID` recognizers, please import `BlinkID` SDK.
+- The SDK now supports iOS 11 or higher.
+
+### Changes to the PhotoPayRecognizer
+- We’ve added support for 3 new fields to HungaryQRCodePaymentRecognizer:
+	- `idCode`, `versionNumber`, `characterSet`
+- We’ve added 2 new fields to CzQRCodePaymentRecognizer
+	- `paymentSituation`, `orderFrequency`
+
 ## 7.13.0
 
 ### Newly supported identity documents:
