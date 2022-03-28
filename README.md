@@ -1,10 +1,10 @@
 <p align="center" >
-  <img src="https://raw.githubusercontent.com/wiki/blinkid/blinkid-ios/Images/logo-microblink.png" alt="MicroBlink" title="MicroBlink">
+  <img src="https://raw.githubusercontent.com/wiki/blinkid/blinkid-ios/Images/logo-microblink.png" alt="Microblink" title="Microblink">
 </p>
 
 # PhotoPay SDK for payment slips scanning
 
-PhotoPay SDK is a delightful component for quick and easy scanning of payment slips and payment barcodes. The SDK is powered with [MicroBlink's](http://www.microblink.com) industry-proven and world leading OCR and barcode scanning technology, and offers:
+PhotoPay SDK is a delightful component for quick and easy scanning of payment slips and payment barcodes. The SDK is powered with [Microblink's](http://www.microblink.com) industry-proven and world leading OCR and barcode scanning technology, and offers:
 
 - integrated camera management
 - layered API, allowing everything from simple integration to complex UX customizations.
@@ -12,7 +12,7 @@ PhotoPay SDK is a delightful component for quick and easy scanning of payment sl
 - enteprise-level security standards
 - data parsing from payment slips and barcode standards
 
-PhotoPay is a part of family of SDKs developed by [MicroBlink](http://www.microblink.com) for optical text recognition, barcode scanning, ID document scanning, payment slips and barcodes and many others.
+PhotoPay is a part of family of SDKs developed by [Microblink](http://www.microblink.com) for optical text recognition, barcode scanning, ID document scanning, payment slips and barcodes and many others.
 # Table of contents
 
 - [Requirements](#requirements)
@@ -101,7 +101,7 @@ PhotoPay is a part of family of SDKs developed by [MicroBlink](http://www.microb
 
 # <a name="requirements"></a> Requirements
 
-SDK package contains PhotoPay framework and one or more sample apps which demonstrate framework integration. The framework can be deployed in **iOS 9.0 or later**.
+SDK package contains PhotoPay framework and one or more sample apps which demonstrate framework integration. The framework can be deployed in **iOS 11.0 or later**.
 
 SDK performs significantly better when the images obtained from the camera are focused. Because of that, the SDK can have lower performance on iPad 2 and iPod Touch 4th gen devices, which [don't have camera with autofocus](http://www.adweek.com/socialtimes/ipad-2-rear-camera-has-tap-for-auto-exposure-not-auto-focus/12536). 
 # <a name="quick-start"></a> Quick Start
@@ -1237,9 +1237,9 @@ For the list of all available configuration methods see [`MBPMrtdDetector`](http
 
 # Creating customized build of PhotoPay SDK
 
-If your final app size is too large, you can create a customised build of _MicroBlink.framework_ and _MicroBlink.bundle_ which will contain only features and resources that you really need.
+If your final app size is too large, you can create a customised build of _Microblink.framework_ and _Microblink.bundle_ which will contain only features and resources that you really need.
 
-In order to create customised build of PhotoPay SDK, you first need to download the static distribution of PhotoPay SDK. A valid production licence key is required in order to gain access to the download link of PhotoPay SDK static distribution. Once you have a valid production licence key, please contact our [support team](http://help.microblink.com) and ask them to provide you with the download link. After they give you access to the static distribution of PhotoPay SDK, you will be able to download it from you account at [MicroBlink Developer Dashboard](https://www.microblink.com/login).
+In order to create customised build of PhotoPay SDK, you first need to download the static distribution of PhotoPay SDK. A valid production licence key is required in order to gain access to the download link of PhotoPay SDK static distribution. Once you have a valid production licence key, please contact our [support team](http://help.microblink.com) and ask them to provide you with the download link. After they give you access to the static distribution of PhotoPay SDK, you will be able to download it from you account at [Microblink Developer Dashboard](https://www.microblink.com/login).
 
 The static distribution of PhotoPay SDK is a large zip file (several hundred megabytes) which contains static libraries of PhotoPay SDK's native code, all assets and resources and a script which will create the customised build for you.
 
@@ -1288,7 +1288,7 @@ You probably have a typo in `enabled-features.cmake`. CMake is very sensitive la
 
 This sometimes happens when XCode's link time optimizer runs out of memory. Usually running the script again solves the problem. Please reboot your Mac if this keeps happening.
 
-#### Keeping only `FEATURE_MRTD` creates rather large `MicroBlink.bundle`
+#### Keeping only `FEATURE_MRTD` creates rather large `Microblink.bundle`
 
 `FEATURE_MRTD` marks the _MRTD recognizer_. However, _MRTD recognizer_ can also be used in _Templating API_ mode where non-MRZ data can be scanned. To perform OCR of non-MRZ data, a rather large OCR model must be used, which supports all fonts. If you only plan to scan MRZ part of the document, you can edit the `features.cmake` in following way:
 
@@ -1304,7 +1304,7 @@ feature_resources( FEATURE_MRTD model_mrtd model_general_blink_ocr model_micr mo
 feature_resources( FEATURE_MRTD model_mrtd )
 ```
 
-This will keep only support for reading MRZ zone in OCR - you will not be able to scan non-MRZ data with such configuration using _MRTD recognizer_, however you will reduce the `MicroBlink.bundle` and then final app size by more than 4MB.
+This will keep only support for reading MRZ zone in OCR - you will not be able to scan non-MRZ data with such configuration using _MRTD recognizer_, however you will reduce the `Microblink.bundle` and then final app size by more than 4MB.
 
 ##### More information about OCR models in `FEATURE_MRTD`
 
