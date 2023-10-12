@@ -20,7 +20,7 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          PPPhotoPay v8.1.0 Docs
+          PPPhotoPay v9.0.0 Docs
         </a>
          (79% documented)
       </p>
@@ -105,6 +105,15 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBPAustriaSlipRecognizerResult.html">MBPAustriaSlipRecognizerResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MBPBarcodeOverlaySettings.html">MBPBarcodeOverlaySettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MBPBarcodeRecognizer.html">MBPBarcodeRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MBPBarcodeRecognizerResult.html">MBPBarcodeRecognizerResult</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBPBaseOcrEngineOptions.html">MBPBaseOcrEngineOptions</a>
@@ -209,13 +218,13 @@
                 <a class="nav-group-task-link" href="Classes/MBPDPIBasedDewarpPolicy.html">MBPDPIBasedDewarpPolicy</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MBPDate.html">MBPDate</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBPDateParser.html">MBPDateParser</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBPDateParserResult.html">MBPDateParserResult</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes/MBPDateResult.html">MBPDateResult</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBPDeepOcrEngineOptions.html">MBPDeepOcrEngineOptions</a>
@@ -473,6 +482,12 @@
                 <a class="nav-group-task-link" href="Classes.html#/c:objc(cs)MBPParserResult">MBPParserResult</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MBPPdf417Recognizer.html">MBPPdf417Recognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MBPPdf417RecognizerResult.html">MBPPdf417RecognizerResult</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBPPhotopayOverlaySettings.html">MBPPhotopayOverlaySettings</a>
               </li>
               <li class="nav-group-task">
@@ -567,6 +582,12 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBPSerbiaReferenceParserResult.html">MBPSerbiaReferenceParserResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MBPSimNumberRecognizer.html">MBPSimNumberRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MBPSimNumberRecognizerResult.html">MBPSimNumberRecognizerResult</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBPSlovakiaCode128PaymentRecognizer.html">MBPSlovakiaCode128PaymentRecognizer</a>
@@ -700,6 +721,9 @@
             <a class="nav-group-name-link" href="Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/MBPBarcodeType.html">MBPBarcodeType</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/MBPCameraAutofocusRestriction.html">MBPCameraAutofocusRestriction</a>
               </li>
               <li class="nav-group-task">
@@ -773,6 +797,9 @@
           <li class="nav-group-name">
             <a class="nav-group-name-link" href="Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/MBPBarcodeOverlayViewControllerDelegate.html">MBPBarcodeOverlayViewControllerDelegate</a>
+              </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/MBPDebugRecognizerRunnerDelegate.html">MBPDebugRecognizerRunnerDelegate</a>
               </li>
@@ -1045,9 +1072,8 @@
 </ul>
 <h1 id='a-name-requirements-a-requirements' class='heading'><a name="requirements"></a> Requirements</h1>
 
-<p>SDK package contains PhotoPay framework and one or more sample apps which demonstrate framework integration. The framework can be deployed in <strong>iOS 11.0 or later</strong>.</p>
-
-<p>SDK performs significantly better when the images obtained from the camera are focused. Because of that, the SDK can have lower performance on iPad 2 and iPod Touch 4th gen devices, which <a href="http://www.adweek.com/socialtimes/ipad-2-rear-camera-has-tap-for-auto-exposure-not-auto-focus/12536">don&rsquo;t have camera with autofocus</a>. </p>
+<p>SDK package contains PhotoPay framework and one or more sample apps which demonstrate framework integration. The framework can be deployed in <strong>iOS 13.0 or later</strong>.
+<strong>NOTE:</strong> The SDK doesn&rsquo;t contain bitcode anymore. </p>
 <h1 id='a-name-quick-start-a-quick-start' class='heading'><a name="quick-start"></a> Quick Start</h1>
 <h2 id='getting-started-with-photopay-sdk' class='heading'>Getting started with PhotoPay SDK</h2>
 
@@ -1191,7 +1217,7 @@ git lfs install
 </code></pre>
 <h3 id='4-license-key' class='heading'>4. License key</h3>
 
-<p>A valid license key is required to initalize scanning. You can generate a free trial license key, after you register, at <a href="https://microblink.com/login">Microblink developer dashboard</a>.</p>
+<p>A valid license key is required to initialize scanning. You can request a <strong>free trial license key</strong>, after you register, at <a href="https://account.microblink.com/signin">Microblink Developer Hub</a>.</p>
 
 <p>You can include the license key in your app by passing a string or a file with license key.
 <strong>Note</strong> that you need to set the license key before intializing scanning. Ideally in <code>AppDelegate</code> or <code>viewDidLoad</code> before initializing any recognizers.</p>
@@ -1211,11 +1237,11 @@ git lfs install
 <p>Or you can include the license key, with the code below. Please make sure that the file that contains the license key is included in your project and is copied during <strong>Copy Bundle Resources</strong> build phase.</p>
 
 <p>Swift</p>
-<pre class="highlight swift"><code><span class="kt">MBPMicroblinkSDK</span><span class="o">.</span><span class="nf">shared</span><span class="p">()</span><span class="o">.</span><span class="nf">setLicenseResource</span><span class="p">(</span><span class="s">"license-key-file"</span><span class="p">,</span> <span class="nv">withExtension</span><span class="p">:</span> <span class="s">"txt"</span><span class="p">,</span> <span class="nv">inSubdirectory</span><span class="p">:</span> <span class="s">"directory-to-license-key"</span><span class="p">,</span> <span class="nv">for</span><span class="p">:</span> <span class="kt">Bundle</span><span class="o">.</span><span class="n">main</span><span class="p">,</span> <span class="nv">errorCallback</span><span class="p">:</span> <span class="n">block</span><span class="p">)</span>
+<pre class="highlight swift"><code><span class="kt">MBPMicroblinkSDK</span><span class="o">.</span><span class="nf">shared</span><span class="p">()</span><span class="o">.</span><span class="nf">setLicenseResource</span><span class="p">(</span><span class="s">"license-key-file"</span><span class="p">,</span> <span class="nv">withExtension</span><span class="p">:</span> <span class="s">"key"</span><span class="p">,</span> <span class="nv">inSubdirectory</span><span class="p">:</span> <span class="s">"directory-to-license-key"</span><span class="p">,</span> <span class="nv">for</span><span class="p">:</span> <span class="kt">Bundle</span><span class="o">.</span><span class="n">main</span><span class="p">,</span> <span class="nv">errorCallback</span><span class="p">:</span> <span class="n">block</span><span class="p">)</span>
 </code></pre>
 
 <p>Objective-C</p>
-<pre class="highlight plaintext"><code>[[MBPMicroblinkSDK sharedInstance] setLicenseResource:@"license-key-file" withExtension:@"txt" inSubdirectory:@"" forBundle:[NSBundle mainBundle] errorCallback: block];
+<pre class="highlight plaintext"><code>[[MBPMicroblinkSDK sharedInstance] setLicenseResource:@"license-key-file" withExtension:@"key" inSubdirectory:@"" forBundle:[NSBundle mainBundle] errorCallback: block];
 </code></pre>
 
 <p>If the licence is invalid or expired then the methods above will throw an <strong>exception</strong>.</p>
@@ -1279,7 +1305,7 @@ git lfs install
 <p>Within PhotoPay SDK there are several built-in overlay view controllers and scanning subview overlays that you can use to perform scanning. </p>
 <h3 id='a-name-using-pdf417-overlay-viewcontroller-a-using-code-mbpbarcodeoverlayviewcontroller-code' class='heading'><a name="using-pdf417-overlay-viewcontroller"></a> Using <code>MBPBarcodeOverlayViewController</code></h3>
 
-<p><a href="http://photopay.github.io/photopay-ios/Classes/MBPBarcodeOverlayViewController.html"><code>MBPBarcodeOverlayViewController</code></a> is overlay view controller best suited for performing scanning of various barcodes. It has <a href="http://photopay.github.io/photopay-ios/Protocols/MBPBarcodeOverlayViewControllerDelegate.html"><code>MBPBarcodeOverlayViewControllerDelegate</code></a> delegate which can be used out-of-the-box to perform scanning using the default UI. Here is an example how to use and initialize <a href="http://photopay.github.io/photopay-ios/Classes/MBPBarcodeOverlayViewController.html"><code>MBPBarcodeOverlayViewController</code></a>:</p>
+<p><a href="http://photopay.github.io/photopay-ios/Classes/MBPBarcodeOverlayViewController.html"><code>MBPBarcodeOverlayViewController</code></a> is overlay view controller best suited for performing scanning of various barcodes. It has <a href="http://photopay.github.io/photopay-ios/Protocols/MBPBarcodeOverlayViewControllerDelegate.html"><code><a href="Protocols/MBPBarcodeOverlayViewControllerDelegate.html">MBPBarcodeOverlayViewControllerDelegate</a></code></a> delegate which can be used out-of-the-box to perform scanning using the default UI. Here is an example how to use and initialize <a href="http://photopay.github.io/photopay-ios/Classes/MBPBarcodeOverlayViewController.html"><code>MBPBarcodeOverlayViewController</code></a>:</p>
 
 <p>Swift</p>
 <pre class="highlight swift"><code><span class="cm">/** Create your overlay view controller */</span>
@@ -1300,7 +1326,7 @@ UIViewController&lt;MBPRecognizerRunnerViewController&gt;* recognizerRunnerViewC
 [self presentViewController:recognizerRunnerViewController animated:YES completion:nil];
 </code></pre>
 
-<p>As you can see, when initializing <a href="http://photopay.github.io/photopay-ios/Classes/MBPBarcodeOverlayViewController.html"><code>MBPBarcodeOverlayViewController</code></a>, we are sending delegate property as <code>self</code>. To get results, we need to conform to <a href="http://photopay.github.io/photopay-ios/Protocols/MBPBarcodeOverlayViewControllerDelegate.html"><code>MBPBarcodeOverlayViewControllerDelegate</code></a> protocol.</p>
+<p>As you can see, when initializing <a href="http://photopay.github.io/photopay-ios/Classes/MBPBarcodeOverlayViewController.html"><code>MBPBarcodeOverlayViewController</code></a>, we are sending delegate property as <code>self</code>. To get results, we need to conform to <a href="http://photopay.github.io/photopay-ios/Protocols/MBPBarcodeOverlayViewControllerDelegate.html"><code><a href="Protocols/MBPBarcodeOverlayViewControllerDelegate.html">MBPBarcodeOverlayViewControllerDelegate</a></code></a> protocol.</p>
 <h3 id='a-name-using-fieldbyfield-overlay-viewcontroller-a-using-code-mbpfieldbyfieldoverlayviewcontroller-code' class='heading'><a name="using-fieldbyfield-overlay-viewcontroller"></a> Using <code><a href="Classes/MBPFieldByFieldOverlayViewController.html">MBPFieldByFieldOverlayViewController</a></code></h3>
 
 <p><a href="http://photopay.github.io/photopay-ios/Classes/MBPFieldByFieldOverlayViewController.html"><code><a href="Classes/MBPFieldByFieldOverlayViewController.html">MBPFieldByFieldOverlayViewController</a></code></a> is overlay view controller best suited for performing scanning of various payment slips and barcodes with field of view. It has <a href="http://photopay.github.io/photopay-ios/Protocols/MBPFieldByFieldOverlayViewControllerDelegate.html"><code><a href="Protocols/MBPFieldByFieldOverlayViewControllerDelegate.html">MBPFieldByFieldOverlayViewControllerDelegate</a></code></a> delegate which can be used out-of-the-box to perform scanning using the default UI. Here is an example how to use and initialize <a href="http://photopay.github.io/photopay-ios/Classes/MBPFieldByFieldOverlayViewController.html"><code><a href="Classes/MBPFieldByFieldOverlayViewController.html">MBPFieldByFieldOverlayViewController</a></code></a>:</p>
@@ -1399,14 +1425,14 @@ self.navigationController = [[MBPBlinkCardEditNavigationController alloc] initWi
 </code></pre>
 <h3 id='a-name-using-blinkid-overlay-viewcontroller-a-using-code-mbpblinkidoverlayviewcontroller-code' class='heading'><a name="using-blinkid-overlay-viewcontroller"></a> Using <code>MBPBlinkIdOverlayViewController</code></h3>
 
-<p><a href="http://photopay.github.io/photopay-ios/Classes/MBPBlinkIdOverlayViewController.html"><code>MBPBlinkIdOverlayViewController</code></a> implements new UI for scanning identity documents, which is optimally designed to be used with new <a href="http://photopay.github.io/photopay-ios/Classes/MBPBlinkIdRecognizer.html"><code>MBPBlinkIdRecognizer</code></a> and <a href="http://photopay.github.io/photopay-ios/Classes/MBPBlinkIdCombinedRecognizer.html"><code>MBPBlinkIdCombinedRecognizer</code></a>. The new <a href="http://photopay.github.io/photopay-ios/Classes/MBPBlinkIdOverlayViewController.html"><code>MBPBlinkIdOverlayViewController</code></a> implements several new features:</p>
+<p><a href="http://photopay.github.io/photopay-ios/Classes/MBPBlinkIdOverlayViewController.html"><code>MBPBlinkIdOverlayViewController</code></a> implements new UI for scanning identity documents, which is optimally designed to be used with new <a href="http://photopay.github.io/photopay-ios/Classes/MBPBlinkIdRecognizer.html"><code>MBPBlinkIdSingleSideRecognizer</code></a> and <a href="http://photopay.github.io/photopay-ios/Classes/MBPBlinkIdMultiSideRecognizer.html"><code>MBPBlinkIdMultiSideRecognizer</code></a>. The new <a href="http://photopay.github.io/photopay-ios/Classes/MBPBlinkIdOverlayViewController.html"><code>MBPBlinkIdOverlayViewController</code></a> implements several new features:</p>
 
 <ul>
 <li>clear indication for searching phase, when BlinkID is searching for an ID document</li>
 <li>clear progress indication, when BlinkID is busy with OCR and data extraction</li>
 <li>clear message when the document is not supported</li>
 <li>visual indications when the user needs to place the document closer to the camera</li>
-<li>when <a href="http://photopay.github.io/photopay-ios/Classes/MBPBlinkIdCombinedRecognizer.html"><code>MBPBlinkIdCombinedRecognizer</code></a> is used, visual indication that the data from the front side of the document doesn&rsquo;t match the data on the back side of the document.</li>
+<li>when <a href="http://photopay.github.io/photopay-ios/Classes/MBPBlinkIdMultiSideRecognizer.html"><code>MBPBlinkIdMultiSideRecognizer</code></a> is used, visual indication that the data from the front side of the document doesn&rsquo;t match the data on the back side of the document.</li>
 </ul>
 
 <p>The new UI allows the user to scan the document at an any angle, in any orientation. We recommend forcing landscape orientation if you scan barcodes on the back side, because in that orientation success rate will be higher.
@@ -1704,12 +1730,12 @@ The only difference is that user should call <code>- (void)processString:(NSStri
 <p>This recognizer is best for use cases when you need to capture the exact image that was being processed by some other <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> object at the time its <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizerResult.html"><code><a href="Classes.html#/c:objc(cs)MBPRecognizerResult">MBPRecognizerResult</a></code></a> became <code>Valid</code>. When that happens, <code>MBPSuccessFrameGrabberRecognizer&#39;s</code> <code><a href="Classes/MBPSuccessFrameGrabberRecognizerResult.html">MBPSuccessFrameGrabberRecognizerResult</a></code> will also become <code>Valid</code> and will contain described image.</p>
 <h2 id='a-name-pdf417-recognizer-a-pdf417-recognizer' class='heading'><a name="pdf417-recognizer"></a> PDF417 recognizer</h2>
 
-<p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPPdf417Recognizer.html"><code>MBPPdf417Recognizer</code></a> is recognizer specialised for scanning <a href="https://en.wikipedia.org/wiki/PDF417">PDF417 2D barcodes</a>. This recognizer can recognize only PDF417 2D barcodes - for recognition of other barcodes, please refer to <a href="#barcode-recognizer">BarcodeRecognizer</a>.</p>
+<p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPPdf417Recognizer.html"><code><a href="Classes/MBPPdf417Recognizer.html">MBPPdf417Recognizer</a></code></a> is recognizer specialised for scanning <a href="https://en.wikipedia.org/wiki/PDF417">PDF417 2D barcodes</a>. This recognizer can recognize only PDF417 2D barcodes - for recognition of other barcodes, please refer to <a href="#barcode-recognizer">BarcodeRecognizer</a>.</p>
 
 <p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPBarcodeOverlayViewController.html"><code>MBPBarcodeOverlayViewController</code></a>, which has UI best suited for barcode scanning.</p>
 <h2 id='a-name-barcode-recognizer-a-barcode-recognizer' class='heading'><a name="barcode-recognizer"></a> Barcode recognizer</h2>
 
-<p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPBarcodeRecognizer.html"><code>MBPBarcodeRecognizer</code></a> is recognizer specialised for scanning various types of barcodes. This recognizer should be your first choice when scanning barcodes as it supports lots of barcode symbologies, including the <a href="https://en.wikipedia.org/wiki/PDF417">PDF417 2D barcodes</a>, thus making <a href="#pdf417-recognizer">PDF417 recognizer</a> possibly redundant, which was kept only for its simplicity.</p>
+<p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPBarcodeRecognizer.html"><code><a href="Classes/MBPBarcodeRecognizer.html">MBPBarcodeRecognizer</a></code></a> is recognizer specialised for scanning various types of barcodes. This recognizer should be your first choice when scanning barcodes as it supports lots of barcode symbologies, including the <a href="https://en.wikipedia.org/wiki/PDF417">PDF417 2D barcodes</a>, thus making <a href="#pdf417-recognizer">PDF417 recognizer</a> possibly redundant, which was kept only for its simplicity.</p>
 
 <p>You can enable multiple barcode symbologies within this recognizer, however keep in mind that enabling more barcode symbologies affect scanning performance - the more barcode symbologies are enabled, the slower the overall recognition performance. Also, keep in mind that some simple barcode symbologies that lack proper redundancy, such as <a href="https://en.wikipedia.org/wiki/Code_39">Code 39</a>, can be recognized within more complex barcodes, especially 2D barcodes, like <a href="https://en.wikipedia.org/wiki/PDF417">PDF417</a>.</p>
 
@@ -1781,12 +1807,12 @@ This recognizer can be used in any context, but it works best with the <a href="
 <p>You can find information about usage context at the beginning of <a href="#-blinkid-recognizers">this section</a>.</p>
 <h3 id='a-name-blink-id-recognizers-a-blinkid-recognizer' class='heading'><a name="blink-id-recognizers"></a> BlinkID Recognizer</h3>
 
-<p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPBlinkIdRecognizer.html"><code>MBPBlinkIdRecognizer</code></a> scans and extracts data from the front side of the supported document.
+<p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPBlinkIdRecognizer.html"><code>MBPBlinkIdSingleSideRecognizer</code></a> scans and extracts data from the front side of the supported document.
 You can find the list of the currently supported documents <a href="https://github.com/PhotoPay/photopay-ios/tree/master/documentation/BlinkIDRecognizer.md"><code>here</code></a>.
 We will continue expanding this recognizer by adding support for new document types in the future. Star this repo to stay updated.</p>
 <h3 id='a-name-blink-id-combined-recognizers-a-blinkid-combined-recognizer' class='heading'><a name="blink-id-combined-recognizers"></a> BlinkID Combined Recognizer</h3>
 
-<p>Use <a href="http://photopay.github.io/photopay-ios/Classes/MBPBlinkIdCombinedRecognizer.html"><code>MBPBlinkIdCombinedRecognizer</code></a> for scanning both sides of the supported document. First, it scans and extracts data from the front, then scans and extracts data from the barcode on the back, and finally, combines results from both sides. The <a href="http://photopay.github.io/photopay-ios/Classes/MBPBlinkIdCombinedRecognizer.html"><code>BlinkIDCombinedRecognizer</code></a> also performs data matching and returns a flag if the extracted data captured from the front side matches the data from the barcode on the back.
+<p>Use <a href="http://photopay.github.io/photopay-ios/Classes/MBPBlinkIdMultiSideRecognizer.html"><code>MBPBlinkIdMultiSideRecognizer</code></a> for scanning both sides of the supported document. First, it scans and extracts data from the front, then scans and extracts data from the barcode on the back, and finally, combines results from both sides. The <a href="http://photopay.github.io/photopay-ios/Classes/MBPBlinkIdMultiSideRecognizer.html"><code>BlinkIDCombinedRecognizer</code></a> also performs data matching and returns a flag if the extracted data captured from the front side matches the data from the barcode on the back.
 You can find the list of the currently supported documents <a href="https://github.com/PhotoPay/photopay-ios/tree/master/documentation/BlinkIDRecognizer.md"><code>here</code></a>.
 We will continue expanding this recognizer by adding support for new document types in the future. Star this repo to stay updated.</p>
 <h2 id='a-name-photopay-recognizers-a-photopay-recognizers-by-countries' class='heading'><a name="photopay-recognizers"></a> PhotoPay recognizers by countries</h2>
@@ -2313,8 +2339,8 @@ mv <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><s
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2022 <a class="link" href="http://microblink.com" target="_blank" rel="external noopener">Microblink</a>. All rights reserved. (Last updated: 2022-03-25)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+      <p>&copy; 2023 <a class="link" href="http://microblink.com" target="_blank" rel="external noopener">Microblink</a>. All rights reserved. (Last updated: 2023-10-11)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
     </section>
   </body>
 </html>

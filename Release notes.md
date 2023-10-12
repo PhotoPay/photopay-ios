@@ -1,11 +1,25 @@
 # Release notes
 
+## 9.0.0
+
+### API changes
+- We have added back `MBPBarcodeRecognizer` and `MBPRegexParser` to the PhotoPay SDK.
+
+#### Recognizer changes
+- Added `lastDateOfTheStandingOrder` result to `MBPCzechiaQrCodeRecognizerResult`
+- Added `url` result to `MBPHungaryQrCodeRecognizerResult`
+
+### Breaking changes
+
+#### Minimum supported iOS version
+- Minimum supported iOS version has been updated from iOS 11 to iOS 13. This means that the devices that have an iOS version lower than iOS 13 will no longer support PhotoPay SDK
+
 ## 8.1.0
 
 ### Major API changes
 - Updates for `CroatiaPdf417PaymentRecognizer` and `CroatiaQrCodePaymentRecognizer` to enable conversion from HRK to EUR.
 	-  We've added new result members: `amountHRK`, `amountEUR` and`conversionToEurPerformed`.
-	-  We've added new setting member called `conversionRate` with the default value of 7,53450.
+	-  We've added new setting member called `conversionRate` with the default value of 7,53540.
 		-  We will make conversion to EUR only in the case when the currency in the barcode is HRK; `conversionToEurPerformed` will be `true` in that case, and `false` otherwise. Conversion from EUR to HRK will never be performed.
 - We have removed HUB1 payment slip support from the `CroatiaPdf417PaymentRecognizer` and `CroatiaQrCodePaymentRecognizer` where these result members are no longer available:
 	- `amount`,
