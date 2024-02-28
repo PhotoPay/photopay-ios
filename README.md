@@ -101,9 +101,8 @@ PhotoPay is a part of family of SDKs developed by [Microblink](http://www.microb
 
 # <a name="requirements"></a> Requirements
 
-SDK package contains PhotoPay framework and one or more sample apps which demonstrate framework integration. The framework can be deployed in **iOS 11.0 or later**.
-
-SDK performs significantly better when the images obtained from the camera are focused. Because of that, the SDK can have lower performance on iPad 2 and iPod Touch 4th gen devices, which [don't have camera with autofocus](http://www.adweek.com/socialtimes/ipad-2-rear-camera-has-tap-for-auto-exposure-not-auto-focus/12536). 
+SDK package contains PhotoPay framework and one or more sample apps which demonstrate framework integration. The framework can be deployed in **iOS 13.0 or later**.
+**NOTE:** The SDK doesn't contain bitcode anymore. 
 # <a name="quick-start"></a> Quick Start
 
 ## Getting started with PhotoPay SDK
@@ -254,7 +253,7 @@ Objective-C
 
 ### 4. License key
 
-A valid license key is required to initalize scanning. You can generate a free trial license key, after you register, at [Microblink developer dashboard](https://microblink.com/login).
+A valid license key is required to initialize scanning. You can request a **free trial license key**, after you register, at [Microblink Developer Hub](https://account.microblink.com/signin).
 
 You can include the license key in your app by passing a string or a file with license key.
 **Note** that you need to set the license key before intializing scanning. Ideally in `AppDelegate` or `viewDidLoad` before initializing any recognizers.
@@ -280,13 +279,13 @@ Or you can include the license key, with the code below. Please make sure that t
 Swift
 
 ```swift
-MBPMicroblinkSDK.shared().setLicenseResource("license-key-file", withExtension: "txt", inSubdirectory: "directory-to-license-key", for: Bundle.main, errorCallback: block)
+MBPMicroblinkSDK.shared().setLicenseResource("license-key-file", withExtension: "key", inSubdirectory: "directory-to-license-key", for: Bundle.main, errorCallback: block)
 ```
 
 Objective-C
 
 ```objective-c
-[[MBPMicroblinkSDK sharedInstance] setLicenseResource:@"license-key-file" withExtension:@"txt" inSubdirectory:@"" forBundle:[NSBundle mainBundle] errorCallback: block];
+[[MBPMicroblinkSDK sharedInstance] setLicenseResource:@"license-key-file" withExtension:@"key" inSubdirectory:@"" forBundle:[NSBundle mainBundle] errorCallback: block];
 ```
 
 If the licence is invalid or expired then the methods above will throw an **exception**.
@@ -491,12 +490,12 @@ self.navigationController = [[MBPBlinkCardEditNavigationController alloc] initWi
 ```
 ### <a name="using-blinkid-overlay-viewcontroller"></a> Using `MBPBlinkIdOverlayViewController`
 
-[`MBPBlinkIdOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBPBlinkIdOverlayViewController.html) implements new UI for scanning identity documents, which is optimally designed to be used with new [`MBPBlinkIdRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBPBlinkIdRecognizer.html) and [`MBPBlinkIdCombinedRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBPBlinkIdCombinedRecognizer.html). The new [`MBPBlinkIdOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBPBlinkIdOverlayViewController.html) implements several new features:
+[`MBPBlinkIdOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBPBlinkIdOverlayViewController.html) implements new UI for scanning identity documents, which is optimally designed to be used with new [`MBPBlinkIdSingleSideRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBPBlinkIdRecognizer.html) and [`MBPBlinkIdMultiSideRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBPBlinkIdMultiSideRecognizer.html). The new [`MBPBlinkIdOverlayViewController`](http://photopay.github.io/photopay-ios/Classes/MBPBlinkIdOverlayViewController.html) implements several new features:
 * clear indication for searching phase, when BlinkID is searching for an ID document
 * clear progress indication, when BlinkID is busy with OCR and data extraction
 * clear message when the document is not supported
 * visual indications when the user needs to place the document closer to the camera
-* when [`MBPBlinkIdCombinedRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBPBlinkIdCombinedRecognizer.html) is used, visual indication that the data from the front side of the document doesn't match the data on the back side of the document.
+* when [`MBPBlinkIdMultiSideRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBPBlinkIdMultiSideRecognizer.html) is used, visual indication that the data from the front side of the document doesn't match the data on the back side of the document.
 
 The new UI allows the user to scan the document at an any angle, in any orientation. We recommend forcing landscape orientation if you scan barcodes on the back side, because in that orientation success rate will be higher.
 To force the UI in landscape mode, use the following instructions:
@@ -875,12 +874,12 @@ The [`MBPDocumentFaceRecognizer`](http://photopay.github.io/photopay-ios/Classes
 You can find information about usage context at the beginning of [this section](#-blinkid-recognizers).
 
 ### <a name="blink-id-recognizers"></a> BlinkID Recognizer
-The [`MBPBlinkIdRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBPBlinkIdRecognizer.html) scans and extracts data from the front side of the supported document.
+The [`MBPBlinkIdSingleSideRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBPBlinkIdRecognizer.html) scans and extracts data from the front side of the supported document.
 You can find the list of the currently supported documents [`here`](https://github.com/PhotoPay/photopay-ios/tree/master/documentation/BlinkIDRecognizer.md).
 We will continue expanding this recognizer by adding support for new document types in the future. Star this repo to stay updated.
 
 ### <a name="blink-id-combined-recognizers"></a> BlinkID Combined Recognizer
-Use [`MBPBlinkIdCombinedRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBPBlinkIdCombinedRecognizer.html) for scanning both sides of the supported document. First, it scans and extracts data from the front, then scans and extracts data from the barcode on the back, and finally, combines results from both sides. The [`BlinkIDCombinedRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBPBlinkIdCombinedRecognizer.html) also performs data matching and returns a flag if the extracted data captured from the front side matches the data from the barcode on the back.
+Use [`MBPBlinkIdMultiSideRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBPBlinkIdMultiSideRecognizer.html) for scanning both sides of the supported document. First, it scans and extracts data from the front, then scans and extracts data from the barcode on the back, and finally, combines results from both sides. The [`BlinkIDCombinedRecognizer`](http://photopay.github.io/photopay-ios/Classes/MBPBlinkIdMultiSideRecognizer.html) also performs data matching and returns a flag if the extracted data captured from the front side matches the data from the barcode on the back.
 You can find the list of the currently supported documents [`here`](https://github.com/PhotoPay/photopay-ios/tree/master/documentation/BlinkIDRecognizer.md).
 We will continue expanding this recognizer by adding support for new document types in the future. Star this repo to stay updated.
 

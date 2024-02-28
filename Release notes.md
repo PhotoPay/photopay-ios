@@ -1,5 +1,34 @@
 # Release notes
 
+## 9.1.0
+
+### Minor Breaking Changes
+
+- removed support for Mac Catalyst
+    - `PhotoPay.xcframework` now contains only slices for iOS devices and iOS simulators
+    - keep in mind that scanning on iOS simulator is supported only on a "best effort" basis
+
+### New Features
+
+- added `PrivacyInfo.xcprivacy` to the framework
+- added support for license keys that can cover multiple `NSBundleIDs`
+- added support for processing `UIImages` created from HDR images
+    - on newer iOS devices, taking screenshots creates a HDR PNG image
+
+### Bug fixes
+
+- `MBPCzechiaQrCodeRecognizer` can now correctly scan inverted QR codes
+- removed surplus headers from the framework
+
+### Behavior changes
+
+- in DirectAPI, log if scanning delegate is `nil`
+    - this can happen if the object defined as the delegate gets deleted
+      while recognition is being performed
+    - for example, if SwiftUI coordinator is used also as delegate and not
+      deliberately kept alive, it can get deleted, which makes it very
+      difficult to debug without knowing why callback is then not invoked
+
 ## 9.0.0
 
 ### API changes
