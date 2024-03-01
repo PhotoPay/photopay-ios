@@ -1,5 +1,11 @@
 # Release notes
 
+## 9.1.1 
+
+- fixed broken links in documentation
+- removed documentation parts that were specific to BlinkID, BlinkCard, and BlinkInput
+    - since v8.0.0 these are not part of PhotoPay SDK anymore
+
 ## 9.1.0
 
 ### Minor Breaking Changes

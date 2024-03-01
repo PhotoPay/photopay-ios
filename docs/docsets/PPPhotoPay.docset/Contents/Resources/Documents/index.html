@@ -20,7 +20,7 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          PPPhotoPay v9.1.0 Docs
+          PPPhotoPay v9.1.1 Docs
         </a>
          (80% documented)
       </p>
@@ -815,9 +815,6 @@
 <ul>
 <li><a href="#using-pdf417-overlay-viewcontroller">Using <code>MBPBarcodeOverlayViewController</code></a></li>
 <li><a href="#using-fieldbyfield-overlay-viewcontroller">Using <code><a href="Classes/MBPFieldByFieldOverlayViewController.html">MBPFieldByFieldOverlayViewController</a></code></a></li>
-<li><a href="#using-documentcapture-overlay-viewcontroller">Using <code>MBPDocumentCaptureOverlayViewController</code></a></li>
-<li><a href="#using-blinkcard-overlay-viewcontroller">Using <code>MBPBlinkCardOverlayViewController</code></a></li>
-<li><a href="#using-blinkid-overlay-viewcontroller">Using <code>MBPBlinkIdOverlayViewController</code></a></li>
 <li><a href="#using-photopay-overlay-viewcontroller">Using <code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></a></li>
 <li><a href="#using-custom-overlay-viewcontroller">Custom overlay view controller</a></li>
 </ul></li>
@@ -836,26 +833,6 @@
 <li><a href="#pdf417-recognizer">PDF417 recognizer</a></li>
 <li><a href="#barcode-recognizer">Barcode recognizer</a></li>
 <li><a href="#blinkinput-recognizer">BlinkInput recognizer</a></li>
-<li><a href="#detector-recognizer">Detector recognizer</a></li>
-<li><a href="#document-capture-recognizer">Document Capture recognizer</a></li>
-<li><a href="#blinkcard-recognizers">BlinkCard recognizers</a>
-
-<ul>
-<li><a href="#blink-card-recognizer">MBPBlinkCardRecognizer</a></li>
-<li><a href="#payment-card-recognizers">MBPLegacyBlinkCardRecognizer (deprecated)</a></li>
-<li><a href="#elite-payment-card-recognizers">MBPLegacyBlinkCardEliteRecognizer (deprecated)</a></li>
-</ul></li>
-<li><a href="#blinkid-recognizers">BlinkID recognizers</a>
-
-<ul>
-<li><a href="#mrtd-recognizer">Machine Readable Travel Document recognizer</a></li>
-<li><a href="#passport-recognizer">Passport recognizer</a></li>
-<li><a href="#visa-recognizer">Visa recognizer</a></li>
-<li><a href="#id-barcode-recognizer">ID barcode recognizer</a></li>
-<li><a href="#document-face-recognizers">Document face recognizer</a></li>
-<li><a href="#blink-id-recognizers">BlinkID Recognizer</a></li>
-<li><a href="#blink-id-combined-recognizers">BlinkID Combined Recognizer</a></li>
-</ul></li>
 <li><a href="#photopay-recognizers">PhotoPay recognizers by countries</a>
 
 <ul>
@@ -889,39 +866,11 @@
 <ul>
 <li><a href="#amount-parser">Amount Parser</a></li>
 <li><a href="#date-parser">Date Parser</a></li>
-<li><a href="#email-parser">Email Parser</a></li>
 <li><a href="#iban-parser">IBAN Parser</a></li>
-<li><a href="#license-plate-parser">License Plates Parser</a></li>
 <li><a href="#raw-parser">Raw Parser</a></li>
 <li><a href="#regex-parser">Regex Parser</a></li>
-<li><a href="#topup-parser">TopUp Parser</a></li>
-<li><a href="#vin-parser">VIN (<em>Vehicle Identification Number</em>) Parser</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#templating-api">Scanning generic documents with Templating API</a>
-
-<ul>
-<li><a href="#defining-document-detection">Defining how document should be detected</a></li>
-<li><a href="#defining-field-extraction">Defining how fields of interest should be extracted</a>
-
-<ul>
-<li><a href="#processor-group">The <code><a href="Classes/MBPProcessorGroup.html">MBPProcessorGroup</a></code> component</a></li>
-<li><a href="#dewarp-policy-list">List of available dewarp policies</a></li>
-<li><a href="#templating-class">The <code>MBPTemplatingClass</code> component</a></li>
-<li><a href="#implementing-templating-classifier">Implementing the <code>MBPTemplatingClassifier</code></a></li>
-</ul></li>
-</ul></li>
-<li><a href="#detector-concept">The <code>MBPDetector</code> concept</a>
-
-<ul>
-<li><a href="#detector-list">List of available detectors</a>
-
-<ul>
-<li><a href="#document-detector">Document Detector</a></li>
-<li><a href="#mrtd-detector">MRTD Detector</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#localization">Localization</a></li>
 <li><a href="#troubleshooting">Troubleshooting</a>
 
 <ul>
@@ -1009,14 +958,12 @@ git lfs <span class="nb">install</span>
 
 <p>To initiate the scanning process, first decide where in your app you want to add scanning functionality. Usually, users of the scanning library have a button which, when tapped, starts the scanning process. Initialization code is then placed in touch handler for that button. Here we&rsquo;re listing the initialization code as it looks in a touch handler method.</p>
 
-<p>Also, for initialization purposes, the ViewController which initiates the scan have private properties for <a href="http://photopay.github.io/photopay-ios/Classes/MBPRawParser.html"><code><a href="Classes/MBPRawParser.html">MBPRawParser</a></code></a>, <a href="http://photopay.github.io/photopay-ios//Classes/MBPParserGroupProcessor.html"><code><a href="Classes/MBPParserGroupProcessor.html">MBPParserGroupProcessor</a></code></a> and <a href="http://photopay.github.io/photopay-ios//Classes/MBPBlinkInputRecognizer.html"><code><a href="Classes/MBPBlinkInputRecognizer.html">MBPBlinkInputRecognizer</a></code></a>, so we know how to obtain result.</p>
+<p>Also, for initialization purposes, the ViewController which initiates the scan have private properties for <a href="http://photopay.github.io/photopay-ios/Classes/MBPCroatiaPdf417PaymentRecognizer.html"><code><a href="Classes/MBPCroatiaPdf417PaymentRecognizer.html">MBPCroatiaPdf417PaymentRecognizer</a></code></a>, so we know how to obtain result.</p>
 
 <p>Swift</p>
-<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">ViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">MBPDocumentOverlayViewControllerDelegate</span>  <span class="p">{</span>
+<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">ViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">MBPPhotopayOverlayViewControllerDelegate</span>  <span class="p">{</span>
 
-    <span class="k">var</span> <span class="nv">rawParser</span><span class="p">:</span> <span class="kt">MBPRawParser</span><span class="p">?</span>
-    <span class="k">var</span> <span class="nv">parserGroupProcessor</span><span class="p">:</span> <span class="kt">MBPParserGroupProcessor</span><span class="p">?</span>
-    <span class="k">var</span> <span class="nv">blinkInputRecognizer</span><span class="p">:</span> <span class="kt">MBPBlinkInputRecognizer</span><span class="p">?</span>
+    <span class="k">var</span> <span class="nv">croPdf417PaymentRecognizer</span><span class="p">:</span> <span class="kt">MBPCroatiaPdf417PaymentRecognizer</span><span class="p">?</span>
 
     <span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
         <span class="k">super</span><span class="o">.</span><span class="nf">viewDidLoad</span><span class="p">()</span>
@@ -1024,19 +971,17 @@ git lfs <span class="nb">install</span>
 
     <span class="kd">@IBAction</span> <span class="kd">func</span> <span class="nf">didTapScan</span><span class="p">(</span><span class="n">_</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">)</span> <span class="p">{</span>
 
-        <span class="k">let</span> <span class="nv">settings</span> <span class="o">=</span> <span class="kt">MBPDocumentOverlaySettings</span><span class="p">()</span>
-        <span class="n">rawParser</span> <span class="o">=</span> <span class="kt">MBPRawParser</span><span class="p">()</span>
-        <span class="n">parserGroupProcessor</span> <span class="o">=</span> <span class="kt">MBPParserGroupProcessor</span><span class="p">(</span><span class="nv">parsers</span><span class="p">:</span> <span class="p">[</span><span class="n">rawParser</span><span class="o">!</span><span class="p">])</span>
-        <span class="n">blinkInputRecognizer</span> <span class="o">=</span> <span class="kt">MBPBlinkInputRecognizer</span><span class="p">(</span><span class="nv">processors</span><span class="p">:</span> <span class="p">[</span><span class="n">parserGroupProcessor</span><span class="o">!</span><span class="p">])</span>
+        <span class="k">let</span> <span class="nv">settings</span> <span class="o">=</span> <span class="kt">MBPPhotopayOverlaySettings</span><span class="p">()</span>
+        <span class="n">croPdf417PaymentRecognizer</span> <span class="o">=</span> <span class="kt">MBPCroatiaPdf417PaymentRecognizer</span><span class="p">()</span>
 
-        <span class="k">let</span> <span class="nv">recognizerList</span> <span class="o">=</span> <span class="p">[</span><span class="k">self</span><span class="o">.</span><span class="n">blinkInputRecognizer</span><span class="o">!</span><span class="p">]</span>
+        <span class="k">let</span> <span class="nv">recognizerList</span> <span class="o">=</span> <span class="p">[</span><span class="k">self</span><span class="o">.</span><span class="n">croPdf417PaymentRecognizer</span><span class="o">!</span><span class="p">]</span>
         <span class="k">let</span> <span class="nv">recognizerCollection</span> <span class="o">=</span> <span class="kt">MBPRecognizerCollection</span><span class="p">(</span><span class="nv">recognizers</span><span class="p">:</span> <span class="n">recognizerList</span><span class="p">)</span>
 
         <span class="cm">/** Create your overlay view controller */</span>
-        <span class="k">let</span> <span class="nv">documentOverlayViewController</span> <span class="o">=</span> <span class="kt">MBPDocumentOverlayViewController</span><span class="p">(</span><span class="nv">settings</span><span class="p">:</span> <span class="n">settings</span><span class="p">,</span> <span class="nv">recognizerCollection</span><span class="p">:</span> <span class="n">recognizerCollection</span><span class="p">,</span> <span class="nv">delegate</span><span class="p">:</span> <span class="k">self</span><span class="p">)</span>
+        <span class="k">let</span> <span class="nv">photopayOverlayViewController</span> <span class="o">=</span> <span class="kt">MBPPhotopayOverlayViewController</span><span class="p">(</span><span class="nv">settings</span><span class="p">:</span> <span class="n">settings</span><span class="p">,</span> <span class="nv">recognizerCollection</span><span class="p">:</span> <span class="n">recognizerCollection</span><span class="p">,</span> <span class="nv">delegate</span><span class="p">:</span> <span class="k">self</span><span class="p">)</span>
 
         <span class="cm">/** Create recognizer view controller with wanted overlay view controller */</span>
-        <span class="k">let</span> <span class="nv">recognizerRunnerViewController</span><span class="p">:</span> <span class="kt">UIViewController</span> <span class="o">=</span> <span class="kt">MBPViewControllerFactory</span><span class="o">.</span><span class="nf">recognizerRunnerViewController</span><span class="p">(</span><span class="nv">withOverlayViewController</span><span class="p">:</span> <span class="n">documentOverlayViewController</span><span class="p">)</span>
+        <span class="k">let</span> <span class="nv">recognizerRunnerViewController</span><span class="p">:</span> <span class="kt">UIViewController</span> <span class="o">=</span> <span class="kt">MBPViewControllerFactory</span><span class="o">.</span><span class="nf">recognizerRunnerViewController</span><span class="p">(</span><span class="nv">withOverlayViewController</span><span class="p">:</span> <span class="n">photopayOverlayViewController</span><span class="p">)</span>
 
         <span class="cm">/** Present the recognizer runner view controller. You can use other presentation methods as well (instead of presentViewController) */</span>
         <span class="nf">present</span><span class="p">(</span><span class="n">recognizerRunnerViewController</span><span class="o">!</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
@@ -1045,11 +990,9 @@ git lfs <span class="nb">install</span>
 </code></pre>
 
 <p>Objective-C</p>
-<pre class="highlight plaintext"><code>@interface ViewController () &lt;MBPDocumentOverlayViewControllerDelegate&gt;
+<pre class="highlight plaintext"><code>@interface ViewController () &lt;MBPPhotopayOverlayViewControllerDelegate&gt;
 
-@property (nonatomic, strong) MBPRawParser *rawParser;
-@property (nonatomic, strong) MBPParserGroupProcessor *parserGroupProcessor;
-@property (nonatomic, strong) MBPBlinkInputRecognizer *blinkInputRecognizer;
+@property (nonatomic, strong) MBPCroatiaPdf417PaymentRecognizer *croPdf417PaymentRecognizer;
 
 @end
 
@@ -1062,16 +1005,14 @@ git lfs <span class="nb">install</span>
 
 - (IBAction)didTapScan:(id)sender {
 
-    MBPDocumentOverlaySettings* settings = [[MBPDocumentOverlaySettings alloc] init];
+    MBPPhotopayOverlaySettings* settings = [[MBPPhotopayOverlaySettings alloc] init];
 
-    self.rawParser = [[MBPRawParser alloc] init];
-    self.parserGroupProcessor = [[MBPParserGroupProcessor alloc] initWithParsers:@[self.rawParser]];
-    self.blinkInputRecognizer = [[MBPBlinkInputRecognizer alloc] initWithProcessors:@[self.parserGroupProcessor]];
+    self.croPdf417PaymentRecognizer = [[MBPCroatiaPdf417PaymentRecognizer  alloc] init];
 
     /** Create recognizer collection */
-    MBPRecognizerCollection *recognizerCollection = [[MBPRecognizerCollection alloc] initWithRecognizers:@[self.blinkInputRecognizer]];
+    MBPRecognizerCollection *recognizerCollection = [[MBPRecognizerCollection alloc] initWithRecognizers:@[self.croPdf417PaymentRecognizer ]];
 
-    MBPDocumentOverlayViewController *overlayVC = [[MBPDocumentOverlayViewController alloc] initWithSettings:settings recognizerCollection:recognizerCollection delegate:self];
+    MBPPhotopayOverlayViewController *overlayVC = [[MBPPhotopayOverlayViewController alloc] initWithSettings:settings recognizerCollection:recognizerCollection delegate:self];
     UIViewController&lt;MBPRecognizerRunnerViewController&gt;* recognizerRunnerViewController = [MBPViewControllerFactory recognizerRunnerViewControllerWithOverlayViewController:overlayVC];
 
     /** Present the recognizer runner view controller. You can use other presentation methods as well (instead of presentViewController) */
@@ -1113,17 +1054,17 @@ git lfs <span class="nb">install</span>
 <p>If the licence is invalid or expired then the methods above will throw an <strong>exception</strong>.</p>
 <h3 id='5-registering-for-scanning-events' class='heading'>5. Registering for scanning events</h3>
 
-<p>In the previous step, you instantiated <a href="http://photopay.github.io/photopay-ios/Classes/MBPDocumentOverlayViewController.html"><code>MBPDocumentOverlayViewController</code></a> object with a delegate object. This object gets notified on certain events in scanning lifecycle. In this example we set it to <code>self</code>. The protocol which the delegate has to implement is <a href="http://photopay.github.io/photopay-ios//Protocols/MBPDocumentOverlayViewControllerDelegate.html"><code>MBPDocumentOverlayViewControllerDelegate</code></a> protocol. It is necessary to conform to that protocol. We will discuss more about protocols in <a href="#advanced-integration">Advanced integration section</a>. You can use the following default implementation of the protocol to get you started.</p>
+<p>In the previous step, you instantiated <a href="http://photopay.github.io/photopay-ios/Classes/MBPPhotopayOverlayViewController.html"><code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></a> object with a delegate object. This object gets notified on certain events in scanning lifecycle. In this example we set it to <code>self</code>. The protocol which the delegate has to implement is <a href="http://photopay.github.io/photopay-ios//Protocols/MBPPhotopayOverlayViewControllerDelegate.html"><code><a href="Protocols/MBPPhotopayOverlayViewControllerDelegate.html">MBPPhotopayOverlayViewControllerDelegate</a></code></a> protocol. It is necessary to conform to that protocol. We will discuss more about protocols in <a href="#advanced-integration">Advanced integration section</a>. You can use the following default implementation of the protocol to get you started.</p>
 
 <p>Swift</p>
-<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">documentOverlayViewControllerDidFinishScanning</span><span class="p">(</span><span class="n">_</span> <span class="nv">documentOverlayViewController</span><span class="p">:</span> <span class="kt">MBPDocumentOverlayViewController</span><span class="p">,</span> <span class="nv">state</span><span class="p">:</span> <span class="kt">MBPRecognizerResultState</span><span class="p">)</span> <span class="p">{</span>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">photopayOverlayViewControllerDidFinishScanning</span><span class="p">(</span><span class="n">_</span> <span class="nv">photopayOverlayViewController</span><span class="p">:</span> <span class="kt">MBPPhotopayOverlayViewController</span><span class="p">,</span> <span class="nv">state</span><span class="p">:</span> <span class="kt">MBPRecognizerResultState</span><span class="p">)</span> <span class="p">{</span>
 
     <span class="c1">// this is done on background thread</span>
     <span class="c1">// check for valid state</span>
     <span class="k">if</span> <span class="n">state</span> <span class="o">==</span> <span class="o">.</span><span class="n">valid</span> <span class="p">{</span>
 
         <span class="c1">// first, pause scanning until we process all the results</span>
-        <span class="n">documentOverlayViewController</span><span class="o">.</span><span class="n">recognizerRunnerViewController</span><span class="p">?</span><span class="o">.</span><span class="nf">pauseScanning</span><span class="p">()</span>
+        <span class="n">photopayOverlayViewController</span><span class="o">.</span><span class="n">recognizerRunnerViewController</span><span class="p">?</span><span class="o">.</span><span class="nf">pauseScanning</span><span class="p">()</span>
 
         <span class="kt">DispatchQueue</span><span class="o">.</span><span class="n">main</span><span class="o">.</span><span class="nf">async</span><span class="p">(</span><span class="nv">execute</span><span class="p">:</span> <span class="p">{()</span> <span class="o">-&gt;</span> <span class="kt">Void</span> <span class="k">in</span>
             <span class="c1">// All UI interaction needs to be done on main thread</span>
@@ -1131,20 +1072,20 @@ git lfs <span class="nb">install</span>
     <span class="p">}</span>
 <span class="p">}</span>
 
-<span class="kd">func</span> <span class="nf">documentOverlayViewControllerDidTapClose</span><span class="p">(</span><span class="n">_</span> <span class="nv">documentOverlayViewController</span><span class="p">:</span> <span class="kt">MBPDocumentOverlayViewController</span><span class="p">)</span> <span class="p">{</span>
+<span class="kd">func</span> <span class="nf">photopayOverlayViewControllerDidTapClose</span><span class="p">(</span><span class="n">_</span> <span class="nv">photopayOverlayViewController</span><span class="p">:</span> <span class="kt">MBPPhotopayOverlayViewController</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// Your action on cancel</span>
 <span class="p">}</span>
 </code></pre>
 
 <p>Objective-C</p>
-<pre class="highlight plaintext"><code>- (void)documentOverlayViewControllerDidFinishScanning:(MBPDocumentOverlayViewController *)documentOverlayViewController state:(MBPRecognizerResultState)state {
+<pre class="highlight plaintext"><code>- (void)photopayOverlayViewControllerDidFinishScanning:(MBPPhotopayOverlayViewController *)photopayOverlayViewController state:(MBPRecognizerResultState)state {
 
     // this is done on background thread
     // check for valid state
     if (state == MBPRecognizerResultStateValid) {
 
         // first, pause scanning until we process all the results
-        [documentOverlayViewController.recognizerRunnerViewController pauseScanning];
+        [photopayOverlayViewController.recognizerRunnerViewController pauseScanning];
 
         dispatch_async(dispatch_get_main_queue(), ^{
             // All UI interaction needs to be done on main thread
@@ -1152,7 +1093,7 @@ git lfs <span class="nb">install</span>
     }
 }
 
-- (void)documentOverlayViewControllerDidTapClose:(MBPDocumentOverlayViewController *)documentOverlayViewController {
+- (void)photopayOverlayViewControllerDidTapClose:(MBPPhotopayOverlayViewController *)photopayOverlayViewController {
     // Your action on cancel
 }
 </code></pre>
@@ -1217,173 +1158,7 @@ UIViewController&lt;MBPRecognizerRunnerViewController&gt;* recognizerRunnerViewC
 </code></pre>
 
 <p>As you can see, when initializing <a href="http://photopay.github.io/photopay-ios/Classes/MBPFieldByFieldOverlayViewController.html"><code><a href="Classes/MBPFieldByFieldOverlayViewController.html">MBPFieldByFieldOverlayViewController</a></code></a>, we are sending delegate property as <code>self</code>. To get results, we need to conform to <a href="http://photopay.github.io/photopay-ios/Protocols/MBPFieldByFieldOverlayViewControllerDelegate.html"><code><a href="Protocols/MBPFieldByFieldOverlayViewControllerDelegate.html">MBPFieldByFieldOverlayViewControllerDelegate</a></code></a> protocol.</p>
-<h3 id='a-name-using-documentcapture-overlay-viewcontroller-a-using-code-mbpdocumentcaptureoverlayviewcontroller-code' class='heading'><a name="using-documentcapture-overlay-viewcontroller"></a> Using <code>MBPDocumentCaptureOverlayViewController</code></h3>
-
-<p><a href="http://photopay.github.io/photopay-ios/Classes/MBPDocumentCaptureOverlayViewController.html"><code>MBPDocumentCaptureOverlayViewController</code></a> is overlay view controller best suited for performing captureing cropped document images. It has <a href="http://photopay.github.io/photopay-ios/Protocols/MBPDocumentCaptureOverlayViewControllerDelegate.html"><code>MBPDocumentCaptureOverlayViewControllerDelegate</code></a> delegate which can be used out-of-the-box to perform scanning using the default UI. Here is an example how to use and initialize <a href="http://photopay.github.io/photopay-ios/Classes/MBPFieldByFieldOverlayViewController.html"><code>MBPDocumentCaptureOverlayViewController</code></a>:</p>
-
-<p>Swift</p>
-<pre class="highlight swift"><code><span class="cm">/** Create your overlay view controller */</span>
-<span class="k">let</span> <span class="nv">documentCaptureOverlayViewController</span> <span class="p">:</span> <span class="kt">MBPDocumentCaptureOverlayViewController</span> <span class="o">=</span> <span class="kt">MBPDocumentCaptureOverlayViewController</span><span class="p">(</span><span class="nv">settings</span><span class="p">:</span> <span class="n">settings</span><span class="p">,</span> <span class="nv">recognizer</span><span class="p">:</span> <span class="n">documentCaptureRecognizer</span><span class="p">,</span> <span class="nv">delegate</span><span class="p">:</span> <span class="k">self</span><span class="p">)</span>
-
-<span class="cm">/** Create recognizer view controller with wanted overlay view controller */</span>
-<span class="k">let</span> <span class="nv">recognizerRunneViewController</span> <span class="p">:</span> <span class="kt">UIViewController</span> <span class="o">=</span> <span class="kt">MBPViewControllerFactory</span><span class="o">.</span><span class="nf">recognizerRunnerViewController</span><span class="p">(</span><span class="nv">withOverlayViewController</span><span class="p">:</span> <span class="n">documentCaptureOverlayViewController</span><span class="p">)</span>
-
-<span class="cm">/** Present the recognizer runner view controller. You can use other presentation methods as well (instead of presentViewController) */</span>
-<span class="k">self</span><span class="o">.</span><span class="nf">present</span><span class="p">(</span><span class="n">recognizerRunneViewController</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
-</code></pre>
-
-<p>Objective-C</p>
-<pre class="highlight plaintext"><code>MBPDocumentCaptureOverlayViewController *overlayVC = [[MBPDocumentCaptureOverlayViewController alloc] initWithSettings:settings recognizer: documentCaptureRecognizer delegate:self];
-UIViewController&lt;MBPRecognizerRunnerViewController&gt;* recognizerRunnerViewController = [MBPViewControllerFactory recognizerRunnerViewControllerWithOverlayViewController:overlayVC];
-
-/** Present the recognizer runner view controller. You can use other presentation methods as well (instead of presentViewController) */
-[self presentViewController:recognizerRunnerViewController animated:YES completion:nil];
-</code></pre>
-
-<p>As you can see, when initializing <a href="http://photopay.github.io/photopay-ios/Classes/MBPDocumentCaptureOverlayViewController.html"><code>MBPDocumentCaptureOverlayViewController</code></a>, we are sending delegate property as <code>self</code>. To get results, we need to conform to <a href="http://photopay.github.io/photopay-ios/Protocols/MBPDocumentCaptureOverlayViewControllerDelegate.html"><code>MBPDocumentCaptureOverlayViewControllerDelegate</code></a> protocol.</p>
-<h3 id='a-name-using-blinkcard-overlay-viewcontroller-a-using-code-mbpblinkcardoverlayviewcontroller-code' class='heading'><a name="using-blinkcard-overlay-viewcontroller"></a> Using <code>MBPBlinkCardOverlayViewController</code></h3>
-
-<p><a href="http://photopay.github.io/photopay-ios/Classes/MBPBlinkCardOverlayViewController.html"><code>MBPBlinkCardOverlayViewController</code></a> is overlay view controller best suited for performing scanning of payment cards for both front and back side. It has <a href="http://photopay.github.io/photopay-ios/Protocols/MBPBlinkCardOverlayViewControllerDelegate.html"><code>MBPBlinkCardOverlayViewControllerDelegate</code></a> delegate which can be used out-of-the-box to perform scanning using the default UI. Here is an example how to use and initialize <a href="http://photopay.github.io/photopay-ios/Classes/MBPBlinkCardOverlayViewController.html"><code>MBPBlinkCardOverlayViewController</code></a>:</p>
-
-<p>Swift</p>
-<pre class="highlight swift"><code><span class="cm">/** Create your overlay view controller */</span>
-<span class="k">let</span> <span class="nv">blinkCardViewController</span> <span class="p">:</span> <span class="kt">MBPBlinkCardOverlayViewController</span> <span class="o">=</span> <span class="kt">MBPBlinkCardOverlayViewController</span><span class="p">(</span><span class="nv">settings</span><span class="p">:</span> <span class="n">blinkCardSettings</span><span class="p">,</span> <span class="nv">recognizerCollection</span><span class="p">:</span> <span class="n">recognizerCollection</span><span class="p">,</span> <span class="nv">delegate</span><span class="p">:</span> <span class="k">self</span><span class="p">)</span>
-
-<span class="cm">/** Create recognizer view controller with wanted overlay view controller */</span>
-<span class="k">let</span> <span class="nv">recognizerRunneViewController</span> <span class="p">:</span> <span class="kt">UIViewController</span> <span class="o">=</span> <span class="kt">MBPViewControllerFactory</span><span class="o">.</span><span class="nf">recognizerRunnerViewController</span><span class="p">(</span><span class="nv">withOverlayViewController</span><span class="p">:</span> <span class="n">blinkCardViewController</span><span class="p">)</span>
-
-<span class="cm">/** Present the recognizer runner view controller. You can use other presentation methods as well (instead of presentViewController) */</span>
-<span class="k">self</span><span class="o">.</span><span class="nf">present</span><span class="p">(</span><span class="n">recognizerRunneViewController</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
-</code></pre>
-
-<p>Objective-C</p>
-<pre class="highlight plaintext"><code>MBPDocumentVerificationOverlayViewController *overlayVC = [[MBPBlinkCardOverlayViewController alloc] initWithSettings:settings recognizerCollection: recognizerCollection delegate:self];
-UIViewController&lt;MBPRecognizerRunnerViewController&gt;* recognizerRunnerViewController = [MBPViewControllerFactory recognizerRunnerViewControllerWithOverlayViewController:overlayVC];
-
-/** Present the recognizer runner view controller. You can use other presentation methods as well (instead of presentViewController) */
-[self presentViewController:recognizerRunnerViewController animated:YES completion:nil];
-</code></pre>
-
-<p>As you can see, when initializing <a href="http://photopay.github.io/photopay-ios/Classes/MBPDocumentVerificationOverlayViewController.html"><code>MBPDocumentVerificationOverlayViewController</code></a>, we are sending delegate property as <code>self</code>. To get results, we need to conform to <a href="http://photopay.github.io/photopay-ios/Protocols/MBPDocumentVerificationOverlayViewControllerDelegate.html"><code>MBPDocumentVerificationOverlayViewControllerDelegate</code></a> protocol.</p>
-<h3 id='edit-results-screen' class='heading'>Edit results screen</h3>
-
-<p>SDK also provides an overlay view controller that allows users to edit scanned results and input data that wasn&rsquo;t scanned. Note that this view controller works only with <code>MBPBlinkCardRecognizer</code>.</p>
-
-<p>Enable edit screen by setting property <code>enableEditScreen = YES/true</code> on <code>MBPBlinkCardOverlaySettings</code>. It is enabled by default.</p>
-
-<p>If edit screen is enabled, you must implement <code>blinkCardOverlayViewControllerDidFinishEditing</code> delegate method from <code>MBPBlinkCardOverlayViewControllerDelegate</code> protocol to get edited results. It returns <code>MBPBlinkCardOverlayViewController</code> and <code>MBPBlinkCardEditResult</code> object. You can still get original results and images from <code>MBPBlinkCardRecognizerResult</code>.</p>
-
-<p>Edit results view controller can be customised in several ways:</p>
-
-<ul>
-<li>to configure which fields should be displayed use <code>fieldConfiguration</code> property of type <a href="http://photopay.github.io/photopay-ios/Classes/MBPBlinkCardEditFieldConfiguration.html"><code>MBPBlinkCardEditFieldConfiguration</code></a></li>
-<li>set your custom theme with <a href="http://photopay.github.io/photopay-ios/Classes/MBPBlinkCardEditOverlayTheme.html"><code>MBPBlinkCardEditOverlayTheme</code></a></li>
-<li>for setting custom strings, please check out our <a href="#localization">Localization guide</a></li>
-</ul>
-<h4 id='edit-results-screen-in-custom-ui' class='heading'>Edit results screen in Custom UI</h4>
-
-<p>SDK also provides options to use <code>MBPBlinkCardEditViewController</code> with Custom UI. Initalize it and, add it to <code>{ class_prefix }}BlinkCardEditNavigationController</code> and present it.</p>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">blinkCardEditViewController</span> <span class="o">=</span> <span class="kt">MBPBlinkCardEditViewController</span><span class="p">(</span><span class="nv">delegate</span><span class="p">:</span> <span class="k">self</span><span class="p">)</span>
-<span class="k">let</span> <span class="nv">navigationController</span> <span class="o">=</span> <span class="kt">MBPBlinkCardEditNavigationController</span><span class="p">(</span><span class="nv">rootViewController</span><span class="p">:</span> <span class="n">blinkCardEditViewController</span><span class="p">)</span>
-</code></pre>
-<pre class="highlight plaintext"><code>self.blinkCardEditViewController = [[MBPBlinkCardEditViewController alloc] initWithDelegate:self];
-self.navigationController = [[MBPBlinkCardEditNavigationController alloc] initWithRootViewController:self.blinkCardEditViewController];
-</code></pre>
-<h3 id='a-name-using-blinkid-overlay-viewcontroller-a-using-code-mbpblinkidoverlayviewcontroller-code' class='heading'><a name="using-blinkid-overlay-viewcontroller"></a> Using <code>MBPBlinkIdOverlayViewController</code></h3>
-
-<p><a href="http://photopay.github.io/photopay-ios/Classes/MBPBlinkIdOverlayViewController.html"><code>MBPBlinkIdOverlayViewController</code></a> implements new UI for scanning identity documents, which is optimally designed to be used with new <a href="http://photopay.github.io/photopay-ios/Classes/MBPBlinkIdRecognizer.html"><code>MBPBlinkIdSingleSideRecognizer</code></a> and <a href="http://photopay.github.io/photopay-ios/Classes/MBPBlinkIdMultiSideRecognizer.html"><code>MBPBlinkIdMultiSideRecognizer</code></a>. The new <a href="http://photopay.github.io/photopay-ios/Classes/MBPBlinkIdOverlayViewController.html"><code>MBPBlinkIdOverlayViewController</code></a> implements several new features:</p>
-
-<ul>
-<li>clear indication for searching phase, when BlinkID is searching for an ID document</li>
-<li>clear progress indication, when BlinkID is busy with OCR and data extraction</li>
-<li>clear message when the document is not supported</li>
-<li>visual indications when the user needs to place the document closer to the camera</li>
-<li>when <a href="http://photopay.github.io/photopay-ios/Classes/MBPBlinkIdMultiSideRecognizer.html"><code>MBPBlinkIdMultiSideRecognizer</code></a> is used, visual indication that the data from the front side of the document doesn&rsquo;t match the data on the back side of the document.</li>
-</ul>
-
-<p>The new UI allows the user to scan the document at an any angle, in any orientation. We recommend forcing landscape orientation if you scan barcodes on the back side, because in that orientation success rate will be higher.
-To force the UI in landscape mode, use the following instructions:</p>
-
-<p>Swift</p>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">settings</span> <span class="o">=</span> <span class="kt">MBPBlinkIdOverlaySettings</span><span class="p">()</span>
-<span class="n">settings</span><span class="o">.</span><span class="n">autorotateOverlay</span> <span class="o">=</span> <span class="kc">true</span>
-<span class="n">settings</span><span class="o">.</span><span class="n">supportedOrientations</span> <span class="o">=</span> <span class="kt">UIInterfaceOrientationMask</span><span class="o">.</span><span class="n">landscape</span>
-</code></pre>
-
-<p>Objective-C</p>
-<pre class="highlight plaintext"><code>MBPBlinkIdOverlaySettings *settings = [[MBPBlinkIdOverlaySettings alloc] init];
-settings.autorotateOverlay = YES;
-settings.supportedOrientations = UIInterfaceOrientationMaskLandscape;
-</code></pre>
-
-<p>It has <a href="http://photopay.github.io/photopay-ios/Protocols/MBPBlinkIdOverlayViewControllerDelegate.html"><code>MBPBlinkIdOverlayViewControllerDelegate</code></a> delegate which can be used out-of-the-box to perform scanning using the default UI. Here is an example how to use and initialize <a href="http://photopay.github.io/photopay-ios/Classes/MBPBlinkIdOverlayViewController.html"><code>MBPBlinkIdOverlayViewController</code></a>:</p>
-
-<p>Swift</p>
-<pre class="highlight swift"><code><span class="cm">/** Create your overlay view controller */</span>
-<span class="k">let</span> <span class="nv">blinkIdOverlayViewController</span> <span class="p">:</span> <span class="kt">MBPBlinkIdOverlayViewController</span> <span class="o">=</span> <span class="kt">MBPBlinkIdOverlayViewController</span><span class="p">(</span><span class="nv">settings</span><span class="p">:</span> <span class="n">blinkIdSettings</span><span class="p">,</span> <span class="nv">recognizerCollection</span><span class="p">:</span> <span class="n">recognizerCollection</span><span class="p">,</span> <span class="nv">delegate</span><span class="p">:</span> <span class="k">self</span><span class="p">)</span>
-
-<span class="cm">/** Create recognizer view controller with wanted overlay view controller */</span>
-<span class="k">let</span> <span class="nv">recognizerRunneViewController</span> <span class="p">:</span> <span class="kt">UIViewController</span> <span class="o">=</span> <span class="kt">MBPViewControllerFactory</span><span class="o">.</span><span class="nf">recognizerRunnerViewController</span><span class="p">(</span><span class="nv">withOverlayViewController</span><span class="p">:</span> <span class="n">blinkIdOverlayViewController</span><span class="p">)</span>
-
-<span class="cm">/** Present the recognizer runner view controller. You can use other presentation methods as well (instead of presentViewController) */</span>
-<span class="k">self</span><span class="o">.</span><span class="nf">present</span><span class="p">(</span><span class="n">recognizerRunneViewController</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
-</code></pre>
-
-<p>Objective-C</p>
-<pre class="highlight plaintext"><code>MBPBlinkIdOverlayViewController *overlayVC = [[MBPBlinkIdOverlayViewController alloc] initWithSettings:settings recognizerCollection: recognizerCollection delegate:self];
-UIViewController&lt;MBPRecognizerRunnerViewController&gt;* recognizerRunnerViewController = [MBPViewControllerFactory recognizerRunnerViewControllerWithOverlayViewController:overlayVC];
-
-/** Present the recognizer runner view controller. You can use other presentation methods as well (instead of presentViewController) */
-[self presentViewController:recognizerRunnerViewController animated:YES completion:nil];
-</code></pre>
-
-<p>As you can see, when initializing <a href="http://photopay.github.io/photopay-ios/Classes/MBPBlinkIdOverlayViewController.html"><code>MBPBlinkIdOverlayViewController</code></a>, we are sending delegate property as <code>self</code>. To get results, we need to conform to <a href="http://photopay.github.io/photopay-ios/Protocols/MBPBlinkIdOverlayViewControllerDelegate.html"><code>MBPBlinkIdOverlayViewControllerDelegate</code></a> protocol.</p>
-<h3 id='customizing-the-look' class='heading'>Customizing the look</h3>
-
-<p>The SDK comes with the ability to customize some aspects of the UI by using the UI theming. The screens can be customized to fit your app’s look and feel by defining themes in your application that override themes from the SDK. Each theme must extend the corresponding base theme from the SDK, as described in the following sections.</p>
-<h4 id='blinkid-overlay-theme' class='heading'>BlinkID Overlay Theme</h4>
-
-<p><img src="https://user-images.githubusercontent.com/26868155/101787592-8c4f2280-3aff-11eb-8ecf-41b49e83a163.png" alt="BlinkIDOverlayTheme"></p>
-
-<p><img src="https://user-images.githubusercontent.com/26868155/101787959-f1a31380-3aff-11eb-9d5c-05e46e347159.png" alt="BlinkIDOverlayThemeSuccess"></p>
-
-<p>To customize <code>MBPBlinkIdOverlayViewController</code>, use <code>MBPBlinkIdOverlayTheme</code> class to customize your look. You can customise elements labeled on the screenshot above by providing wanted properties to <code>MBPBlinkIdOverlayTheme</code>:</p>
-
-<ul>
-<li><p><strong>reticle</strong></p>
-
-<ul>
-<li>reticleErrorColor - change custom error UIColor</li>
-</ul></li>
-<li><p><strong>instructions</strong></p>
-
-<ul>
-<li>instructionsFont - set custom UIFont</li>
-<li>instructionsTextColor - set custom UIColor</li>
-<li>instructionsCornerRadius - set custom corner radius</li>
-</ul></li>
-<li><p><strong>flashlightWarning</strong></p>
-
-<ul>
-<li>flashlightWarningFont - set custom UIFont</li>
-<li>flashlightWarningBackgroundColor - set custom background UIColor</li>
-<li>flashlightWarningTextColor - set custom text UIColor</li>
-<li>flashlightWarningCornerRadius - set custom corner radius</li>
-</ul></li>
-<li><p><strong>cardIcon</strong></p>
-
-<ul>
-<li>frontCardImage - change front card image on flip</li>
-<li>backCardImage - change back card image on flip</li>
-</ul></li>
-<li><p><strong>successIcon</strong></p>
-
-<ul>
-<li>successScanningImage - change success scan image</li>
-<li>successFlashColor - change flash color on success scanning
-### <a name="using-photopay-overlay-viewcontroller"></a> Using <code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></li>
-</ul></li>
-</ul>
+<h3 id='a-name-using-photopay-overlay-viewcontroller-a-using-code-mbpphotopayoverlayviewcontroller-code' class='heading'><a name="using-photopay-overlay-viewcontroller"></a> Using <code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></h3>
 
 <p><a href="http://photopay.github.io/photopay-ios/Classes/MBPPhotopayOverlayViewController.html"><code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></a> is overlay view controller best suited for performing scanning of various payment slips and barcodes. It has <a href="http://photopay.github.io/photopay-ios/Protocols/MBPPhotopayOverlayViewControllerDelegate.html"><code><a href="Protocols/MBPPhotopayOverlayViewControllerDelegate.html">MBPPhotopayOverlayViewControllerDelegate</a></code></a> delegate which can be used out-of-the-box to perform scanning using the default UI. Here is an example how to use and initialize <a href="http://photopay.github.io/photopay-ios/Classes/MBPPhotopayOverlayViewController.html"><code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></a>:</p>
 
@@ -1563,20 +1338,20 @@ The only difference is that user should call <code>- (void)processString:(NSStri
 
 <p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> is the basic unit of processing within the SDK. Its main purpose is to process the image and extract meaningful information from it. As you will see <a href="#available-recognizers">later</a>, the SDK has lots of different <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> objects that have various purposes.</p>
 
-<p>Each <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> has a <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizerResult.html"><code><a href="Classes.html#/c:objc(cs)MBPRecognizerResult">MBPRecognizerResult</a></code></a> object, which contains the data that was extracted from the image. The <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizerResult.html"><code><a href="Classes.html#/c:objc(cs)MBPRecognizerResult">MBPRecognizerResult</a></code></a> object is a member of corresponding <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> object its lifetime is bound to the lifetime of its parent <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> object. If you need your <code><a href="Classes.html#/c:objc(cs)MBPRecognizerResult">MBPRecognizerResult</a></code> object to outlive its parent <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> object, you must make a copy of it by calling its method <code>copy</code>.</p>
+<p>Each <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> has a <a href="http://photopay.github.io/photopay-ios/Classes.html#/c:objc(cs)MBPRecognizerResult"><code><a href="Classes.html#/c:objc(cs)MBPRecognizerResult">MBPRecognizerResult</a></code></a> object, which contains the data that was extracted from the image. The <a href="http://photopay.github.io/photopay-ios/Classes.html#/c:objc(cs)MBPRecognizerResult"><code><a href="Classes.html#/c:objc(cs)MBPRecognizerResult">MBPRecognizerResult</a></code></a> object is a member of corresponding <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> object its lifetime is bound to the lifetime of its parent <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> object. If you need your <code><a href="Classes.html#/c:objc(cs)MBPRecognizerResult">MBPRecognizerResult</a></code> object to outlive its parent <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> object, you must make a copy of it by calling its method <code>copy</code>.</p>
 
-<p>While <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> object works, it changes its internal state and its result. The <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> object&rsquo;s <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizerResult.html"><code><a href="Classes.html#/c:objc(cs)MBPRecognizerResult">MBPRecognizerResult</a></code></a> always starts in <code>Empty</code> state. When corresponding <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> object performs the recognition of given image, its <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizerResult.html"><code><a href="Classes.html#/c:objc(cs)MBPRecognizerResult">MBPRecognizerResult</a></code></a> can either stay in <code>Empty</code> state (in case <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a>failed to perform recognition), move to <code>Uncertain</code> state (in case <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> performed the recognition, but not all mandatory information was extracted) or move to <code>Valid</code> state (in case <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> performed recognition and all mandatory information was successfully extracted from the image).</p>
+<p>While <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> object works, it changes its internal state and its result. The <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> object&rsquo;s <a href="http://photopay.github.io/photopay-ios/Classes.html#/c:objc(cs)MBPRecognizerResult"><code><a href="Classes.html#/c:objc(cs)MBPRecognizerResult">MBPRecognizerResult</a></code></a> always starts in <code>Empty</code> state. When corresponding <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> object performs the recognition of given image, its <a href="http://photopay.github.io/photopay-ios/Classes.html#/c:objc(cs)MBPRecognizerResult"><code><a href="Classes.html#/c:objc(cs)MBPRecognizerResult">MBPRecognizerResult</a></code></a> can either stay in <code>Empty</code> state (in case <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a>failed to perform recognition), move to <code>Uncertain</code> state (in case <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> performed the recognition, but not all mandatory information was extracted) or move to <code>Valid</code> state (in case <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> performed recognition and all mandatory information was successfully extracted from the image).</p>
 
-<p>As soon as one <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> object&rsquo;s <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizerResult.html"><code><a href="Classes.html#/c:objc(cs)MBPRecognizerResult">MBPRecognizerResult</a></code></a> within <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizerCollection.html"><code><a href="Classes/MBPRecognizerCollection.html">MBPRecognizerCollection</a></code></a> given to <code><a href="Classes/MBPRecognizerRunner.html">MBPRecognizerRunner</a></code> or <code><a href="Protocols/MBPRecognizerRunnerViewController.html">MBPRecognizerRunnerViewController</a></code> changes to <code>Valid</code> state, the <code>onScanningFinished</code> callback will be invoked on same thread that performs the background processing and you will have the opportunity to inspect each of your <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> objects&rsquo; <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizerResult.html"><code><a href="Classes.html#/c:objc(cs)MBPRecognizerResult">MBPRecognizerResult</a></code></a> to see which one has moved to <code>Valid</code> state.</p>
+<p>As soon as one <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> object&rsquo;s <a href="http://photopay.github.io/photopay-ios/Classes.html#/c:objc(cs)MBPRecognizerResult"><code><a href="Classes.html#/c:objc(cs)MBPRecognizerResult">MBPRecognizerResult</a></code></a> within <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizerCollection.html"><code><a href="Classes/MBPRecognizerCollection.html">MBPRecognizerCollection</a></code></a> given to <code><a href="Classes/MBPRecognizerRunner.html">MBPRecognizerRunner</a></code> or <code><a href="Protocols/MBPRecognizerRunnerViewController.html">MBPRecognizerRunnerViewController</a></code> changes to <code>Valid</code> state, the <code>onScanningFinished</code> callback will be invoked on same thread that performs the background processing and you will have the opportunity to inspect each of your <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> objects&rsquo; <a href="http://photopay.github.io/photopay-ios/Classes.html#/c:objc(cs)MBPRecognizerResult"><code><a href="Classes.html#/c:objc(cs)MBPRecognizerResult">MBPRecognizerResult</a></code></a> to see which one has moved to <code>Valid</code> state.</p>
 
-<p>As soon as <code>onScanningFinished</code> method ends, the <code><a href="Protocols/MBPRecognizerRunnerViewController.html">MBPRecognizerRunnerViewController</a></code> will continue processing new camera frames with same <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> objects, unless <code>paused</code>. Continuation of processing or <code>reset</code> recognition will modify or reset all <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> objects&rsquo;s <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizerResult.html"><code><a href="Classes.html#/c:objc(cs)MBPRecognizerResult">MBPRecognizerResult</a></code></a>. When using built-in activities, as soon as <code>onScanningFinished</code> is invoked, built-in activity pauses the <code><a href="Protocols/MBPRecognizerRunnerViewController.html">MBPRecognizerRunnerViewController</a></code> and starts finishing the activity, while saving the <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizerCollection.html"><code><a href="Classes/MBPRecognizerCollection.html">MBPRecognizerCollection</a></code></a> with active <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a>.</p>
+<p>As soon as <code>onScanningFinished</code> method ends, the <code><a href="Protocols/MBPRecognizerRunnerViewController.html">MBPRecognizerRunnerViewController</a></code> will continue processing new camera frames with same <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> objects, unless <code>paused</code>. Continuation of processing or <code>reset</code> recognition will modify or reset all <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> objects&rsquo;s <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizerResult"><code><a href="Classes.html#/c:objc(cs)MBPRecognizerResult">MBPRecognizerResult</a></code></a>. When using built-in activities, as soon as <code>onScanningFinished</code> is invoked, built-in activity pauses the <code><a href="Protocols/MBPRecognizerRunnerViewController.html">MBPRecognizerRunnerViewController</a></code> and starts finishing the activity, while saving the <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizerCollection.html"><code><a href="Classes/MBPRecognizerCollection.html">MBPRecognizerCollection</a></code></a> with active <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a>.</p>
 <h2 id='code-mbprecognizercollection-code-concept' class='heading'><code><a href="Classes/MBPRecognizerCollection.html">MBPRecognizerCollection</a></code> concept</h2>
 
 <p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizerCollection.html"><code><a href="Classes/MBPRecognizerCollection.html">MBPRecognizerCollection</a></code></a> is is wrapper around <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> objects that has array of <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> objects that can be used to give <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> objects to <code><a href="Classes/MBPRecognizerRunner.html">MBPRecognizerRunner</a></code> or <code><a href="Protocols/MBPRecognizerRunnerViewController.html">MBPRecognizerRunnerViewController</a></code> for processing.</p>
 
 <p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizerCollection.html"><code><a href="Classes/MBPRecognizerCollection.html">MBPRecognizerCollection</a></code></a> is always constructed with array <code>[[MBPRecognizerCollection alloc] initWithRecognizers:recognizers]</code> of <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> objects that need to be prepared for recognition (i.e. their properties must be tweaked already).</p>
 
-<p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizerCollection.html"><code><a href="Classes/MBPRecognizerCollection.html">MBPRecognizerCollection</a></code></a> manages a chain of <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> objects within the recognition process. When a new image arrives, it is processed by the first <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> in chain, then by the second and so on, iterating until a <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> object&rsquo;s <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizerResult.html"><code><a href="Classes.html#/c:objc(cs)MBPRecognizerResult">MBPRecognizerResult</a></code></a> changes its state to <code>Valid</code> or all of the <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> objects in chain were invoked (none getting a <code>Valid</code> result state).</p>
+<p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizerCollection.html"><code><a href="Classes/MBPRecognizerCollection.html">MBPRecognizerCollection</a></code></a> manages a chain of <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> objects within the recognition process. When a new image arrives, it is processed by the first <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> in chain, then by the second and so on, iterating until a <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> object&rsquo;s <a href="http://photopay.github.io/photopay-ios/Classes.html#/c:objc(cs)MBPRecognizerResult"><code><a href="Classes.html#/c:objc(cs)MBPRecognizerResult">MBPRecognizerResult</a></code></a> changes its state to <code>Valid</code> or all of the <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> objects in chain were invoked (none getting a <code>Valid</code> result state).</p>
 
 <p>You cannot change the order of the <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> objects within the chain - no matter the order in which you give <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> objects to <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizerCollection.html"><code><a href="Classes/MBPRecognizerCollection.html">MBPRecognizerCollection</a></code></a>, they are internally ordered in a way that provides best possible performance and accuracy. Also, in order for SDK to be able to order <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> objects in recognition chain in a best way possible, it is not allowed to have multiple instances of <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> objects of the same type within the chain. Attempting to do so will crash your application.</p>
 <h1 id='a-name-available-recognizers-a-list-of-available-recognizers' class='heading'><a name="available-recognizers"></a> List of available recognizers</h1>
@@ -1589,11 +1364,11 @@ The only difference is that user should call <code>- (void)processString:(NSStri
 <p>This recognizer is best for easy capturing of camera frames with <code><a href="Protocols/MBPRecognizerRunnerViewController.html">MBPRecognizerRunnerViewController</a></code>. Note that <a href="http://photopay.github.io/photopay-ios/Classes/MBPImage.html"><code><a href="Classes/MBPImage.html">MBPImage</a></code></a> sent to <code>onFrameAvailable</code> are temporary and their internal buffers all valid only until the <code>onFrameAvailable</code> method is executing - as soon as method ends, all internal buffers of <a href="http://photopay.github.io/photopay-ios/Classes/MBPImage.html"><code><a href="Classes/MBPImage.html">MBPImage</a></code></a> object are disposed. If you need to store <a href="http://photopay.github.io/photopay-ios/Classes/MBPImage.html"><code><a href="Classes/MBPImage.html">MBPImage</a></code></a> object for later use, you must create a copy of it by calling <code>copy</code>.</p>
 <h2 id='a-name-success-frame-grabber-recognizer-a-success-frame-grabber-recognizer' class='heading'><a name="success-frame-grabber-recognizer"></a> Success Frame Grabber Recognizer</h2>
 
-<p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPSuccessFrameGrabberRecognizer.html"><code><a href="Classes/MBPSuccessFrameGrabberRecognizer.html">MBPSuccessFrameGrabberRecognizer</a></code></a> is a special <code>MBPecognizer</code> that wraps some other <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> and impersonates it while processing the image. However, when the <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> being impersonated changes its <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizerResult.html"><code><a href="Classes.html#/c:objc(cs)MBPRecognizerResult">MBPRecognizerResult</a></code></a> into <code>Valid</code> state, the <a href="http://photopay.github.io/photopay-ios/Classes/MBPSuccessFrameGrabberRecognizer.html"><code><a href="Classes/MBPSuccessFrameGrabberRecognizer.html">MBPSuccessFrameGrabberRecognizer</a></code></a> captures the image and saves it into its own <a href="http://photopay.github.io/photopay-ios/Classes/MBPSuccessFrameGrabberRecognizerResult.html"><code><a href="Classes/MBPSuccessFrameGrabberRecognizerResult.html">MBPSuccessFrameGrabberRecognizerResult</a></code></a> object.</p>
+<p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPSuccessFrameGrabberRecognizer.html"><code><a href="Classes/MBPSuccessFrameGrabberRecognizer.html">MBPSuccessFrameGrabberRecognizer</a></code></a> is a special <code>MBPecognizer</code> that wraps some other <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> and impersonates it while processing the image. However, when the <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> being impersonated changes its <a href="http://photopay.github.io/photopay-ios/Classes.html#/c:objc(cs)MBPRecognizerResult"><code><a href="Classes.html#/c:objc(cs)MBPRecognizerResult">MBPRecognizerResult</a></code></a> into <code>Valid</code> state, the <a href="http://photopay.github.io/photopay-ios/Classes/MBPSuccessFrameGrabberRecognizer.html"><code><a href="Classes/MBPSuccessFrameGrabberRecognizer.html">MBPSuccessFrameGrabberRecognizer</a></code></a> captures the image and saves it into its own <a href="http://photopay.github.io/photopay-ios/Classes/MBPSuccessFrameGrabberRecognizerResult.html"><code><a href="Classes/MBPSuccessFrameGrabberRecognizerResult.html">MBPSuccessFrameGrabberRecognizerResult</a></code></a> object.</p>
 
 <p>Since <a href="http://photopay.github.io/photopay-ios/Classes/MBPSuccessFrameGrabberRecognizer.html"><code><a href="Classes/MBPSuccessFrameGrabberRecognizer.html">MBPSuccessFrameGrabberRecognizer</a></code></a>  impersonates its slave <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> object, it is not possible to give both concrete <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> object and <code><a href="Classes/MBPSuccessFrameGrabberRecognizer.html">MBPSuccessFrameGrabberRecognizer</a></code> that wraps it to same <code><a href="Classes/MBPRecognizerCollection.html">MBPRecognizerCollection</a></code> - doing so will have the same result as if you have given two instances of same <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> type to the <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizerCollection.html"><code><a href="Classes/MBPRecognizerCollection.html">MBPRecognizerCollection</a></code></a> - it will crash your application.</p>
 
-<p>This recognizer is best for use cases when you need to capture the exact image that was being processed by some other <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> object at the time its <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizerResult.html"><code><a href="Classes.html#/c:objc(cs)MBPRecognizerResult">MBPRecognizerResult</a></code></a> became <code>Valid</code>. When that happens, <code>MBPSuccessFrameGrabberRecognizer&#39;s</code> <code><a href="Classes/MBPSuccessFrameGrabberRecognizerResult.html">MBPSuccessFrameGrabberRecognizerResult</a></code> will also become <code>Valid</code> and will contain described image.</p>
+<p>This recognizer is best for use cases when you need to capture the exact image that was being processed by some other <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> object at the time its <a href="http://photopay.github.io/photopay-ios/Classes.html#/c:objc(cs)MBPRecognizerResult"><code><a href="Classes.html#/c:objc(cs)MBPRecognizerResult">MBPRecognizerResult</a></code></a> became <code>Valid</code>. When that happens, <code>MBPSuccessFrameGrabberRecognizer&#39;s</code> <code><a href="Classes/MBPSuccessFrameGrabberRecognizerResult.html">MBPSuccessFrameGrabberRecognizerResult</a></code> will also become <code>Valid</code> and will contain described image.</p>
 <h2 id='a-name-pdf417-recognizer-a-pdf417-recognizer' class='heading'><a name="pdf417-recognizer"></a> PDF417 recognizer</h2>
 
 <p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPPdf417Recognizer.html"><code><a href="Classes/MBPPdf417Recognizer.html">MBPPdf417Recognizer</a></code></a> is recognizer specialised for scanning <a href="https://en.wikipedia.org/wiki/PDF417">PDF417 2D barcodes</a>. This recognizer can recognize only PDF417 2D barcodes - for recognition of other barcodes, please refer to <a href="#barcode-recognizer">BarcodeRecognizer</a>.</p>
@@ -1613,193 +1388,129 @@ The only difference is that user should call <code>- (void)processString:(NSStri
 <p>This recognizer can be used in any context. It is used internally in the implementation of the provided <a href="http://photopay.github.io/photopay-ios/Classes/MBPFieldByFieldOverlayViewController.html"><code><a href="Classes/MBPFieldByFieldOverlayViewController.html">MBPFieldByFieldOverlayViewController</a></code></a>.</p>
 
 <p><code>MBPProcessors</code> are explained in <a href="#processor-concept">The Processor concept</a> section and you can find more about <code>MBPParsers</code> in <a href="#parser-concept">The Parser concept</a> section.</p>
-<h2 id='a-name-detector-recognizer-a-detector-recognizer' class='heading'><a name="detector-recognizer"></a> Detector recognizer</h2>
-
-<p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPDetectorRecognizer.html"><code>MBPDetectorRecognizer</code></a> is recognizer for scanning generic documents using custom <code>MBPDetector</code>. You can find more about <code>Detector</code> in <a href="#detector-concept">The Detector concept</a> section. <code>MBPDetectorRecognizer</code> can be used simply for document detection and obtaining its image. The more interesting use case is data extraction from the custom document type. <code>MBPDetectorRecognizer</code> performs document detection and can be configured to extract fields of interest from the scanned document by using <strong>Templating API</strong>. You can find more about Templating API in <a href="#detector-templating">this</a> section.</p>
-<h2 id='a-name-document-capture-recognizer-a-document-capture-recognizer' class='heading'><a name="document-capture-recognizer"></a> Document Capture recognizer</h2>
-
-<p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPDocumentCaptureRecognizer.html"><code>MBPDocumentCaptureRecognizer</code></a> is used for taking cropped document images.
-This recognizer can be used in any context, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPDocumentCaptureOverlayViewController.html"><code>MBPDocumentCaptureOverlayViewController</code></a> which takes high resolution document images and guides the user through the image capture process.</p>
-<h2 id='a-name-blinkcard-recognizers-a-blinkcard-recognizers' class='heading'><a name="blinkcard-recognizers"></a> BlinkCard recognizers</h2>
-
-<p>Payment card recognizers are used to scan payment cards.</p>
-<h3 id='a-name-blink-card-recognizer-a-mbpblinkcardrecognizer' class='heading'><a name="blink-card-recognizer"></a> MBPBlinkCardRecognizer</h3>
-
-<p>The MBPBlinkCardRecognizer extracts the card number (PAN), expiry date, owner information (name or company title), IBAN, and CVV, from a large range of different card layouts.</p>
-
-<p>MBPBlinkCardRecognizer is a Combined recognizer, which means it&rsquo;s designed for scanning both sides of a card. However, if all required data is found on the first side, we do not wait for second side scanning. We can return the result early. A set of required fields is defined through the recognizer&rsquo;s settings.</p>
-
-<p>&ldquo;Front side&rdquo; and &ldquo;back side&rdquo; are terms more suited to ID scanning. We start the scanning process with the side containing the card number. This makes the UX easier for users with cards where all data is on the back side.</p>
-<h3 id='a-name-payment-card-recognizers-a-mbplegacyblinkcardrecognizer-deprecated' class='heading'><a name="payment-card-recognizers"></a> MBPLegacyBlinkCardRecognizer (deprecated)</h3>
-
-<p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPLegacyBlinkCardRecognizer.html"><code>MBPLegacyBlinkCardRecognizer</code></a>is used for scanning the <a href="https://en.wikipedia.org/wiki/Payment_card">front and back side of Payment / Debit card</a>.</p>
-<h3 id='a-name-elite-payment-card-recognizers-a-mbplegacyblinkcardeliterecognizer-deprecated' class='heading'><a name="elite-payment-card-recognizers"></a> MBPLegacyBlinkCardEliteRecognizer (deprecated)</h3>
-
-<p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPLegacyBlinkCardEliteRecognizer.html"><code>MBPLegacyBlinkCardEliteRecognizer</code></a> scans back side of elite Payment / Debit card after scanning the front side and combines data from both sides.</p>
-<h2 id='a-name-blinkid-recognizers-a-blinkid-recognizers' class='heading'><a name="blinkid-recognizers"></a> BlinkID recognizers</h2>
-
-<p>Unless stated otherwise for concrete recognizer, <strong>single side BlinkID recognizes</strong> from this list can be used in any context, but they work best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPDocumentOverlayViewController.html"><code>MBPDocumentOverlayViewController</code></a>, which has UI best suited for document scanning.</p>
-
-<p><strong>Combined recognizers</strong> should be used with <a href="http://photopay.github.io/photopay-ios/Classes/MBPDocumentVerificationOverlayViewController.html"><code>MBPDocumentVerificationOverlayViewController</code></a> which manages scanning of multiple document sides in the single camera opening and guides the user through the scanning process. Some combined recognizers support scanning of multiple document types, but only one document type can be scanned at a time.</p>
-<h3 id='a-name-mrtd-recognizer-a-machine-readable-travel-document-recognizer' class='heading'><a name="mrtd-recognizer"></a> Machine Readable Travel Document recognizer</h3>
-
-<p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPMrtdRecognizer.html"><code>MBPMrtdRecognizer</code></a> is used for scanning and data extraction from the Machine Readable Zone (MRZ) of the various Machine Readable Travel Documents (MRTDs) like ID cards and passports. This recognizer is not bound to the specific country, but it can be configured to only return data that match some criteria defined by the <a href="http://photopay.github.io/photopay-ios/Protocols/MBPMrzFilter.html"><code>MBPMrzFilter</code></a>.</p>
-
-<p>You can find information about usage context at the beginning of <a href="#-blinkid-recognizers">this section</a>.</p>
-<h3 id='machine-readable-travel-document-combined-recognizer' class='heading'>Machine Readable Travel Document combined recognizer</h3>
-
-<p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPMrtdCombinedRecognizer.html"><code>MBPMrtdCombinedRecognizer</code></a> scans Machine Readable Zone (MRZ) after scanning the full document image and face image (usually MRZ is on the back side and face image is on the front side of the document). Internally, it uses <a href="#document-face-recognizer">MBPDocumentFaceRecognizer</a> for obtaining full document image and face image as the first step and then <a href="#mrtd-recognizer">MBPMrtdRecognizer</a> for scanning the MRZ.</p>
-
-<p>You can find information about usage context at the beginning of <a href="#-blinkid-recognizers">this section</a>.</p>
-<h3 id='a-name-passport-recognizer-a-passport-recognizer' class='heading'><a name="passport-recognizer"></a> Passport recognizer</h3>
-
-<p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPPassportRecognizer.html"><code>MBPPassportRecognizer</code></a> is used for scanning and data extraction from the Machine Readable Zone (MRZ) of the various passport documents. This recognizer also returns face image from the passport.</p>
-
-<p>You can find information about usage context at the beginning of <a href="#-blinkid-recognizers">this section</a>.</p>
-<h3 id='a-name-visa-recognizer-a-visa-recognizer' class='heading'><a name="visa-recognizer"></a> Visa recognizer</h3>
-
-<p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPVisaRecognizer.html"><code>MBPVisaRecognizer</code></a> is used for scanning and data extraction from the Machine Readable Zone (MRZ) of the various visa documents. This recognizer also returns face image from the visa document.</p>
-
-<p>You can find information about usage context at the beginning of <a href="#-blinkid-recognizers">this section</a>.</p>
-<h3 id='a-name-id-barcode-recognizer-a-id-barcode-recognizer' class='heading'><a name="id-barcode-recognizer"></a> ID barcode recognizer</h3>
-
-<p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPIdBarcodeRecognizer.html"><code>MBPIdBarcodeRecognizer</code></a> is used for scanning barcodes from various ID cards. Check this document to see the list of supported document types.</p>
-
-<p>You can find information about usage context at the beginning of <a href="#-blinkid-recognizers">this section</a>.</p>
-<h3 id='a-name-document-face-recognizers-a-document-face-recognizer' class='heading'><a name="document-face-recognizers"></a> Document face recognizer</h3>
-
-<p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPDocumentFaceRecognizer.html"><code>MBPDocumentFaceRecognizer</code></a> is a special type of recognizer that only returns face image and full document image of the scanned document. It does not extract document fields like first name, last name, etc. This generic recognizer can be used to obtain document images in cases when specific support for some document type is not available.</p>
-
-<p>You can find information about usage context at the beginning of <a href="#-blinkid-recognizers">this section</a>.</p>
-<h3 id='a-name-blink-id-recognizers-a-blinkid-recognizer' class='heading'><a name="blink-id-recognizers"></a> BlinkID Recognizer</h3>
-
-<p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPBlinkIdRecognizer.html"><code>MBPBlinkIdSingleSideRecognizer</code></a> scans and extracts data from the front side of the supported document.
-You can find the list of the currently supported documents <a href="https://github.com/PhotoPay/photopay-ios/tree/master/documentation/BlinkIDRecognizer.md"><code>here</code></a>.
-We will continue expanding this recognizer by adding support for new document types in the future. Star this repo to stay updated.</p>
-<h3 id='a-name-blink-id-combined-recognizers-a-blinkid-combined-recognizer' class='heading'><a name="blink-id-combined-recognizers"></a> BlinkID Combined Recognizer</h3>
-
-<p>Use <a href="http://photopay.github.io/photopay-ios/Classes/MBPBlinkIdMultiSideRecognizer.html"><code>MBPBlinkIdMultiSideRecognizer</code></a> for scanning both sides of the supported document. First, it scans and extracts data from the front, then scans and extracts data from the barcode on the back, and finally, combines results from both sides. The <a href="http://photopay.github.io/photopay-ios/Classes/MBPBlinkIdMultiSideRecognizer.html"><code>BlinkIDCombinedRecognizer</code></a> also performs data matching and returns a flag if the extracted data captured from the front side matches the data from the barcode on the back.
-You can find the list of the currently supported documents <a href="https://github.com/PhotoPay/photopay-ios/tree/master/documentation/BlinkIDRecognizer.md"><code>here</code></a>.
-We will continue expanding this recognizer by adding support for new document types in the future. Star this repo to stay updated.</p>
 <h2 id='a-name-photopay-recognizers-a-photopay-recognizers-by-countries' class='heading'><a name="photopay-recognizers"></a> PhotoPay recognizers by countries</h2>
 <h3 id='a-name-photopay-austria-a-austria' class='heading'><a name="photopay-austria"></a> Austria</h3>
 
-<p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPAustriaQrCodeRecognizer.html"><code>MBPAustriaQrCodeRecognizer</code></a> is recognizer specialised for scanning Austrian payment QR codes, such as Stuzza codes.</p>
+<p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPAustriaQrCodePaymentRecognizer.html"><code><a href="Classes/MBPAustriaQrCodePaymentRecognizer.html">MBPAustriaQrCodePaymentRecognizer</a></code></a> is recognizer specialised for scanning Austrian payment QR codes, such as Stuzza codes.</p>
 
-<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPPhotopayOverlayViewController.html"><code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></a>, which has UI best suited for one side document scanning.</p>
+<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPPhotopayOverlayViewController.html"><code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></a>, which has UI best suited for payment slip and barcode scanning.</p>
 
 <p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPAustriaSlipRecognizer.html"><code><a href="Classes/MBPAustriaSlipRecognizer.html">MBPAustriaSlipRecognizer</a></code></a> is recognizer specialised for scanning Austrian payment slips.</p>
 
-<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPPhotopayOverlayViewController.html"><code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></a>, which has UI best suited for one side document scanning.</p>
+<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPPhotopayOverlayViewController.html"><code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></a>, which has UI best suited for payment slip and barcode scanning.</p>
 <h3 id='a-name-photopay-belgium-a-belgium' class='heading'><a name="photopay-belgium"></a> Belgium</h3>
 
 <p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPBelgiumSlipRecognizer.html"><code><a href="Classes/MBPBelgiumSlipRecognizer.html">MBPBelgiumSlipRecognizer</a></code></a> is recognizer specialised for scanning Belgian payment slips.</p>
 
-<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPPhotopayOverlayViewController.html"><code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></a>, which has UI best suited for one side document scanning.</p>
+<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPPhotopayOverlayViewController.html"><code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></a>, which has UI best suited for payment slip and barcode scanning.</p>
 <h3 id='a-name-photopay-croatia-a-croatia' class='heading'><a name="photopay-croatia"></a> Croatia</h3>
 
-<p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPCroatiaPdf417Recognizer.html"><code>MBPCroatiaPdf417Recognizer</code></a> is recognizer specialised for scanning Croatia payment Pdf417 codes.</p>
+<p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPCroatiaPdf417PaymentRecognizer.html"><code><a href="Classes/MBPCroatiaPdf417PaymentRecognizer.html">MBPCroatiaPdf417PaymentRecognizer</a></code></a> is recognizer specialised for scanning Croatia payment Pdf417 codes.</p>
 
-<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPPhotopayOverlayViewController.html"><code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></a>, which has UI best suited for one side document scanning.</p>
+<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPPhotopayOverlayViewController.html"><code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></a>, which has UI best suited for payment slip and barcode scanning.</p>
 
-<p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPCroatiaQrCodeRecognizer.html"><code>MBPCroatiaQrCodeRecognizer</code></a> is recognizer specialised for scanning Croatia payment QR codes.</p>
+<p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPCroatiaQrCodePaymentRecognizer.html"><code><a href="Classes/MBPCroatiaQrCodePaymentRecognizer.html">MBPCroatiaQrCodePaymentRecognizer</a></code></a> is recognizer specialised for scanning Croatia payment QR codes.</p>
 
-<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPPhotopayOverlayViewController.html"><code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></a>, which has UI best suited for one side document scanning.</p>
+<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPPhotopayOverlayViewController.html"><code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></a>, which has UI best suited for payment slip and barcode scanning.</p>
 
 <p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPCroatiaSlipRecognizer.html"><code><a href="Classes/MBPCroatiaSlipRecognizer.html">MBPCroatiaSlipRecognizer</a></code></a> is recognizer specialised for scanning Croatia payment slips.</p>
 
-<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPPhotopayOverlayViewController.html"><code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></a>, which has UI best suited for both side document scanning.</p>
+<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPPhotopayOverlayViewController.html"><code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></a>, which has UI best suited for payment slip and barcode scanning.</p>
 <h3 id='a-name-photopay-czechia-a-czechia' class='heading'><a name="photopay-czechia"></a> Czechia</h3>
 
 <p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPCzechiaQrCodeRecognizer.html"><code><a href="Classes/MBPCzechiaQrCodeRecognizer.html">MBPCzechiaQrCodeRecognizer</a></code></a> is recognizer specialised for scanning Czech payment QR codes.</p>
 
-<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPPhotopayOverlayViewController.html"><code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></a>, which has UI best suited for one side document scanning.</p>
+<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPPhotopayOverlayViewController.html"><code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></a>, which has UI best suited for payment slip and barcode scanning.</p>
 
 <p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPCzechiaSlipRecognizer.html"><code><a href="Classes/MBPCzechiaSlipRecognizer.html">MBPCzechiaSlipRecognizer</a></code></a> is recognizer specialised for scanning Czech payment slips.</p>
 
-<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPPhotopayOverlayViewController.html"><code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></a>, which has UI best suited for one side document scanning.</p>
+<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPPhotopayOverlayViewController.html"><code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></a>, which has UI best suited for payment slip and barcode scanning.</p>
 <h3 id='a-name-photopay-germany-a-germany' class='heading'><a name="photopay-germany"></a> Germany</h3>
 
-<p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPGermanyQrCodeRecognizer.html"><code>MBPGermanyQrCodeRecognizer</code></a> is recognizer specialised for scanning German payment QR codes.</p>
+<p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPGermanyQrCodePaymentRecognizer.html"><code><a href="Classes/MBPGermanyQrCodePaymentRecognizer.html">MBPGermanyQrCodePaymentRecognizer</a></code></a> is recognizer specialised for scanning German payment QR codes.</p>
 
-<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPPhotopayOverlayViewController.html"><code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></a>, which has UI best suited for one side document scanning.</p>
+<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPPhotopayOverlayViewController.html"><code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></a>, which has UI best suited for payment slip and barcode scanning.</p>
 
 <p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPGermanySlipRecognizer.html"><code><a href="Classes/MBPGermanySlipRecognizer.html">MBPGermanySlipRecognizer</a></code></a> is recognizer specialised for scanning German payment slips.</p>
 
-<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPPhotopayOverlayViewController.html"><code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></a>, which has UI best suited for one side document scanning.</p>
+<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPPhotopayOverlayViewController.html"><code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></a>, which has UI best suited for payment slip and barcode scanning.</p>
 <h3 id='a-name-photopay-hungary-a-hungary' class='heading'><a name="photopay-hungary"></a> Hungary</h3>
 
 <p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPHungarySlipRecognizer.html"><code><a href="Classes/MBPHungarySlipRecognizer.html">MBPHungarySlipRecognizer</a></code></a> is recognizer specialised for scanning Hungarian payment slips - white and yellow.</p>
 
-<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPPhotopayOverlayViewController.html"><code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></a>, which has UI best suited for one side document scanning.</p>
+<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPPhotopayOverlayViewController.html"><code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></a>, which has UI best suited for payment slip and barcode scanning.</p>
 <h3 id='a-name-photopay-kosovo-a-kosovo' class='heading'><a name="photopay-kosovo"></a> Kosovo</h3>
 
 <p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPKosovoSlipRecognizer.html"><code><a href="Classes/MBPKosovoSlipRecognizer.html">MBPKosovoSlipRecognizer</a></code></a> is recognizer specialised for scanning Kosovo payment slips.</p>
 
-<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPFieldOfViewOverlayViewController.html"><code><a href="Classes/MBPFieldOfViewOverlayViewController.html">MBPFieldOfViewOverlayViewController</a></code></a>, which has UI best suited for one side document scanning.</p>
+<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPFieldOfViewOverlayViewController.html"><code><a href="Classes/MBPFieldOfViewOverlayViewController.html">MBPFieldOfViewOverlayViewController</a></code></a>, which has UI best suited for payment slip and barcode scanning.</p>
 
-<p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPKosovoCode128Recognizer.html"><code>MBPKosovoCode128Recognizer</code></a> is recognizer specialised for scanning code 128 barcodes found on Kosovo payment slips.</p>
+<p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPKosovoCode128PaymentRecognizer.html"><code><a href="Classes/MBPKosovoCode128PaymentRecognizer.html">MBPKosovoCode128PaymentRecognizer</a></code></a> is recognizer specialised for scanning code 128 barcodes found on Kosovo payment slips.</p>
 
-<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPFieldOfViewOverlayViewController.html"><code><a href="Classes/MBPFieldOfViewOverlayViewController.html">MBPFieldOfViewOverlayViewController</a></code></a>, which has UI best suited for one side document scanning.</p>
+<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPFieldOfViewOverlayViewController.html"><code><a href="Classes/MBPFieldOfViewOverlayViewController.html">MBPFieldOfViewOverlayViewController</a></code></a>, which has UI best suited for payment slip and barcode scanning.</p>
 <h3 id='a-name-photopay-netherlands-a-netherlands' class='heading'><a name="photopay-netherlands"></a> Netherlands</h3>
 
 <p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPNetherlandsSlipRecognizer.html"><code><a href="Classes/MBPNetherlandsSlipRecognizer.html">MBPNetherlandsSlipRecognizer</a></code></a> is recognizer specialised for scanning Dutch payment slips.</p>
 
-<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPPhotopayOverlayViewController.html"><code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></a>, which has UI best suited for one side document scanning.</p>
+<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPFieldOfViewOverlayViewController.html"><code><a href="Classes/MBPFieldOfViewOverlayViewController.html">MBPFieldOfViewOverlayViewController</a></code></a>, which has UI best suited for payment slip and barcode scanning.</p>
 <h3 id='a-name-photopay-sepa-a-sepa' class='heading'><a name="photopay-sepa"></a> SEPA</h3>
 
-<p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPSepaQrCodeRecognizer.html"><code>MBPSepaQrCodeRecognizer</code></a> is recognizer specialised for scanning SEPA QR codes.</p>
+<p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPSepaQrCodePaymentRecognizer.html"><code><a href="Classes/MBPSepaQrCodePaymentRecognizer.html">MBPSepaQrCodePaymentRecognizer</a></code></a> is recognizer specialised for scanning SEPA QR codes.</p>
 
-<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPPhotopayOverlayViewController.html"><code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></a>, which has UI best suited for one side document scanning.</p>
+<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPPhotopayOverlayViewController.html"><code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></a>, which has UI best suited for payment slip and barcode scanning.</p>
 <h3 id='a-name-photopay-serbia-a-serbia' class='heading'><a name="photopay-serbia"></a> Serbia</h3>
 
 <p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPSerbiaQrCodeRecognizer.html"><code><a href="Classes/MBPSerbiaQrCodeRecognizer.html">MBPSerbiaQrCodeRecognizer</a></code></a> is recognizer specialised for scanning Serbian QR payment barcodes.</p>
 
-<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPPhotopayOverlayViewController.html"><code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></a>, which has UI best suited for one side document scanning.</p>
+<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPPhotopayOverlayViewController.html"><code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></a>, which has UI best suited for payment slip and barcode scanning.</p>
 
 <p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPSerbiaPdf417Recognizer.html"><code><a href="Classes/MBPSerbiaPdf417Recognizer.html">MBPSerbiaPdf417Recognizer</a></code></a> is recognizer specialised for scanning Serbian PDF 417 payment barcodes.</p>
 
-<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPPhotopayOverlayViewController.html"><code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></a>, which has UI best suited for one side document scanning.</p>
+<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPPhotopayOverlayViewController.html"><code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></a>, which has UI best suited for payment slip and barcode scanning.</p>
 <h3 id='a-name-photopay-slovakia-a-slovakia' class='heading'><a name="photopay-slovakia"></a> Slovakia</h3>
 
-<p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPSlovakiaCode128Recognizer.html"><code>MBPSlovakiaCode128Recognizer</code></a> is recognizer specialised for scanning Slovakian CODE 128 payment barcodes.</p>
+<p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPSlovakiaCode128PaymentRecognizer.html"><code><a href="Classes/MBPSlovakiaCode128PaymentRecognizer.html">MBPSlovakiaCode128PaymentRecognizer</a></code></a> is recognizer specialised for scanning Slovakian CODE 128 payment barcodes.</p>
 
-<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPPhotopayOverlayViewController.html"><code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></a>, which has UI best suited for one side document scanning.</p>
+<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPPhotopayOverlayViewController.html"><code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></a>, which has UI best suited for payment slip and barcode scanning.</p>
 
-<p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPSlovakiaDataMatrixRecognizer.html"><code>MBPSlovakiaDataMatrixRecognizer</code></a> is recognizer specialised for scanning Slovakian Data Matrix payment barcodes.</p>
+<p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPSlovakiaDataMatrixPaymentRecognizer.html"><code><a href="Classes/MBPSlovakiaDataMatrixPaymentRecognizer.html">MBPSlovakiaDataMatrixPaymentRecognizer</a></code></a> is recognizer specialised for scanning Slovakian Data Matrix payment barcodes.</p>
 
-<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPPhotopayOverlayViewController.html"><code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></a>, which has UI best suited for one side document scanning.</p>
+<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPPhotopayOverlayViewController.html"><code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></a>, which has UI best suited for payment slip and barcode scanning.</p>
 
 <p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPSlovakiaQrCodeRecognizer.html"><code><a href="Classes/MBPSlovakiaQrCodeRecognizer.html">MBPSlovakiaQrCodeRecognizer</a></code></a> is recognizer specialised for scanning Slovakian QR payment barcodes.</p>
 
-<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPPhotopayOverlayViewController.html"><code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></a>, which has UI best suited for both side document scanning.</p>
+<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPPhotopayOverlayViewController.html"><code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></a>, which has UI best suited for payment slip and barcode scanning.</p>
 
 <p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPSlovakiaSlipRecognizer.html"><code><a href="Classes/MBPSlovakiaSlipRecognizer.html">MBPSlovakiaSlipRecognizer</a></code></a> is recognizer specialised for scanning Slovakian payment slips.</p>
 
-<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPPhotopayOverlayViewController.html"><code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></a>, which has UI best suited for both side document scanning.</p>
+<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPPhotopayOverlayViewController.html"><code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></a>, which has UI best suited for payment slip and barcode scanning.</p>
 <h3 id='a-name-photopay-slovenia-a-slovenia' class='heading'><a name="photopay-slovenia"></a> Slovenia</h3>
 
 <p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPSloveniaSlipRecognizer.html"><code><a href="Classes/MBPSloveniaSlipRecognizer.html">MBPSloveniaSlipRecognizer</a></code></a> is recognizer specialised for scanning Slovenian UPN payment slips.</p>
 
-<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPPhotopayOverlayViewController.html"><code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></a>, which has UI best suited for one side document scanning.</p>
+<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPPhotopayOverlayViewController.html"><code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></a>, which has UI best suited for payment slip and barcode scanning.</p>
+
+<p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPSloveniaQrCodePaymentRecognizer.html"><code><a href="Classes/MBPSloveniaQrCodePaymentRecognizer.html">MBPSloveniaQrCodePaymentRecognizer</a></code></a> is recognizer specialised for scanning Slovenian QR payment barcodes.</p>
+
+<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPPhotopayOverlayViewController.html"><code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></a>, which has UI best suited for payment slip and barcode scanning.</p>
 <h3 id='a-name-photopay-switzerland-a-switzerland' class='heading'><a name="photopay-switzerland"></a> Switzerland</h3>
 
-<p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPSwitzerlandQrCodeRecognizer.html"><code>MBPSwitzerlandQrCodeRecognizer</code></a> is recognizer specialised for scanning Swiss payment QR codes, such as Stuzza codes.</p>
+<p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPSwitzerlandQrCodePaymentRecognizer.html"><code><a href="Classes/MBPSwitzerlandQrCodePaymentRecognizer.html">MBPSwitzerlandQrCodePaymentRecognizer</a></code></a> is recognizer specialised for scanning Swiss payment QR codes, such as Stuzza codes.</p>
 
-<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPPhotopayOverlayViewController.html"><code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></a>, which has UI best suited for one side document scanning.</p>
+<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPPhotopayOverlayViewController.html"><code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></a>, which has UI best suited for payment slip and barcode scanning.</p>
 
 <p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPSwitzerlandSlipRecognizer.html"><code><a href="Classes/MBPSwitzerlandSlipRecognizer.html">MBPSwitzerlandSlipRecognizer</a></code></a> is recognizer specialised for scanning Swiss payment slips.</p>
 
-<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPPhotopayOverlayViewController.html"><code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></a>, which has UI best suited for one side document scanning.</p>
+<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPPhotopayOverlayViewController.html"><code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></a>, which has UI best suited for payment slip and barcode scanning.</p>
 <h3 id='a-name-photopay-uk-a-united-kingdom' class='heading'><a name="photopay-uk"></a> United Kingdom</h3>
 
-<p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPUnitedKingdomQrCodeRecognizer.html"><code>MBPUnitedKingdomQrCodeRecognizer</code></a> is recognizer specialised for scanning UK payment QR codes.</p>
+<p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPUnitedKingdomQrCodePaymentRecognizer.html"><code><a href="Classes/MBPUnitedKingdomQrCodePaymentRecognizer.html">MBPUnitedKingdomQrCodePaymentRecognizer</a></code></a> is recognizer specialised for scanning UK payment QR codes.</p>
 
-<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPPhotopayOverlayViewController.html"><code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></a>, which has UI best suited for one side document scanning.</p>
+<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPPhotopayOverlayViewController.html"><code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></a>, which has UI best suited for payment slip and barcode scanning.</p>
 
 <p>The <a href="http://photopay.github.io/photopay-ios/Classes/MBPUnitedKingdomSlipRecognizer.html"><code><a href="Classes/MBPUnitedKingdomSlipRecognizer.html">MBPUnitedKingdomSlipRecognizer</a></code></a> is recognizer specialised for scanning UK payment slips.</p>
 
-<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPPhotopayOverlayViewController.html"><code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></a>, which has UI best suited for both side document scanning.</p>
+<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://photopay.github.io/photopay-ios/Classes/MBPPhotopayOverlayViewController.html"><code><a href="Classes/MBPPhotopayOverlayViewController.html">MBPPhotopayOverlayViewController</a></code></a>, which has UI best suited for payment slip and barcode scanning.</p>
 <h1 id='a-name-processors-and-parsers-a-code-mbpprocessor-code-and-code-mbpparser-code' class='heading'><a name="processors-and-parsers"></a> <code><a href="Classes/MBPProcessor.html">MBPProcessor</a></code> and <code><a href="Classes/MBPParser.html">MBPParser</a></code></h1>
 
 <p>The <code>MBPProcessors</code> and <code>MBPParsers</code> are standard processing units within <em>PhotoPay</em> SDK used for data extraction from the input images. Unlike the <a href="#recognizer-concept"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a>, <code><a href="Classes/MBPProcessor.html">MBPProcessor</a></code> and <code><a href="Classes/MBPParser.html">MBPParser</a></code> are not stand-alone processing units. <code><a href="Classes/MBPProcessor.html">MBPProcessor</a></code> is always used within <code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code> and <code><a href="Classes/MBPParser.html">MBPParser</a></code> is used within appropriate <code><a href="Classes/MBPProcessor.html">MBPProcessor</a></code> to extract data from the OCR result.</p>
@@ -1836,7 +1547,7 @@ We will continue expanding this recognizer by adding support for new document ty
 
 <p>If we put <code><a href="Classes/MBPAmountParser.html">MBPAmountParser</a></code> in one <code><a href="Classes/MBPParserGroupProcessor.html">MBPParserGroupProcessor</a></code> and <code>MBPEmailParser</code> in another <code><a href="Classes/MBPParserGroupProcessor.html">MBPParserGroupProcessor</a></code>, OCR will be performed for each parser group independently, thus preventing the <code><a href="Classes/MBPAmountParser.html">MBPAmountParser</a></code> confusion, but two OCR passes of the image will be performed, which can have a performance impact.</p>
 
-<p><code><a href="Classes/MBPParserGroupProcessor.html">MBPParserGroupProcessor</a></code> is most commonly used <code><a href="Classes/MBPProcessor.html">MBPProcessor</a></code>. It is used whenever the OCR is needed. After the OCR is performed and all parsers are run, parsed results can be obtained through parser objects that are enclosed in the group. <code><a href="Classes/MBPParserGroupProcessor.html">MBPParserGroupProcessor</a></code> instance also has associated inner <code><a href="Classes.html#/c:objc(cs)MBPParserGroupProcessorResult">MBPParserGroupProcessorResult</a></code> whose state is updated during processing and its property <a href="http://photopay.github.io/photopay-ios/Classes/MBPParserGroupProcessor.html"><code>ocrLayout</code></a> can be used to obtain the raw <a href="http://photopay.github.io/photopay-ios/Classes/MBPOcrLayout.html"><code><a href="Classes/MBPOcrLayout.html">MBPOcrLayout</a></code></a> that was used for parsing data.</p>
+<p><code><a href="Classes/MBPParserGroupProcessor.html">MBPParserGroupProcessor</a></code> is most commonly used <code><a href="Classes/MBPProcessor.html">MBPProcessor</a></code>. It is used whenever the OCR is needed. After the OCR is performed and all parsers are run, parsed results can be obtained through parser objects that are enclosed in the group. <code><a href="Classes/MBPParserGroupProcessor.html">MBPParserGroupProcessor</a></code> instance also has associated inner <code><a href="Classes.html#/c:objc(cs)MBPParserGroupProcessorResult">MBPParserGroupProcessorResult</a></code> whose state is updated during processing and its property <code>ocrLayout</code> can be used to obtain the raw <a href="http://photopay.github.io/photopay-ios/Classes/MBPOcrLayout.html"><code><a href="Classes/MBPOcrLayout.html">MBPOcrLayout</a></code></a> that was used for parsing data.</p>
 
 <p>Take note that <code><a href="Classes/MBPOcrLayout.html">MBPOcrLayout</a></code> is available only if it is allowed by the <em>PhotoPay</em> SDK license key. <code><a href="Classes/MBPOcrLayout.html">MBPOcrLayout</a></code> structure contains information about all recognized characters and their positions on the image. To prevent someone to abuse that, obtaining of the <code><a href="Classes/MBPOcrLayout.html">MBPOcrLayout</a></code> structure is allowed only by the premium license keys.</p>
 <h2 id='a-name-parser-concept-a-the-code-mbpparser-code-concept' class='heading'><a name="parser-concept"></a> The <code><a href="Classes/MBPParser.html">MBPParser</a></code> concept</h2>
@@ -1855,250 +1566,18 @@ We will continue expanding this recognizer by adding support for new document ty
 <h3 id='a-name-date-parser-a-date-parser' class='heading'><a name="date-parser"></a> Date Parser</h3>
 
 <p><a href="http://photopay.github.io/photopay-ios/Classes/MBPDateParser.html"><code><a href="Classes/MBPDateParser.html">MBPDateParser</a></code></a> is used for extracting dates in various formats from the OCR result.</p>
-<h3 id='a-name-email-parser-a-email-parser' class='heading'><a name="email-parser"></a> Email Parser</h3>
-
-<p><a href="http://photopay.github.io/photopay-ios/Classes/MBPEmailParser.html"><code>MBPEmailParser</code></a> is used for extracting e-mail addresses from the OCR result.</p>
 <h3 id='a-name-iban-parser-a-iban-parser' class='heading'><a name="iban-parser"></a> IBAN Parser</h3>
 
 <p><a href="http://photopay.github.io/photopay-ios/Classes/MBPIbanParser.html"><code><a href="Classes/MBPIbanParser.html">MBPIbanParser</a></code></a> is used for extracting IBAN (<em>International Bank Account Number</em>) from the OCR result.</p>
-<h3 id='a-name-license-plate-parser-a-license-plates-parser' class='heading'><a name="license-plate-parser"></a> License Plates Parser</h3>
-
-<p><a href="http://photopay.github.io/photopay-ios/Classes/MBPLicensePlatesParser.html"><code>MBPLicensePlatesParser</code></a> is used for extracting license plate content from the OCR result.</p>
 <h3 id='a-name-raw-parser-a-raw-parser' class='heading'><a name="raw-parser"></a> Raw Parser</h3>
 
 <p><a href="http://photopay.github.io/photopay-ios/Classes/MBPRawParser.html"><code><a href="Classes/MBPRawParser.html">MBPRawParser</a></code></a> is used for obtaining string version of raw OCR result, without performing any smart parsing operations.</p>
 <h3 id='a-name-regex-parser-a-regex-parser' class='heading'><a name="regex-parser"></a> Regex Parser</h3>
 
 <p><a href="http://photopay.github.io/photopay-ios/Classes/MBPRegexParser.html"><code><a href="Classes/MBPRegexParser.html">MBPRegexParser</a></code></a> is used for extracting OCR result content which is in accordance with the given regular expression. Regular expression parsing is not performed with java&rsquo;s regex engine. Instead, it is performed with custom regular expression engine.</p>
-<h3 id='a-name-topup-parser-a-topup-parser' class='heading'><a name="topup-parser"></a> TopUp Parser</h3>
+<h3 id='other-parsers' class='heading'>Other parsers</h3>
 
-<p><a href="http://photopay.github.io/photopay-ios/Classes/MBPTopUpParser.html"><code>MBPTopUpParser</code></a> is used for extracting TopUp (mobile phone coupon) codes from the OCR result. There exists <a href="http://photopay.github.io/photopay-ios/Enums/MBPTopUpPreset.html"><code>TopUpPreset</code></a> enum with presets for most common vendors. Method <code>- (void)setTopUpPreset:(MBPTopUpPreset)topUpPreset</code> can be used to configure parser to only return codes with the appropriate format defined by the used preset.</p>
-<h3 id='a-name-vin-parser-a-vin-em-vehicle-identification-number-em-parser' class='heading'><a name="vin-parser"></a> VIN (<em>Vehicle Identification Number</em>) Parser</h3>
-
-<p><a href="http://photopay.github.io/photopay-ios/Classes/MBPVinParser.html"><code>MBPVinParser</code></a> is used for extracting VIN (<em>Vehicle Identification Number</em>) from the OCR result.</p>
-<h1 id='a-name-templating-api-a-scanning-generic-documents-with-templating-api' class='heading'><a name="templating-api"></a> Scanning generic documents with Templating API</h1>
-
-<p>This section discusses the setting up of <code>MBPDetectorRecognizer</code> for scanning templated documents. Please check <code>Templating-sample</code> sample app for source code examples.</p>
-
-<p>Templated document is any document which is defined by its template. Template contains the information about how the document should be detected, i.e. found on the camera scene and information about which part of the document contains which useful information.</p>
-<h2 id='a-name-defining-document-detection-a-defining-how-document-should-be-detected' class='heading'><a name="defining-document-detection"></a> Defining how document should be detected</h2>
-
-<p>Before performing OCR of the document, <em>PhotoPay</em> first needs to find its location on a camera scene. In order to perform detection, you need to define <a href="#detector-concept">MBPDetector</a>.</p>
-
-<p>You have to set concrete <code>MBPDetector</code> when instantiating the <code>MBPDetectorRecognizer</code> as a parameter to its constructor.</p>
-
-<p>You can find out more information about detectors that can be used in section <a href="#detector-list">List of available detectors</a>. The most commonly used detector is <a href="#document-detector"><code>MBPDocumentDetector</code></a>.</p>
-<h2 id='a-name-defining-field-extraction-a-defining-how-fields-of-interest-should-be-extracted' class='heading'><a name="defining-field-extraction"></a> Defining how fields of interest should be extracted</h2>
-
-<p><code>MBPDetector</code> produces its result which contains document location. After the document has been detected, all further processing is done on the detected part of the input image.</p>
-
-<p>There may be one or more variants of the same document type, for example for some document there may be old and new version and both of them must be supported. Because of that, for implementing support for each document, one or multiple templating classes are used. <code>MBPTemplatingClass</code> is described in <a href="#templating-class">The Templating Class component</a> section.</p>
-
-<p><code>MBPTemplatingClass</code> holds all needed information and components for processing its class of documents. Templating classes are processed in chain, one by one. On first class for which the data is successfully extracted, the chain is terminated and recognition results are returned. For each input image processing is done in the following way:</p>
-
-<ol>
-<li><p>Classification <code>MBPProcessorGroups</code> are run on the defined locations to extract data. <code><a href="Classes/MBPProcessorGroup.html">MBPProcessorGroup</a></code> is used to define the location of interest on the detected document and <code>MBPProcessors</code> that will extract data from that location. You can find more about <code><a href="Classes/MBPProcessorGroup.html">MBPProcessorGroup</a></code> in the <a href="#processor-group">next section</a>.</p></li>
-<li><p><code>MBPTemplatingClassifier</code> is run with the data extracted by the classification processor groups to decide whether the currently scanned document belongs to the current class or not. Its <a href="http://photopay.github.io/photopay-ios/Protocols/MBPTemplatingClassifier.html">classify</a> method  simply returns <code>YES/true</code> or <code>NO/false</code>. If the classifier returns <code>NO/false</code>, recognition is moved to the next class in the chain, if it exists. You can find more about <code>MBPTemplatingClassifier</code> in <a href="#implementing-templating-classifier">this</a> section.</p></li>
-<li><p>If the <code>MBPTemplatingClassifier</code> has decided that currently scanned document belongs to the current class, non-classification <code>MBPProcessorGroups</code> are run to extract other fields of interest.</p></li>
-</ol>
-<h3 id='a-name-processor-group-a-the-code-mbpprocessorgroup-code-component' class='heading'><a name="processor-group"></a> The <code><a href="Classes/MBPProcessorGroup.html">MBPProcessorGroup</a></code> component</h3>
-
-<p>In templating API <a href="http://photopay.github.io/photopay-ios/Classes/MBPProcessorGroup.html"><code><a href="Classes/MBPProcessorGroup.html">MBPProcessorGroup</a></code></a> is used to define the location of the field of interest on the detected document and how that location should be processed by setting following parameters in its constructor:</p>
-
-<ol>
-<li><p>Location coordinates relative to document detection which are passed as [<code>Rectangle</code>] object.</p></li>
-<li><p><code><a href="Classes.html#/c:objc(cs)MBPDewarpPolicy">MBPDewarpPolicy</a></code> which determines the resulting image chunk for processing. You can find a description of each <code><a href="Classes.html#/c:objc(cs)MBPDewarpPolicy">MBPDewarpPolicy</a></code>, its purpose and recommendations when it should be used to get the best results in <a href="#dewarp-policy-list">List of available dewarp policies</a> section.</p></li>
-<li><p>Collection of processors that will be executed on the prepared chunk of the image for current document location. You can find more information about processors in <a href="#processor-concept">The Processor concept</a> section.</p></li>
-</ol>
-<h3 id='a-name-dewarp-policy-list-a-list-of-available-dewarp-policies' class='heading'><a name="dewarp-policy-list"></a> List of available dewarp policies</h3>
-
-<p>Concrete <code><a href="Classes.html#/c:objc(cs)MBPDewarpPolicy">MBPDewarpPolicy</a></code> defines how specific location of interest should be dewarped (cropped and rotated). It determines the height and width of the resulting dewarped image in pixels. Here is the list of available dewarp policies with linked doc for more information:</p>
-
-<ul>
-<li><p><a href="http://photopay.github.io/photopay-ios/Classes/MBPFixedDewarpPolicy.html"><code><a href="Classes/MBPFixedDewarpPolicy.html">MBPFixedDewarpPolicy</a></code></a></p>
-
-<ul>
-<li>defines the exact height of the dewarped image in pixels</li>
-<li><strong>usually the best policy for processor groups that use a legacy OCR engine</strong></li>
-</ul></li>
-<li><p><a href="http://photopay.github.io/photopay-ios/Classes/MBPDPIBasedDewarpPolicy.html"><code><a href="Classes/MBPDPIBasedDewarpPolicy.html">MBPDPIBasedDewarpPolicy</a></code></a>:</p>
-
-<ul>
-<li>defines the desired DPI (<em>Dots Per Inch</em>)</li>
-<li>the height of the dewarped image will be calculated based on the actual physical size of the document provided by the used detector and chosen DPI</li>
-<li><strong>usually the best policy for processor groups that prepare location&rsquo;s raw image for output</strong></li>
-</ul></li>
-<li><p><a href="http://photopay.github.io/photopay-ios/Classes/MBPNoUpScalingDewarpPolicy.html"><code><a href="Classes/MBPNoUpScalingDewarpPolicy.html">MBPNoUpScalingDewarpPolicy</a></code></a>:</p>
-
-<ul>
-<li>defines the maximal allowed height of the dewarped image in pixels</li>
-<li>the height of the dewarped image will be calculated in a way that no part of the image will be up-scaled</li>
-<li>if the height of the resulting image is larger than maximal allowed, then the maximal allowed height will be used as actual height, which effectively scales down the image</li>
-<li><strong>usually the best policy for processors that use neural networks, for example,  DEEP OCR, hologram detection or NN-based classification</strong></li>
-</ul></li>
-</ul>
-<h3 id='a-name-templating-class-a-the-code-mbptemplatingclass-code-component' class='heading'><a name="templating-class"></a> The <code>MBPTemplatingClass</code> component</h3>
-
-<p><a href="http://photopay.github.io/photopay-ios/Classes/MBPTemplatingClass.html"><code>MBPTemplatingClass</code></a> enables implementing support for a specific class of documents that should be scanned with templating API. Final implementation of the templating recognizer consists of one or more templating classes, one class for each version of the document.</p>
-
-<p><code>MBPTemplatingClass</code> contains two collections of <code>MBPProcessorGroups</code> and a <code>MBPTemplatingClassifier</code>.</p>
-
-<p>The two collections of processor groups within <code>MBPTemplatingClass</code> are:</p>
-
-<ol>
-<li><p>The classification processor groups which are set by using the [<code>- (void)setClassificationProcessorGroups:(nonnull NSArray&lt;__kindof MBPProcessorGroup *&gt; *)processorGroups</code>] method. <code>MBPProcessorGroups</code> from this collection will be executed before classification, which means that they are always executed when processing comes to this class.</p></li>
-<li><p>The non-classification processor groups which are set by using the [<code>- (void)setNonClassificationProcessorGroups:(nonnull NSArray&lt;__kindof MBPProcessorGroup *&gt; *)processorGroups</code>]method. <code>MBPProcessorGroups</code> from this collection will be executed after classification if the classification has been positive.</p></li>
-</ol>
-
-<p>A component which decides whether the scanned document belongs to the current class is <a href="http://photopay.github.io/photopay-ios/Classes/MBPTemplatingClass.html"><code>MBPTemplatingClass</code></a>. It can be set by using the <code>- (void)setTemplatingClassifier:(nullable id&lt;MBPTemplatingClassifier&gt;)templatingClassifier</code> method. If it is not set, non-classification processor groups will not be executed. Instructions for implementing the <code>MBPTemplatingClassifier</code> are given in the <a href="#implementing-templating-classifier">next section</a>.</p>
-<h3 id='a-name-implementing-templating-classifier-a-implementing-the-code-mbptemplatingclassifier-code' class='heading'><a name="implementing-templating-classifier"></a> Implementing the <code>MBPTemplatingClassifier</code></h3>
-
-<p>Each concrete templating classifier implements the <a href="http://photopay.github.io/photopay-ios/Protocols/MBPTemplatingClassifier.html"><code>MBPTemplatingClassifier</code></a> interface, which requires to implement its <code>classify</code> method that is invoked while evaluating associated <code>MBPTemplatingClass</code>.</p>
-
-<p>Classification decision should be made based on the processing result which is returned by one or more processing units contained in the collection of the classification processor groups. As described in <a href="#processor-group">The ProcessorGroup component</a> section, each processor group contains one or more <code>MBPProcessors</code>. <a href="#processor-list">There are different <code>MBPProcessors</code></a> which may enclose smaller processing units, for example, <a href="#parser-group-processor"><code><a href="Classes/MBPParserGroupProcessor.html">MBPParserGroupProcessor</a></code></a> maintains the group of <a href="#parser-concept"><code>MBPParsers</code></a>. Result from each of the processing units in that hierarchy can be used for classification. In most cases <code><a href="Classes/MBPParser.html">MBPParser</a></code> result is used to determine whether some data in the expected format exists on the specified location.</p>
-
-<p>To be able to retrieve results from the various processing units that are needed for classification, their instances must be available when <code>classify</code> method is called.</p>
-<h2 id='obtaining-recognition-results' class='heading'>Obtaining recognition results</h2>
-
-<p>When recognition is done, results can be obtained through processing units instances, such as: <code>MBPProcessors</code>, <code>MBPParsers</code>, etc. which are used for configuring the <code>MBPTemplatingRecognizer</code> and later for processing the input image.</p>
-<h1 id='a-name-detector-concept-a-the-code-mbpdetector-code-concept' class='heading'><a name="detector-concept"></a> The <code>MBPDetector</code> concept</h1>
-
-<p><a href="http://photopay.github.io/photopay-ios/Classes/MBPDetector.html"><code>MBPDetector</code></a> is a processing unit used within some <code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code> which supports detectors, such as <a href="#detector-recognizer"><code>MBPDetectorRecognizer</code></a>. Concrete <code>MBPDetector</code> knows how to find the certain object on the input image. <code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code> can use it to perform object detection prior to performing further recognition of detected object&rsquo;s contents.</p>
-
-<p><code>MBPDetector</code> architecture is similar to <code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code> architecture described in <a href="#recognizer-concept">The Recognizer concept</a> section. Each instance also has associated inner <code><a href="Classes.html#/c:objc(cs)MBPRecognizerResult">MBPRecognizerResult</a></code> object whose lifetime is bound to the lifetime of its parent <code>MBPDetector</code> object and it is updated while <code>MBPDetector</code> works. If you need your <code><a href="Classes.html#/c:objc(cs)MBPRecognizerResult">MBPRecognizerResult</a></code> object to outlive its parent <code>MBPDetector</code> object, you must make a copy of it by calling its <code>copy</code> method.</p>
-
-<p>It also has its internal state and while it is in the <em>working state</em> during recognition process, it is not allowed to tweak <code>MBPDetector</code> object&rsquo;s properties.</p>
-
-<p>When detection is performed on the input image, each <code>MBPDetector</code> in its associated <code>MBPDetectorResult</code> object holds the following information:</p>
-
-<ul>
-<li><p><a href="http://photopay.github.io/photopay-ios/Enums/MBPDetectionCode.html"><code>MBPDetectionCode</code></a> that indicates the type of the detection.</p></li>
-<li><p><a href="http://photopay.github.io/photopay-ios/Enums/MBPDetectionStatus.html"><code><a href="Enums/MBPDetectionStatus.html">MBPDetectionStatus</a></code></a> that represents the status of the detection.</p></li>
-<li><p>each concrete detector returns additional information specific to the detector type</p></li>
-</ul>
-
-<p>To support common use cases, there are several different <code>MBPDetector</code> implementations available. They are listed in the next section.</p>
-<h2 id='a-name-detector-list-a-list-of-available-detectors' class='heading'><a name="detector-list"></a> List of available detectors</h2>
-<h3 id='a-name-document-detector-a-document-detector' class='heading'><a name="document-detector"></a> Document Detector</h3>
-
-<p><a href="http://photopay.github.io/photopay-ios/Classes/MBPDocumentDetector.html"><code>MBPDocumentDetector</code></a> is used to detect card documents, cheques, A4-sized documents, receipts and much more.</p>
-
-<p>It accepts one or more <code>MBPDocumentSpecifications</code>. <a href="http://photopay.github.io/photopay-ios/Classes/MBPDocumentSpecification.html"><code>MBPDocumentSpecification</code></a> represents a specification of the document that should be detected by using edge detection algorithm and predefined aspect ratio.</p>
-
-<p>For the most commonly used document formats, there is a helper method  <code>+ (instancetype)createFromPreset:(MBPDocumentSpecificationPreset)preset</code> which creates and initializes the document specification based on the given <a href="http://photopay.github.io/photopay-ios/Enums/MBPDocumentSpecificationPreset.html"><code>MBPDocumentSpecificationPreset</code></a>.</p>
-
-<p>For the list of all available configuration methods see <a href="http://photopay.github.io/photopay-ios/Classes/MBPDocumentDetector.html"><code>MBPDocumentDetector</code></a> doc, and for available result content see <a href="http://photopay.github.io/photopay-ios/Classes/MBPDocumentDetectorResult.html"><code>MBPDocumentDetectorResult</code></a> doc.</p>
-<h3 id='a-name-mrtd-detector-a-mrtd-detector' class='heading'><a name="mrtd-detector"></a> MRTD Detector</h3>
-
-<p><a href="http://photopay.github.io/photopay-ios/Classes/MBPMrtdDetector.html"><code>MBPMrtdDetector</code></a> is used to perform detection of <em>Machine Readable Travel Documents (MRTD)</em>.</p>
-
-<p>Method <code>- (void)setMrtdSpecifications:(NSArray&lt;__kindof MBPMrtdSpecification *&gt; *)mrtdSpecifications</code> can be used to define which MRTD documents should be detectable. It accepts the array of <code>MBPMrtdSpecification</code>. <a href="http://photopay.github.io/photopay-ios/Classes/MBPMrtdSpecification.html"><code>MBPMrtdSpecification</code></a> represents specification of MRTD that should be detected. It can be created from the <a href="http://photopay.github.io/photopay-ios/Enums/MBPMrtdSpecificationPreset.html"><code>MBPMrtdSpecificationPreset</code></a> by using <code>+ (instancetype)createFromPreset:(MBPMrtdSpecificationPreset)preset</code> method.</p>
-
-<p>If <code>MBPMrtdSpecifications</code> are not set, all supported MRTD formats will be detectable.</p>
-
-<p>For the list of all available configuration methods see <a href="http://photopay.github.io/photopay-ios/Classes/MBPMrtdDetector.html"><code>MBPMrtdDetector</code></a> doc, and for available result content see <a href="http://photopay.github.io/photopay-ios/Classes/MBPMrtdDetectorResult.html"><code>MBPMrtdDetectorResult</code></a> doc.</p>
-<h1 id='creating-customized-build-of-photopay-sdk' class='heading'>Creating customized build of PhotoPay SDK</h1>
-
-<p>If your final app size is too large, you can create a customised build of <em>Microblink.framework</em> and <em>Microblink.bundle</em> which will contain only features and resources that you really need.</p>
-
-<p>In order to create customised build of PhotoPay SDK, you first need to download the static distribution of PhotoPay SDK. A valid production licence key is required in order to gain access to the download link of PhotoPay SDK static distribution. Once you have a valid production licence key, please contact our <a href="http://help.microblink.com">support team</a> and ask them to provide you with the download link. After they give you access to the static distribution of PhotoPay SDK, you will be able to download it from you account at <a href="https://www.microblink.com/login">Microblink Developer Dashboard</a>.</p>
-
-<p>The static distribution of PhotoPay SDK is a large zip file (several hundred megabytes) which contains static libraries of PhotoPay SDK&rsquo;s native code, all assets and resources and a script which will create the customised build for you.</p>
-<h3 id='prerequisites-for-creating-customised-build' class='heading'>Prerequisites for creating customised build</h3>
-
-<p>In order to create customised build of PhotoPay SDK, you will need following tools:</p>
-
-<ul>
-<li>XCode and latest iOS SDK</li>
-<li>CMake - you can install it from Homebrew with <code>brew install cmake</code>, or you can download it from <a href="https://cmake.org/download/">official page</a>
-
-<ul>
-<li>please note that command-line version of CMake is required, so if you have downloaded CMake from official page, make sure you install command-line support as well</li>
-</ul></li>
-</ul>
-<h3 id='steps-for-creating-customised-build' class='heading'>Steps for creating customised build</h3>
-
-<ol>
-<li>Obtain the static distribution of PhotoPay SDK by <a href="http://help.microblink.com">contacting us</a></li>
-<li>Download the zip from link that you will be provided</li>
-<li>Unzip the file into an empty folder</li>
-<li>Edit the file <code>enabled-features.cmake</code>
-
-<ul>
-<li>you should enable only features that you need to use by setting appropriate variables to <code>ON</code>.</li>
-<li>the list of all possible feature variables can be found in <code>features.cmake</code> 
-
-<ul>
-<li>for each <code>feature_option</code> command, first parameter defines the feature variable, and the second is the description of the feature, i.e. what it provides. Other parameters are information for script to work correctly.</li>
-</ul></li>
-<li>you should not edit any file except <code>enabled-features.cmake</code> (except if instructed so by our support team) to ensure creation of customised build works well</li>
-</ul></li>
-<li>Open terminal and navigate to folder with zip&rsquo;s contents.</li>
-<li>Execute command <code>./create-custom-build.sh</code> and select whether you want static or dynamic frameowk.
-
-<ul>
-<li>when asked, enter <code>s</code> to build static framework or <code>d</code> to build dynamic framework</li>
-</ul></li>
-<li>After several minutes (depedending of CPU speed of your computer), customised build will appear in the <code>Release</code> folder. Use that bundle and framework in your app instead of default one.</li>
-</ol>
-<h4 id='warning' class='heading'>Warning:</h4>
-
-<p>Attempt to use feature within your app which was not enabled in customised build will cause a linker error when linking against the customised framework.</p>
-<h3 id='troubleshooting' class='heading'>Troubleshooting:</h3>
-<h4 id='getting-code-unrecognized-selector-sent-to-instance-code-when-using-customised-static-framework-while-everything-works-ok-with-dynamic-framework' class='heading'>Getting <code>unrecognized selector sent to instance</code> when using customised static framework, while everything works OK with dynamic framework</h4>
-
-<p>This happens when your app has not been linked with <code>-ObjC</code> flag against static framework. The problem is related to using Objective C categories within static library which are thrown away by linker. You can see more information in <a href="https://developer.apple.com/library/content/qa/qa1490/_index.html">official Apple documentation</a>.</p>
-<h4 id='app-crashing-when-scanning-starts-with-log-message-em-failed-to-load-resource-xx-the-program-will-now-crash-em' class='heading'>App crashing when scanning starts with log message <em>Failed to load resource XX. The program will now crash.</em></h4>
-
-<p>This means that a required resource was not packaged into final app. This usually indicates a bug in our script that makes the customised build. Please <a href="http://help.microblink.com">contact us</a> and send your version of <code>enabled-features.cmake</code> and crash log.</p>
-<h4 id='cmake-error-while-running-script' class='heading'>CMake error while running script.</h4>
-
-<p>You probably have a typo in <code>enabled-features.cmake</code>. CMake is very sensitive language and will throw an non-understandable error if you have a typo or invoke any of its commands with wrong number of parameters.</p>
-<h4 id='linker-error-while-running-the-script' class='heading'>Linker error while running the script.</h4>
-
-<p>This sometimes happens when XCode&rsquo;s link time optimizer runs out of memory. Usually running the script again solves the problem. Please reboot your Mac if this keeps happening.</p>
-<h4 id='keeping-only-code-feature_mrtd-code-creates-rather-large-code-microblink-bundle-code' class='heading'>Keeping only <code>FEATURE_MRTD</code> creates rather large <code>Microblink.bundle</code></h4>
-
-<p><code>FEATURE_MRTD</code> marks the <em>MRTD recognizer</em>. However, <em>MRTD recognizer</em> can also be used in <em>Templating API</em> mode where non-MRZ data can be scanned. To perform OCR of non-MRZ data, a rather large OCR model must be used, which supports all fonts. If you only plan to scan MRZ part of the document, you can edit the <code>features.cmake</code> in following way:</p>
-
-<ul>
-<li>find the following line:</li>
-</ul>
-<pre class="highlight plaintext"><code>feature_resources( FEATURE_MRTD model_mrtd model_general_blink_ocr model_micr model_arabic )
-</code></pre>
-
-<ul>
-<li>keep only <code>model_mrtd</code> in the list, i.e. modify the line so that it will be like this:</li>
-</ul>
-<pre class="highlight plaintext"><code>feature_resources( FEATURE_MRTD model_mrtd )
-</code></pre>
-
-<p>This will keep only support for reading MRZ zone in OCR - you will not be able to scan non-MRZ data with such configuration using <em>MRTD recognizer</em>, however you will reduce the <code>Microblink.bundle</code> and then final app size by more than 4MB.</p>
-<h5 id='more-information-about-ocr-models-in-code-feature_mrtd-code' class='heading'>More information about OCR models in <code>FEATURE_MRTD</code></h5>
-
-<ul>
-<li><code>model_mrtd</code> is OCR model for performing OCR of MRZ zone</li>
-<li><code>model_arabic</code> is OCR model for performing OCR of digits used in arabic languages - text scanning is not supported</li>
-<li><code>model_micr</code> is OCR model for performing OCR of <a href="https://en.wikipedia.org/wiki/Magnetic_ink_character_recognition">Magnetic Ink Characters</a></li>
-<li><code>model_general_blink_ocr</code> is OCR model for performing general-purpose OCR. This model is usually required for performing OCR of non-MRZ text on documents.</li>
-</ul>
-<h1 id='a-name-localization-a-localization' class='heading'><a name="localization"></a> Localization</h1>
-
-<p>The SDK is localized on following languages: Arabic, Chinese simplified, Chinese traditional, Croatian, Czech, Dutch, Filipino, French, German, Hebrew, Hungarian, Indonesian, Italian, Malay, Portuguese, Romanian, Slovak, Slovenian, Spanish, Thai, Vietnamese.</p>
-
-<p>If you would like us to support additional languages or report incorrect translation, please contact us at <a href="http://help.microblink.com">help.microblink.com</a>.</p>
-
-<p>If you want to add additional languages yourself or change existing translations, you need to set <code>customLocalizationFileName</code> property on <a href="http://photopay.github.io/photopay-ios/Classes/MBPMicroblinkApp.html"><code>MBPMicroblinkApp</code></a> object to your strings file name.</p>
-
-<p>For example, let&rsquo;s say that we want to change text &ldquo;Scan the front side of a document&rdquo; to &ldquo;Scan the front side&rdquo; in BlinkID sample project. This would be the steps:</p>
-
-<ul>
-<li>Find the translation key in en.strings file inside PhotoPay.framework</li>
-<li>Add a new file MyTranslations.strings to the project by using &ldquo;Strings File&rdquo; template</li>
-<li>With MyTranslations.string open, in File inspector tap &ldquo;Localize&hellip;&rdquo; button and select English</li>
-<li>Add the translation key &ldquo;blinkid_generic_message&rdquo; and the value &ldquo;Scan the front side&rdquo; to MyTranslations.strings</li>
-<li>Finally in AppDelegate.swift in method <code>application(_:, didFinishLaunchingWithOptions:)</code> add <code>MBPMicroblinkApp.instance()?.customLocalizationFileName = &quot;MyTranslations&quot;</code></li>
-</ul>
+<p>There are also other specialized parsers. You can see a list of all o them <a href="http://photopay.github.io/photopay-ios/Classes.html">here</a>.</p>
 <h1 id='a-name-troubleshooting-a-troubleshooting' class='heading'><a name="troubleshooting"></a> Troubleshooting</h1>
 <h2 id='a-name-troubleshooting-integration-problems-a-integration-problems' class='heading'><a name="troubleshooting-integration-problems"></a> Integration problems</h2>
 
@@ -2143,52 +1622,9 @@ We will continue expanding this recognizer by adding support for new document ty
 <h4 id='i-get-code-nserror-code-with-code-mbpmicroblinksdkrecognizererrordomain-code-and-code-mbprecognizerfailedtoinitalize-code-code-with-trial-license-key' class='heading'>I get <code>NSError</code> with <code>MBPMicroblinkSDKRecognizerErrorDomain</code> and <code>MBPRecognizerFailedToInitalize</code> code with trial license key</h4>
 
 <p>Whenever you construct any <a href="http://photopay.github.io/photopay-ios/Classes/MBPRecognizer.html"><code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code></a> object or, a check whether license allows using that object will be performed. If license is not set prior constructing that object, you will get <code>NSError</code> with <code>MBPMicroblinkSDKRecognizerErrorDomain</code> and <code>MBPRecognizerFailedToInitalize</code> code. We recommend setting license as early as possible in your app.</p>
-<h4 id='undefined-symbols-on-architecture-armv7' class='heading'>Undefined Symbols on Architecture armv7</h4>
-
-<p>Make sure you link your app with iconv and Accelerate frameworks as shown in <a href="#quick-start">Quick start</a>.
-If you are using Cocoapods, please be sure that you&rsquo;ve installed <code>git-lfs</code> prior to installing pods. If you are still getting this error, go to project folder and execute command <code>git-lfs pull</code>.</p>
-<h3 id='crash-on-armv7-devices' class='heading'>Crash on armv7 devices</h3>
-
-<p>SDK crashes on armv7 devices if bitcode is enabled. We are working on it.</p>
 <h4 id='in-my-code-didfinish-code-callback-i-have-the-result-inside-my-code-mbprecognizer-code-but-when-scanning-activity-finishes-the-result-is-gone' class='heading'>In my <code>didFinish</code> callback I have the result inside my <code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code>, but when scanning activity finishes, the result is gone</h4>
 
 <p>This usually happens when using <a href="http://photopay.github.io/photopay-ios/Protocols/MBPRecognizerRunnerViewController.html"><code><a href="Protocols/MBPRecognizerRunnerViewController.html">MBPRecognizerRunnerViewController</a></code></a> and forgetting to pause the <a href="http://photopay.github.io/photopay-ios/Protocols/MBPRecognizerRunnerViewController.html"><code><a href="Protocols/MBPRecognizerRunnerViewController.html">MBPRecognizerRunnerViewController</a></code></a> in your <code>didFinish</code> callback. Then, as soon as <code>didFinish</code> happens, the result is mutated or reset by additional processing that <code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code> performs in the time between end of your <code>didFinish</code> callback and actual finishing of the scanning activity. For more information about statefulness of the <code><a href="Classes/MBPRecognizer.html">MBPRecognizer</a></code> objects, check <a href="#recognizer-concept">this section</a>.</p>
-<h4 id='unsupported-architectures-when-submitting-app-to-app-store' class='heading'>Unsupported architectures when submitting app to App Store</h4>
-
-<p>PhotoPay.framework is a dynamic framework which contains slices for all architectures - device and simulator. If you intend to extract .ipa file for ad hoc distribution, you&rsquo;ll need to preprocess the framework to remove simulator architectures.</p>
-
-<p>Ideal solution is to add a build phase after embed frameworks build phase, which strips unused slices from embedded frameworks.</p>
-
-<p>Build step is based on the one provided here: <a href="http://ikennd.ac/blog/2015/02/stripping-unwanted-architectures-from-dynamic-libraries-in-xcode/">http://ikennd.ac/blog/2015/02/stripping-unwanted-architectures-from-dynamic-libraries-in-xcode/</a></p>
-<pre class="highlight shell"><code><span class="nv">APP_PATH</span><span class="o">=</span><span class="s2">"</span><span class="k">${</span><span class="nv">TARGET_BUILD_DIR</span><span class="k">}</span><span class="s2">/</span><span class="k">${</span><span class="nv">WRAPPER_NAME</span><span class="k">}</span><span class="s2">"</span>
-
-<span class="c"># This script loops through the frameworks embedded in the application and</span>
-<span class="c"># removes unused architectures.</span>
-find <span class="s2">"</span><span class="nv">$APP_PATH</span><span class="s2">"</span> <span class="nt">-name</span> <span class="s1">'*.framework'</span> <span class="nt">-type</span> d | <span class="k">while </span><span class="nb">read</span> <span class="nt">-r</span> FRAMEWORK
-<span class="k">do
-</span><span class="nv">FRAMEWORK_EXECUTABLE_NAME</span><span class="o">=</span><span class="si">$(</span>defaults <span class="nb">read</span> <span class="s2">"</span><span class="nv">$FRAMEWORK</span><span class="s2">/Info.plist"</span> CFBundleExecutable<span class="si">)</span>
-<span class="nv">FRAMEWORK_EXECUTABLE_PATH</span><span class="o">=</span><span class="s2">"</span><span class="nv">$FRAMEWORK</span><span class="s2">/</span><span class="nv">$FRAMEWORK_EXECUTABLE_NAME</span><span class="s2">"</span>
-<span class="nb">echo</span> <span class="s2">"Executable is </span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">"</span>
-
-<span class="nv">EXTRACTED_ARCHS</span><span class="o">=()</span>
-
-<span class="k">for </span>ARCH <span class="k">in</span> <span class="nv">$ARCHS</span>
-<span class="k">do
-</span><span class="nb">echo</span> <span class="s2">"Extracting </span><span class="nv">$ARCH</span><span class="s2"> from </span><span class="nv">$FRAMEWORK_EXECUTABLE_NAME</span><span class="s2">"</span>
-lipo <span class="nt">-extract</span> <span class="s2">"</span><span class="nv">$ARCH</span><span class="s2">"</span> <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">"</span> <span class="nt">-o</span> <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">-</span><span class="nv">$ARCH</span><span class="s2">"</span>
-EXTRACTED_ARCHS+<span class="o">=(</span><span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">-</span><span class="nv">$ARCH</span><span class="s2">"</span><span class="o">)</span>
-<span class="k">done
-
-</span><span class="nb">echo</span> <span class="s2">"Merging extracted architectures: </span><span class="k">${</span><span class="nv">ARCHS</span><span class="k">}</span><span class="s2">"</span>
-lipo <span class="nt">-o</span> <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">-merged"</span> <span class="nt">-create</span> <span class="s2">"</span><span class="k">${</span><span class="nv">EXTRACTED_ARCHS</span><span class="p">[@]</span><span class="k">}</span><span class="s2">"</span>
-<span class="nb">rm</span> <span class="s2">"</span><span class="k">${</span><span class="nv">EXTRACTED_ARCHS</span><span class="p">[@]</span><span class="k">}</span><span class="s2">"</span>
-
-<span class="nb">echo</span> <span class="s2">"Replacing original executable with thinned version"</span>
-<span class="nb">rm</span> <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">"</span>
-<span class="nb">mv</span> <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">-merged"</span> <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">"</span>
-
-<span class="k">done</span>
-</code></pre>
 <h3 id='disable-logging' class='heading'>Disable logging</h3>
 
 <p>Logging can be disabled by calling <code>disableMicroblinkLogging</code> method on <a href="http://photopay.github.io/photopay-ios/Classes/MBPLogger.html"><code>MBPLogger</code></a> instance.</p>
@@ -2205,7 +1641,7 @@ lipo <span class="nt">-o</span> <span class="s2">"</span><span class="nv">$FRAME
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2024 <a class="link" href="http://microblink.com" target="_blank" rel="external noopener">Microblink</a>. All rights reserved. (Last updated: 2024-02-28)</p>
+      <p>&copy; 2024 <a class="link" href="http://microblink.com" target="_blank" rel="external noopener">Microblink</a>. All rights reserved. (Last updated: 2024-03-01)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
     </section>
   </body>
