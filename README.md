@@ -119,7 +119,7 @@ git clone git@github.com:PhotoPay/photopay-ios.git
     - libiconv.tbd
     - libz.tbd
 
-![Adding Apple frameworks to your project](https://raw.githubusercontent.com/wiki/blinkocr/blinkocr-ios/Images/02%20-%20Add%20Libraries.png)
+![Adding Apple frameworks to your project](https://github.com/PhotoPay/photopay-ios/assets/158844/1d8f5fbf-e7b9-4622-9b5e-8f939bff28b2)
 
 ### 2. Referencing header file
 
