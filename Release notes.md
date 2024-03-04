@@ -1,5 +1,10 @@
 # Release notes
 
+## 9.1.2 
+
+- fixed a crash when using Direct API on iOS 15.8 or older
+    - the crash was introduced with introducing of HDR image processing support in v9.1.0
+
 ## 9.1.1 
 
 - fixed broken links in documentation
