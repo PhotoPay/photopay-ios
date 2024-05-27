@@ -1,1986 +1,2014 @@
 {
   "warnings": [
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBAmountParser.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBAmountParser.h",
       "line": 22,
       "symbol": "MBPAmountParser.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBAmountParserResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBAmountParserResult.h",
       "line": 21,
       "symbol": "MBPAmountParserResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBAustraliaAbnParser.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBAustraliaAbnParser.h",
       "line": 22,
       "symbol": "MBPAustraliaAbnParser.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBAustraliaAbnParserResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBAustraliaAbnParserResult.h",
       "line": 20,
       "symbol": "MBPAustraliaAbnParserResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBAustraliaAccountParser.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBAustraliaAccountParser.h",
       "line": 22,
       "symbol": "MBPAustraliaAccountParser.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBAustraliaAccountParserResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBAustraliaAccountParserResult.h",
       "line": 20,
       "symbol": "MBPAustraliaAccountParserResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBAustraliaBillerParser.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBAustraliaBillerParser.h",
       "line": 22,
       "symbol": "MBPAustraliaBillerParser.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBAustraliaBillerParserResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBAustraliaBillerParserResult.h",
       "line": 20,
       "symbol": "MBPAustraliaBillerParserResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBAustraliaBsbParser.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBAustraliaBsbParser.h",
       "line": 22,
       "symbol": "MBPAustraliaBsbParser.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBAustraliaBsbParserResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBAustraliaBsbParserResult.h",
       "line": 20,
       "symbol": "MBPAustraliaBsbParserResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBAustraliaReferenceParser.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBAustraliaReferenceParser.h",
       "line": 22,
       "symbol": "MBPAustraliaReferenceParser.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBAustraliaReferenceParserResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBAustraliaReferenceParserResult.h",
       "line": 20,
       "symbol": "MBPAustraliaReferenceParserResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBAustriaQrCodePaymentRecognizer.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBAustriaQrCodePaymentRecognizer.h",
       "line": 19,
       "symbol": "MBPAustriaQrCodePaymentRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBAustriaQrCodePaymentRecognizerResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBAustriaQrCodePaymentRecognizerResult.h",
       "line": 19,
       "symbol": "MBPAustriaQrCodePaymentRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBAustriaReferenceParser.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBAustriaReferenceParser.h",
       "line": 22,
       "symbol": "MBPAustriaReferenceParser.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBAustriaReferenceParserResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBAustriaReferenceParserResult.h",
       "line": 20,
       "symbol": "MBPAustriaReferenceParserResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBAustriaSlipRecognizer.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBAustriaSlipRecognizer.h",
       "line": 23,
       "symbol": "MBPAustriaSlipRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBAustriaSlipRecognizerResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBAustriaSlipRecognizerResult.h",
       "line": 18,
       "symbol": "MBPAustriaSlipRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBBarcodeOverlayViewController.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBBarcodeOverlayViewController.h",
       "line": 20,
       "symbol": "MBPBarcodeOverlayViewController",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBBarcodeRecognizer.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBBarcodeRecognizer.h",
       "line": 23,
       "symbol": "MBPBarcodeRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBBarcodeRecognizerResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBBarcodeRecognizerResult.h",
       "line": 22,
       "symbol": "MBPBarcodeRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBBarcodeType.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBBarcodeType.h",
       "line": 12,
       "symbol": "MBPBarcodeType.MBPBarcodeNone",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBBelgiumSlipRecognizer.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBBelgiumSlipRecognizer.h",
       "line": 23,
       "symbol": "MBPBelgiumSlipRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBBgraImage.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBBgraImage.h",
       "line": 18,
       "symbol": "MBPBgraImage",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBBlinkInputRecognizer.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBBlinkInputRecognizer.h",
       "line": 24,
       "symbol": "MBPBlinkInputRecognizer.-initWithProcessors:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBBlinkInputRecognizerResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBBlinkInputRecognizerResult.h",
       "line": 23,
       "symbol": "MBPBlinkInputRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBBlurredFieldOfViewSubview.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBBlurredFieldOfViewSubview.h",
       "line": 20,
       "symbol": "MBPBlurredFieldOfViewSubview.-initWithFrame:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBBlurredFieldOfViewSubview.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBBlurredFieldOfViewSubview.h",
       "line": 22,
       "symbol": "MBPBlurredFieldOfViewSubview.-initWithCoder:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBBlurredFieldOfViewSubview.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBBlurredFieldOfViewSubview.h",
       "line": 27,
       "symbol": "MBPBlurredFieldOfViewSubview.-animateGradientsWithDuration:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBBosniaAndHerzegovinaAccountParser.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBBosniaAndHerzegovinaAccountParser.h",
       "line": 22,
       "symbol": "MBPBosniaAndHerzegovinaAccountParser.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBBosniaAndHerzegovinaAccountParserResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBBosniaAndHerzegovinaAccountParserResult.h",
       "line": 20,
       "symbol": "MBPBosniaAndHerzegovinaAccountParserResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBBosniaAndHerzegovinaReferenceParser.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBBosniaAndHerzegovinaReferenceParser.h",
       "line": 22,
       "symbol": "MBPBosniaAndHerzegovinaReferenceParser.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBBosniaAndHerzegovinaReferenceParserResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBBosniaAndHerzegovinaReferenceParserResult.h",
       "line": 20,
       "symbol": "MBPBosniaAndHerzegovinaReferenceParserResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBCroatiaAmountParser.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBCroatiaAmountParser.h",
       "line": 22,
       "symbol": "MBPCroatiaAmountParser.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBCroatiaAmountParserResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBCroatiaAmountParserResult.h",
       "line": 20,
       "symbol": "MBPCroatiaAmountParserResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBCroatiaBarcodeSlipIdType.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBCroatiaBarcodeSlipIdType.h",
       "line": 11,
       "symbol": "MBPCroatiaBarcodeSlipIdType",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBCroatiaBarcodeSlipIdType.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBCroatiaBarcodeSlipIdType.h",
       "line": 11,
       "symbol": "MBPCroatiaBarcodeSlipIdType",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBCroatiaPdf417PaymentRecognizer.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBCroatiaPdf417PaymentRecognizer.h",
       "line": 21,
       "symbol": "MBPCroatiaPdf417PaymentRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBCroatiaPdf417PaymentRecognizerResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBCroatiaPdf417PaymentRecognizerResult.h",
       "line": 20,
       "symbol": "MBPCroatiaPdf417PaymentRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBCroatiaQrCodePaymentRecognizer.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBCroatiaQrCodePaymentRecognizer.h",
       "line": 21,
       "symbol": "MBPCroatiaQrCodePaymentRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBCroatiaQrCodePaymentRecognizerResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBCroatiaQrCodePaymentRecognizerResult.h",
       "line": 20,
       "symbol": "MBPCroatiaQrCodePaymentRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBCroatiaReferenceParser.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBCroatiaReferenceParser.h",
       "line": 22,
       "symbol": "MBPCroatiaReferenceParser.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBCroatiaReferenceParserResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBCroatiaReferenceParserResult.h",
       "line": 20,
       "symbol": "MBPCroatiaReferenceParserResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBCroatiaSlipRecognizer.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBCroatiaSlipRecognizer.h",
       "line": 22,
       "symbol": "MBPCroatiaSlipRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBCroatiaSlipRecognizerResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBCroatiaSlipRecognizerResult.h",
       "line": 45,
       "symbol": "MBPCroatiaSlipRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBCustomOverlayViewController.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBCustomOverlayViewController.h",
       "line": 28,
       "symbol": "MBPCustomOverlayViewController.recognizerCollection",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBCustomOverlayViewController.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBCustomOverlayViewController.h",
       "line": 29,
       "symbol": "MBPCustomOverlayViewController.cameraSettings",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBCustomOverlayViewController.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBCustomOverlayViewController.h",
       "line": 30,
       "symbol": "MBPCustomOverlayViewController.metadataDelegates",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBCustomOverlayViewController.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBCustomOverlayViewController.h",
       "line": 31,
       "symbol": "MBPCustomOverlayViewController.scanningRecognizerRunnerViewControllerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBCustomOverlayViewController.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBCustomOverlayViewController.h",
       "line": 32,
       "symbol": "MBPCustomOverlayViewController.recognizerRunnerViewControllerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBCustomOverlayViewController.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBCustomOverlayViewController.h",
       "line": 41,
       "symbol": "MBPCustomOverlayViewController.-initWithRecognizerCollection:cameraSettings:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBCzechiaAccountParser.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBCzechiaAccountParser.h",
       "line": 22,
       "symbol": "MBPCzechiaAccountParser.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBCzechiaAccountParserResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBCzechiaAccountParserResult.h",
       "line": 20,
       "symbol": "MBPCzechiaAccountParserResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBCzechiaQrCodeRecognizer.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBCzechiaQrCodeRecognizer.h",
       "line": 21,
       "symbol": "MBPCzechiaQrCodeRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBCzechiaQrCodeRecognizerResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBCzechiaQrCodeRecognizerResult.h",
       "line": 20,
       "symbol": "MBPCzechiaQrCodeRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBCzechiaSlipRecognizer.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBCzechiaSlipRecognizer.h",
       "line": 23,
       "symbol": "MBPCzechiaSlipRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBCzechiaSlipRecognizerResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBCzechiaSlipRecognizerResult.h",
       "line": 18,
       "symbol": "MBPCzechiaSlipRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBCzechiaVariabilniSymbolParser.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBCzechiaVariabilniSymbolParser.h",
       "line": 22,
       "symbol": "MBPCzechiaVariabilniSymbolParser.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBCzechiaVariabilniSymbolParserResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBCzechiaVariabilniSymbolParserResult.h",
       "line": 20,
       "symbol": "MBPCzechiaVariabilniSymbolParserResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBDate.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBDate.h",
       "line": 27,
       "symbol": "MBPDate.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBDateParser.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBDateParser.h",
       "line": 20,
       "symbol": "MBPDateFormat.MBPDateFormatDDMMYYYY",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBDateParser.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBDateParser.h",
       "line": 21,
       "symbol": "MBPDateFormat.MBPDateFormatDDMMYY",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBDateParser.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBDateParser.h",
       "line": 22,
       "symbol": "MBPDateFormat.MBPDateFormatMMDDYYYY",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBDateParser.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBDateParser.h",
       "line": 23,
       "symbol": "MBPDateFormat.MBPDateFormatMMDDYY",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBDateParser.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBDateParser.h",
       "line": 24,
       "symbol": "MBPDateFormat.MBPDateFormatYYYYMMDD",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBDateParser.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBDateParser.h",
       "line": 25,
       "symbol": "MBPDateFormat.MBPDateFormatYYMMDD",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBDateParser.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBDateParser.h",
       "line": 26,
       "symbol": "MBPDateFormat.MBPDateFormatDDMONTHYYYY",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBDateParser.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBDateParser.h",
       "line": 27,
       "symbol": "MBPDateFormat.MBPDateFormatDDMONTHYY",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBDateParser.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBDateParser.h",
       "line": 28,
       "symbol": "MBPDateFormat.MBPDateFormatMONTHDDYYYY",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBDateParser.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBDateParser.h",
       "line": 29,
       "symbol": "MBPDateFormat.MBPDateFormatMONTHDDYY",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBDateParser.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBDateParser.h",
       "line": 30,
       "symbol": "MBPDateFormat.MBPDateFormatYYYYMONTHDD",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBDateParser.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBDateParser.h",
       "line": 31,
       "symbol": "MBPDateFormat.MBPDateFormatYYMONTHDD",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBDateParser.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBDateParser.h",
       "line": 34,
       "symbol": "MBPDateFormatArray",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBDateParser.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBDateParser.h",
       "line": 35,
       "symbol": "MBPDateSeparatorCharsArray",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBDateParser.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBDateParser.h",
       "line": 45,
       "symbol": "MBPDateParser.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBDateParserResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBDateParserResult.h",
       "line": 23,
       "symbol": "MBPDateParserResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBDewarpPolicy.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBDewarpPolicy.h",
       "line": 19,
       "symbol": "MBPDewarpPolicy.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBDotsSubview.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBDotsSubview.h",
       "line": 23,
       "symbol": "MBPDotsSubview.dotsLayer",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBDotsSubview.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBDotsSubview.h",
       "line": 42,
       "symbol": "MBPDotsSubview.-initWithCoder:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBDotsSubview.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBDotsSubview.h",
       "line": 44,
       "symbol": "MBPDotsSubview.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBException.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBException.h",
       "line": 11,
       "symbol": "MBPExceptionName",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBException.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBException.h",
       "line": 13,
       "symbol": "MBPIllegalModificationException",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBException.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBException.h",
       "line": 14,
       "symbol": "MBPInvalidLicenseKeyException",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBException.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBException.h",
       "line": 15,
       "symbol": "MBPInvalidLicenseeKeyException",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBException.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBException.h",
       "line": 16,
       "symbol": "MBPInvalidLicenseResourceException",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBException.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBException.h",
       "line": 17,
       "symbol": "MBPInvalidBundleException",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBException.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBException.h",
       "line": 18,
       "symbol": "MBPMissingSettingsException",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBException.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBException.h",
       "line": 19,
       "symbol": "MBPInvalidArgumentException",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBFieldByFieldOverlaySettings.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBFieldByFieldOverlaySettings.h",
       "line": 24,
       "symbol": "MBPFieldByFieldOverlaySettings.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBFieldByFieldOverlayViewController.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBFieldByFieldOverlayViewController.h",
       "line": 30,
       "symbol": "MBPFieldByFieldOverlayViewController.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBFieldByFieldOverlayViewController.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBFieldByFieldOverlayViewController.h",
       "line": 32,
       "symbol": "MBPFieldByFieldOverlayViewController.-initWithNibName:bundle:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBFieldByFieldOverlayViewController.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBFieldByFieldOverlayViewController.h",
       "line": 34,
       "symbol": "MBPFieldByFieldOverlayViewController.-initWithCoder:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBFrameGrabberRecognizer.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBFrameGrabberRecognizer.h",
       "line": 24,
       "symbol": "MBPFrameGrabberRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBFrameGrabberRecognizer.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBFrameGrabberRecognizer.h",
       "line": 25,
       "symbol": "MBPFrameGrabberRecognizer.-initWithFrameGrabberDelegate:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBFrameGrabberRecognizer.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBFrameGrabberRecognizer.h",
       "line": 43,
       "symbol": "MBPFrameGrabberRecognizerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
       "line": 27,
       "symbol": "CGDelta",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
       "line": 30,
       "symbol": "CGLine",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.struct",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
       "line": 30,
       "symbol": "CGLine",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
       "line": 38,
       "symbol": "CGDeltaMake",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
       "line": 41,
       "symbol": "CGPointWithDelta",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
       "line": 44,
       "symbol": "CGPointDistance",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
       "line": 47,
       "symbol": "CGPointAlongLine",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
       "line": 50,
       "symbol": "CGPointRotatedAroundPoint",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
       "line": 55,
       "symbol": "CGLineMake",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
       "line": 58,
       "symbol": "CGLineEqualToLine",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
       "line": 61,
       "symbol": "CGLineMidPoint",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
       "line": 64,
       "symbol": "CGLineDirection",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
       "line": 67,
       "symbol": "CGLinesAngle",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
       "line": 70,
       "symbol": "CGLinesIntersectAtPoint",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
       "line": 73,
       "symbol": "CGLineLength",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
       "line": 76,
       "symbol": "CGLineScale",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
       "line": 79,
       "symbol": "CGLineTranslate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
       "line": 82,
       "symbol": "CGLineScaleOnMidPoint",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
       "line": 85,
       "symbol": "CGLineDelta",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
       "line": 88,
       "symbol": "CGLinesAreParallel",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
       "line": 93,
       "symbol": "CGRectTopLeftPoint",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
       "line": 94,
       "symbol": "CGRectTopRightPoint",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
       "line": 95,
       "symbol": "CGRectBottomLeftPoint",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
       "line": 96,
       "symbol": "CGRectBottomRightPoint",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
       "line": 99,
       "symbol": "CGRectResize",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
       "line": 102,
       "symbol": "CGRectInsetEdge",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
       "line": 113,
       "symbol": "CGRectCenterPoint",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
       "line": 116,
       "symbol": "CGRectClosestTwoCornerPoints",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
       "line": 120,
       "symbol": "CGLineIntersectsRectAtPoint",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
       "line": 123,
       "symbol": "CGTransformedPointToDestination",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
       "line": 131,
       "symbol": "CGControlPointsForArcBetweenPointsWithRadius",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGeometry.h",
       "line": 137,
       "symbol": "MBPscanningRegionForFrameInBounds",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGermanyQrCodePaymentRecognizer.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGermanyQrCodePaymentRecognizer.h",
       "line": 19,
       "symbol": "MBPGermanyQrCodePaymentRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGermanyQrCodePaymentRecognizerResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGermanyQrCodePaymentRecognizerResult.h",
       "line": 19,
       "symbol": "MBPGermanyQrCodePaymentRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGermanyReferenceParser.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGermanyReferenceParser.h",
       "line": 22,
       "symbol": "MBPGermanyReferenceParser.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGermanyReferenceParserResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGermanyReferenceParserResult.h",
       "line": 19,
       "symbol": "MBPGermanyReferenceParserResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGermanySlipRecognizer.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGermanySlipRecognizer.h",
       "line": 22,
       "symbol": "MBPGermanySlipRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGermanySlipRecognizerResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGermanySlipRecognizerResult.h",
       "line": 18,
       "symbol": "MBPGermanySlipRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGlareRecognizerRunnerDelegate.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGlareRecognizerRunnerDelegate.h",
       "line": 13,
       "symbol": "MBPGlareRecognizerRunnerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGlareRecognizerRunnerViewControllerDelegate.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGlareRecognizerRunnerViewControllerDelegate.h",
       "line": 15,
       "symbol": "MBPGlareRecognizerRunnerViewControllerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGlareStatusSubview.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGlareStatusSubview.h",
       "line": 20,
       "symbol": "MBPGlareStatusSubview.label",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGlareStatusSubview.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGlareStatusSubview.h",
       "line": 22,
       "symbol": "MBPGlareStatusSubview.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGlareStatusSubview.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGlareStatusSubview.h",
       "line": 24,
       "symbol": "MBPGlareStatusSubview.-initWithCoder:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGlareStatusSubview.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGlareStatusSubview.h",
       "line": 26,
       "symbol": "MBPGlareStatusSubview.-initWithFrame:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGlareStatusSubview.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBGlareStatusSubview.h",
       "line": 28,
       "symbol": "MBPGlareStatusSubview.-glareDetectionFinishedWithResult:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBHungaryAccountParser.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBHungaryAccountParser.h",
       "line": 22,
       "symbol": "MBPHungaryAccountParser.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBHungaryAccountParserResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBHungaryAccountParserResult.h",
       "line": 20,
       "symbol": "MBPHungaryAccountParserResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBHungaryPayerIdParser.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBHungaryPayerIdParser.h",
       "line": 22,
       "symbol": "MBPHungaryPayerIdParser.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBHungaryPayerIdParserResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBHungaryPayerIdParserResult.h",
       "line": 20,
       "symbol": "MBPHungaryPayerIdParserResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBHungaryQrCodePaymentRecognizer.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBHungaryQrCodePaymentRecognizer.h",
       "line": 19,
       "symbol": "MBPHungaryQrCodePaymentRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBHungaryQrCodePaymentRecognizerResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBHungaryQrCodePaymentRecognizerResult.h",
       "line": 19,
       "symbol": "MBPHungaryQrCodePaymentRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBHungarySlipRecognizer.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBHungarySlipRecognizer.h",
       "line": 22,
       "symbol": "MBPHungarySlipRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBHungarySlipRecognizerResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBHungarySlipRecognizerResult.h",
       "line": 29,
       "symbol": "MBPHungarySlipRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBIbanBicAccount.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBIbanBicAccount.h",
       "line": 14,
       "symbol": "MBPIbanBicAccount",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBIbanParser.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBIbanParser.h",
       "line": 22,
       "symbol": "MBPIbanParser.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBIbanParserResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBIbanParserResult.h",
       "line": 21,
       "symbol": "MBPIbanParserResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBImageProcessingRecognizerRunnerDelegate.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBImage.h",
+      "line": 19,
+      "symbol": "MBPVideoRotationAngle.MBPVideoRotationAngleLandscapeLeft",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBImage.h",
+      "line": 21,
+      "symbol": "MBPVideoRotationAngle.MBPVideoRotationAnglePortrait",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBImage.h",
+      "line": 23,
+      "symbol": "MBPVideoRotationAngle.MBPVideoRotationAngleLandscapeRight",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBImage.h",
+      "line": 25,
+      "symbol": "MBPVideoRotationAngle.MBPVideoRotationAnglePortraitUpsideDown",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBImageProcessingRecognizerRunnerDelegate.h",
       "line": 11,
       "symbol": "MBPImageProcessingRecognizerRunnerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBImageReturnProcessor.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBImageReturnProcessor.h",
       "line": 22,
       "symbol": "MBPImageReturnProcessor.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBImageReturnProcessorResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBImageReturnProcessorResult.h",
       "line": 22,
       "symbol": "MBPImageReturnProcessorResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBKosovoCode128PaymentRecognizer.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBKosovoCode128PaymentRecognizer.h",
       "line": 21,
       "symbol": "MBPKosovoCode128PaymentRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBKosovoCode128PaymentRecognizerResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBKosovoCode128PaymentRecognizerResult.h",
       "line": 29,
       "symbol": "MBPKosovoCode128PaymentRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBKosovoSlipRecognizer.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBKosovoSlipRecognizer.h",
       "line": 22,
       "symbol": "MBPKosovoSlipRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBKosovoSlipRecognizerResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBKosovoSlipRecognizerResult.h",
       "line": 18,
       "symbol": "MBPKosovoSlipRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBLicenseError.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBLicenseError.h",
       "line": 13,
       "symbol": "MBPLicenseErrorNotification",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBLicenseError.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBLicenseError.h",
       "line": 15,
       "symbol": "MBPLicenseError",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBLicenseError.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBLicenseError.h",
       "line": 15,
       "symbol": "MBPLicenseError",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBLicenseError.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBLicenseError.h",
       "line": 27,
       "symbol": "MBPLicenseErrorBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBLogger.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBLogger.h",
       "line": 13,
       "symbol": "MBPLogLevel",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBLogger.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBLogger.h",
       "line": 13,
       "symbol": "MBPLogLevel",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBLogger.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBLogger.h",
       "line": 21,
       "symbol": "MBPLoggerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBLogger.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBLogger.h",
       "line": 30,
       "symbol": "MBPLogger",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBMacedoniaAccountParser.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBMacedoniaAccountParser.h",
       "line": 22,
       "symbol": "MBPMacedoniaAccountParser.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBMacedoniaAccountParserResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBMacedoniaAccountParserResult.h",
       "line": 20,
       "symbol": "MBPMacedoniaAccountParserResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBMacedoniaReferenceParser.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBMacedoniaReferenceParser.h",
       "line": 22,
       "symbol": "MBPMacedoniaReferenceParser.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBMacedoniaReferenceParserResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBMacedoniaReferenceParserResult.h",
       "line": 20,
       "symbol": "MBPMacedoniaReferenceParserResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBMicroblinkApp.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBMicroblinkApp.h",
       "line": 25,
       "symbol": "MBPMicroblinkApp",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBMicroblinkApp.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBMicroblinkApp.h",
       "line": 75,
       "symbol": "MBP_LOCALIZED_DEFAULT_STRING",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBMicroblinkApp.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBMicroblinkApp.h",
       "line": 79,
       "symbol": "MBP_LOCALIZED_FOR_LANGUAGE",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBMicroblinkApp.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBMicroblinkApp.h",
       "line": 97,
       "symbol": "MBP_LOCALIZED",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBMicroblinkDefines.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBMicroblinkDefines.h",
       "line": 34,
       "symbol": "MBBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBMicroblinkSDK.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBMicroblinkSDK.h",
       "line": 21,
       "symbol": "MBPMicroblinkSDK.+sharedInstance",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBMontenegroAccountParser.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBMontenegroAccountParser.h",
       "line": 22,
       "symbol": "MBPMontenegroAccountParser.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBMontenegroAccountParserResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBMontenegroAccountParserResult.h",
       "line": 20,
       "symbol": "MBPMontenegroAccountParserResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBMontenegroReferenceParser.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBMontenegroReferenceParser.h",
       "line": 22,
       "symbol": "MBPMontenegroReferenceParser.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBMontenegroReferenceParserResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBMontenegroReferenceParserResult.h",
       "line": 20,
       "symbol": "MBPMontenegroReferenceParserResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBNativeResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBNativeResult.h",
       "line": 14,
       "symbol": "MBPNativeResult",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBNetherlandsSlipRecognizer.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBNetherlandsSlipRecognizer.h",
       "line": 22,
       "symbol": "MBPNetherlandsSlipRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBNetherlandsSlipRecognizerResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBNetherlandsSlipRecognizerResult.h",
       "line": 19,
       "symbol": "MBPNetherlandsSlipRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBOcrLayout.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBOcrLayout.h",
       "line": 74,
       "symbol": "MBPOcrLayout.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBOcrLayout.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBOcrLayout.h",
       "line": 192,
       "symbol": "MBPCharWithVariants",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBOcrLayout.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBOcrLayout.h",
       "line": 260,
       "symbol": "MBPOcrChar.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBOcrLayout.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBOcrLayout.h",
       "line": 302,
       "symbol": "MBPPosition.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBOverlayViewController.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBOverlayViewController.h",
       "line": 33,
       "symbol": "MBPOverlayViewController.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBParserGroupProcessor.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBParserGroupProcessor.h",
       "line": 24,
       "symbol": "MBPParserGroupProcessor.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBParserGroupProcessor.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBParserGroupProcessor.h",
       "line": 26,
       "symbol": "MBPParserGroupProcessor.-initWithParsers:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBParserGroupProcessorResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBParserGroupProcessorResult.h",
       "line": 21,
       "symbol": "MBPParserGroupProcessorResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBParserGroupProcessorResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBParserGroupProcessorResult.h",
       "line": 23,
       "symbol": "MBPParserGroupProcessorResult.ocrLayout",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBParserResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBParserResult.h",
       "line": 41,
       "symbol": "MBPParserResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBParserResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBParserResult.h",
       "line": 43,
       "symbol": "MBPParserResult.resultState",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBPdf417Recognizer.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBPdf417Recognizer.h",
       "line": 23,
       "symbol": "MBPPdf417Recognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBPdf417RecognizerResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBPdf417RecognizerResult.h",
       "line": 22,
       "symbol": "MBPPdf417RecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBPhotopayRecognizerResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBPhotopayRecognizerResult.h",
       "line": 12,
       "symbol": "MBPPhotopayRecognizerResult",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBPivotView.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBPivotView.h",
       "line": 13,
       "symbol": "MBPPivotView",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBProcessorGroup.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBProcessorGroup.h",
       "line": 24,
       "symbol": "MBPProcessorGroup.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBProcessorResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBProcessorResult.h",
       "line": 41,
       "symbol": "MBPProcessorResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBProcessorResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBProcessorResult.h",
       "line": 43,
       "symbol": "MBPProcessorResult.resultState",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBProductIntegrationInfo.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBProductIntegrationInfo.h",
       "line": 17,
       "symbol": "MBPProductIntegrationInfo",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBRawParser.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBRawParser.h",
       "line": 24,
       "symbol": "MBPRawParser.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBRawParserResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBRawParserResult.h",
       "line": 21,
       "symbol": "MBPRawParserResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBRecognizer.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBRecognizer.h",
       "line": 29,
       "symbol": "MBPRecognizer.-getOptimalHudOrientation",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBRecognizerCollection.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBRecognizerCollection.h",
       "line": 51,
       "symbol": "MBPRecognizerCollection.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBRecognizerCollection.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBRecognizerCollection.h",
       "line": 53,
       "symbol": "MBPRecognizerCollection.-initWithRecognizers:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBRecognizerResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBRecognizerResult.h",
       "line": 46,
       "symbol": "MBPRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBRecognizerResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBRecognizerResult.h",
       "line": 48,
       "symbol": "MBPRecognizerResult.resultState",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBRecognizerResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBRecognizerResult.h",
       "line": 49,
       "symbol": "MBPRecognizerResult.resultStateString",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBRecognizerRunner.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBRecognizerRunner.h",
       "line": 29,
       "symbol": "MBPRecognizerRunner.metadataDelegates",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBRecognizerRunner.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBRecognizerRunner.h",
       "line": 30,
       "symbol": "MBPRecognizerRunner.scanningRecognizerRunnerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBRecognizerRunner.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBRecognizerRunner.h",
       "line": 31,
       "symbol": "MBPRecognizerRunner.imageProcessingRecognizerRunnerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBRecognizerRunner.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBRecognizerRunner.h",
       "line": 32,
       "symbol": "MBPRecognizerRunner.stringProcessingRecognizerRunnerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBRecognizerRunner.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBRecognizerRunner.h",
       "line": 34,
       "symbol": "MBPRecognizerRunner.coordinator",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBRecognizerRunner.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBRecognizerRunner.h",
       "line": 36,
       "symbol": "MBPRecognizerRunner.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBRecognizerRunner.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBRecognizerRunner.h",
       "line": 41,
       "symbol": "MBPRecognizerRunner.-resetState",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBRecognizerRunner.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBRecognizerRunner.h",
       "line": 43,
       "symbol": "MBPRecognizerRunner.-resetState:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBRecognizerRunnerMetadataDelegates.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBRecognizerRunnerMetadataDelegates.h",
       "line": 21,
       "symbol": "MBPRecognizerRunnerMetadataDelegates.debugRecognizerRunnerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBRecognizerRunnerMetadataDelegates.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBRecognizerRunnerMetadataDelegates.h",
       "line": 22,
       "symbol": "MBPRecognizerRunnerMetadataDelegates.detectionRecognizerRunnerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBRecognizerRunnerMetadataDelegates.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBRecognizerRunnerMetadataDelegates.h",
       "line": 23,
       "symbol": "MBPRecognizerRunnerMetadataDelegates.ocrRecognizerRunnerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBRecognizerRunnerMetadataDelegates.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBRecognizerRunnerMetadataDelegates.h",
       "line": 24,
       "symbol": "MBPRecognizerRunnerMetadataDelegates.glareRecognizerRunnerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBRecognizerRunnerViewControllerMetadataDelegates.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBRecognizerRunnerViewControllerMetadataDelegates.h",
       "line": 21,
       "symbol": "MBPRecognizerRunnerViewControllerMetadataDelegates.debugRecognizerRunnerViewControllerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBRecognizerRunnerViewControllerMetadataDelegates.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBRecognizerRunnerViewControllerMetadataDelegates.h",
       "line": 22,
       "symbol": "MBPRecognizerRunnerViewControllerMetadataDelegates.detectionRecognizerRunnerViewControllerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBRecognizerRunnerViewControllerMetadataDelegates.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBRecognizerRunnerViewControllerMetadataDelegates.h",
       "line": 23,
       "symbol": "MBPRecognizerRunnerViewControllerMetadataDelegates.ocrRecognizerRunnerViewControllerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBRecognizerRunnerViewControllerMetadataDelegates.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBRecognizerRunnerViewControllerMetadataDelegates.h",
       "line": 24,
       "symbol": "MBPRecognizerRunnerViewControllerMetadataDelegates.glareRecognizerRunnerViewControllerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBRegexParser.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBRegexParser.h",
       "line": 29,
       "symbol": "MBPRegexParser.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBRegexParserResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBRegexParserResult.h",
       "line": 21,
       "symbol": "MBPRegexParserResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBScanElement.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBScanElement.h",
       "line": 38,
       "symbol": "MBPScanElement.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBScanResultHistory.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBScanResultHistory.h",
       "line": 10,
       "symbol": "MBPScanResultHistory",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBScanResultView.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBScanResultView.h",
       "line": 55,
       "symbol": "MBPScanResultView.labelResultTitle",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSepaQrCodePaymentRecognizer.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSepaQrCodePaymentRecognizer.h",
       "line": 21,
       "symbol": "MBPSepaQrCodePaymentRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSepaQrCodePaymentRecognizerResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSepaQrCodePaymentRecognizerResult.h",
       "line": 18,
       "symbol": "MBPSepaQrCodePaymentRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSepaQrCodePaymentRecognizerResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSepaQrCodePaymentRecognizerResult.h",
       "line": 48,
       "symbol": "MBPSepaQrCodePaymentRecognizerResult.displayData",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSerbiaAccountParser.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSerbiaAccountParser.h",
       "line": 22,
       "symbol": "MBPSerbiaAccountParser.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSerbiaAccountParserResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSerbiaAccountParserResult.h",
       "line": 20,
       "symbol": "MBPSerbiaAccountParserResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSerbiaBarcodePaymentResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSerbiaBarcodePaymentResult.h",
       "line": 11,
       "symbol": "MBPSerbiaBarcodePaymentResult",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSerbiaPdf417Recognizer.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSerbiaPdf417Recognizer.h",
       "line": 21,
       "symbol": "MBPSerbiaPdf417Recognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSerbiaPdf417RecognizerResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSerbiaPdf417RecognizerResult.h",
       "line": 19,
       "symbol": "MBPSerbiaPdf417RecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSerbiaQrCodeRecognizer.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSerbiaQrCodeRecognizer.h",
       "line": 21,
       "symbol": "MBPSerbiaQrCodeRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSerbiaQrCodeRecognizerResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSerbiaQrCodeRecognizerResult.h",
       "line": 19,
       "symbol": "MBPSerbiaQrCodeRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSerbiaReferenceParser.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSerbiaReferenceParser.h",
       "line": 22,
       "symbol": "MBPSerbiaReferenceParser.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSerbiaReferenceParserResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSerbiaReferenceParserResult.h",
       "line": 20,
       "symbol": "MBPSerbiaReferenceParserResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSignedPayload.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSignedPayload.h",
       "line": 16,
       "symbol": "MBPSignedPayload",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSimNumberRecognizer.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSimNumberRecognizer.h",
       "line": 22,
       "symbol": "MBPSimNumberRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSimNumberRecognizerResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSimNumberRecognizerResult.h",
       "line": 20,
       "symbol": "MBPSimNumberRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSlovakiaCode128PaymentRecognizer.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSlovakiaCode128PaymentRecognizer.h",
       "line": 22,
       "symbol": "MBPSlovakiaCode128PaymentRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSlovakiaCode128PaymentRecognizerResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSlovakiaCode128PaymentRecognizerResult.h",
       "line": 18,
       "symbol": "MBPSlovakiaCode128PaymentRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSlovakiaDataMatrixPaymentRecognizer.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSlovakiaDataMatrixPaymentRecognizer.h",
       "line": 21,
       "symbol": "MBPSlovakiaDataMatrixPaymentRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSlovakiaDataMatrixPaymentRecognizerResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSlovakiaDataMatrixPaymentRecognizerResult.h",
       "line": 19,
       "symbol": "MBPSlovakiaDataMatrixPaymentRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSlovakiaQrCodeRecognizer.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSlovakiaQrCodeRecognizer.h",
       "line": 21,
       "symbol": "MBPSlovakiaQrCodeRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSlovakiaQrCodeRecognizerResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSlovakiaQrCodeRecognizerResult.h",
       "line": 20,
       "symbol": "MBPSlovakiaQrCodeRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSlovakiaQrPaymentInformation.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSlovakiaQrPaymentInformation.h",
       "line": 16,
       "symbol": "MBPSlovakiaQrPaymentInformation",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSlovakiaSlipRecognizer.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSlovakiaSlipRecognizer.h",
       "line": 22,
       "symbol": "MBPSlovakiaSlipRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSlovakiaSlipRecognizerResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSlovakiaSlipRecognizerResult.h",
       "line": 18,
       "symbol": "MBPSlovakiaSlipRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSloveniaQrCodePaymentRecognizer.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSloveniaQrCodePaymentRecognizer.h",
       "line": 21,
       "symbol": "MBPSloveniaQrCodePaymentRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSloveniaQrCodePaymentRecognizerResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSloveniaQrCodePaymentRecognizerResult.h",
       "line": 19,
       "symbol": "MBPSloveniaQrCodePaymentRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSloveniaReferenceParser.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSloveniaReferenceParser.h",
       "line": 22,
       "symbol": "MBPSloveniaReferenceParser.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSloveniaReferenceParserResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSloveniaReferenceParserResult.h",
       "line": 19,
       "symbol": "MBPSloveniaReferenceParserResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSloveniaSlipRecognizer.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSloveniaSlipRecognizer.h",
       "line": 23,
       "symbol": "MBPSloveniaSlipRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSloveniaSlipRecognizerResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSloveniaSlipRecognizerResult.h",
       "line": 18,
       "symbol": "MBPSloveniaSlipRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBStringProcessingRecognizerRunnerDelegate.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBStringProcessingRecognizerRunnerDelegate.h",
       "line": 10,
       "symbol": "MBPStringProcessingRecognizerRunnerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSuccessFrameGrabberRecognizer.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSuccessFrameGrabberRecognizer.h",
       "line": 21,
       "symbol": "MBPSuccessFrameGrabberRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSuccessFrameGrabberRecognizer.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSuccessFrameGrabberRecognizer.h",
       "line": 22,
       "symbol": "MBPSuccessFrameGrabberRecognizer.-initWithRecognizer:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSuccessFrameGrabberRecognizerResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSuccessFrameGrabberRecognizerResult.h",
       "line": 23,
       "symbol": "MBPSuccessFrameGrabberRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSwedenAmountParser.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSwedenAmountParser.h",
       "line": 22,
       "symbol": "MBPSwedenAmountParser.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSwedenAmountParserResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSwedenAmountParserResult.h",
       "line": 20,
       "symbol": "MBPSwedenAmountParserResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSwedenGiroNumberParser.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSwedenGiroNumberParser.h",
       "line": 22,
       "symbol": "MBPSwedenGiroNumberParser.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSwedenGiroNumberParserResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSwedenGiroNumberParserResult.h",
       "line": 20,
       "symbol": "MBPSwedenGiroNumberParserResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSwedenReferenceParser.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSwedenReferenceParser.h",
       "line": 22,
       "symbol": "MBPSwedenReferenceParser.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSwedenReferenceParserResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSwedenReferenceParserResult.h",
       "line": 20,
       "symbol": "MBPSwedenReferenceParserResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSwedenSlipCodeParser.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSwedenSlipCodeParser.h",
       "line": 22,
       "symbol": "MBPSwedenSlipCodeParser.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSwedenSlipCodeParserResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSwedenSlipCodeParserResult.h",
       "line": 20,
       "symbol": "MBPSwedenSlipCodeParserResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSwitzerlandQrCodePaymentRecognizer.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSwitzerlandQrCodePaymentRecognizer.h",
       "line": 21,
       "symbol": "MBPSwitzerlandQrCodePaymentRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSwitzerlandQrCodePaymentRecognizerResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSwitzerlandQrCodePaymentRecognizerResult.h",
       "line": 19,
       "symbol": "MBPSwitzerlandQrCodePaymentRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSwitzerlandSlipRecognizer.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSwitzerlandSlipRecognizer.h",
       "line": 22,
       "symbol": "MBPSwitzerlandSlipRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSwitzerlandSlipRecognizerResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSwitzerlandSlipRecognizerResult.h",
       "line": 18,
       "symbol": "MBPSwitzerlandSlipRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBTapToFocusSubview.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBTapToFocusSubview.h",
       "line": 25,
       "symbol": "MBPTapToFocusSubview.-initWithCoder:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBTapToFocusSubview.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBTapToFocusSubview.h",
       "line": 27,
       "symbol": "MBPTapToFocusSubview.-willFocusAtPoint:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBUnitedKingdomQrCodePaymentRecognizer.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBUnitedKingdomQrCodePaymentRecognizer.h",
       "line": 21,
       "symbol": "MBPUnitedKingdomQrCodePaymentRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBUnitedKingdomQrCodePaymentRecognizerResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBUnitedKingdomQrCodePaymentRecognizerResult.h",
       "line": 17,
       "symbol": "MBPUnitedKingdomQrCodePaymentRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBUnitedKingdomSlipRecognizer.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBUnitedKingdomSlipRecognizer.h",
       "line": 22,
       "symbol": "MBPUnitedKingdomSlipRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-iphone8/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBUnitedKingdomSlipRecognizerResult.h",
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBUnitedKingdomSlipRecognizerResult.h",
       "line": 18,
       "symbol": "MBPUnitedKingdomSlipRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     }
   ],
-  "source_directory": "/opt/jenkins-iphone8/E0/sdk-photopay-ios"
+  "source_directory": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios"
 }
