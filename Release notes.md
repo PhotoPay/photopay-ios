@@ -1,5 +1,9 @@
 # Release notes
 
+## 9.1.3
+
+- ensure `scanningRecognizerRunnerDelegate` gets invoked for string processing even when using fully offline license keys
+
 ## 9.1.2 
 
 - fixed a crash when using Direct API on iOS 15.8 or older
