@@ -1794,8 +1794,29 @@
     },
     {
       "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSlovakiaQrPaymentInformation.h",
-      "line": 16,
+      "line": 17,
       "symbol": "MBPSlovakiaQrPaymentInformation",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSlovakiaQrPaymentStandingOrder.h",
+      "line": 12,
+      "symbol": "MBPSlovakiaQrPaymentPeriodicity",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSlovakiaQrPaymentStandingOrder.h",
+      "line": 12,
+      "symbol": "MBPSlovakiaQrPaymentPeriodicity",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-iphone-se3/E0/sdk-photopay-ios/photopay-ios/PhotoPay.xcframework/ios-arm64_x86_64-simulator/PhotoPay.framework/Headers/MBSlovakiaQrPaymentStandingOrder.h",
+      "line": 42,
+      "symbol": "MBPSlovakiaQrPaymentStandingOrder",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
       "warning": "undocumented"
     },
