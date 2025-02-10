@@ -1,3 +1,7 @@
+## 9.2.0
+
+- No changes
+
 ## 9.1.0
 
 - The SDK dropped support for Mac Catalyst

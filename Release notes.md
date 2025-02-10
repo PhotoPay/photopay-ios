@@ -1,5 +1,21 @@
 # Release notes
 
+## 9.2.0
+
+### API changes
+
+- `SlovakiaQRPaymentInformation` now additionally contains `standingOrderInfo`, which optionally exists on some pyBySquare payment QR codes.
+- The `standingOrderInfo` contains `day`, `months`, `periodicity`,  and `lastDate`
+    - `day` indicates day in week or month (depending on periodicity) when payment needs to be done.
+    - `months` indicate multiple months when payment needs to be done. Depending on periodicity, it may also be empty.
+    - `periodicity` defines the period of payment.
+    - `lastDate` defines the date when standing order stops.
+
+### Bug fixes
+
+- Fixed parsing of recipient name from Slovak payBySquare QR codes that contain it, but don't contain recipient address.
+- Fixed the incorrectly displayed strings and button action in the 'permission-denied' screen, which is displayed when the end-user denies the camera access.
+
 ## 9.1.3
 
 - ensure `scanningRecognizerRunnerDelegate` gets invoked for string processing even when using fully offline license keys
