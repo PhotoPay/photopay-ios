@@ -2,6 +2,20 @@
   <img src="https://raw.githubusercontent.com/wiki/blinkid/blinkid-ios/Images/logo-microblink.png" alt="Microblink" title="Microblink">
 </p>
 
+# ⚠️ Project Status: Maintenance Mode
+
+This product is currently in maintenance mode. It is no longer receiving new features or major enhancements.
+
+What this means:
+
+- *Support*: Essential support and critical bug fixes will continue with a yearly product updates.
+
+- *Security*: Security patches will be applied as needed to ensure the product remains safe and functional.
+
+- *Development*: No new feature requests or non-critical enhancements will be considered at this time.
+
+Our goal is to provide a stable, reliable experience for our existing customers while focusing our development efforts on other initiatives.
+
 # PhotoPay SDK for payment slips scanning
 
 PhotoPay SDK is a delightful component for quick and easy scanning of payment slips and payment barcodes. The SDK is powered with [Microblink's](http://www.microblink.com) industry-proven and world leading OCR and barcode scanning technology, and offers:
