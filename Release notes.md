@@ -1,5 +1,9 @@
 # Release notes
 
+## 9.2.2
+
+- Fixed a crash when opening the PhotoPay scanning screen in scene-based apps, caused by the interface orientation being reported as unknown 
+
 ## 9.2.1
 
 ### Improvements
